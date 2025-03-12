@@ -1,0 +1,2248 @@
+<html>
+<head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+
+	<script type="text/javascript" src="data/master-data.json"></script>
+	<script type="text/javascript" src="data/master-index.json"></script>
+
+	<style>
+		body {
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+
+		button {
+			padding-left: 5px;
+			padding-right: 5px;
+			height: 25px;
+			margin: 0px;
+		}
+
+		button#hud {
+			z-index: 200;
+			position: fixed;
+			top: 15px;
+			right: 20px;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		tr td:first-child {
+			width: 25%;
+		}
+
+		tr td:last-child {
+			width: 75%;
+		}
+		tr td input, tr td select {
+			width: 100%;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 5px;
+			padding: 0px;
+		}
+
+		.top-menu {
+			z-index: 100;
+			position: fixed;
+			right: 20px;
+			width: 450px;
+			height: 25px;
+			outline: 1px black solid;
+			background-color: white;
+		}
+
+		#game-menu {
+			top: 15px;
+		}
+
+		#data-menu {
+			top: 50px;
+		}
+
+		#compare-menu {
+			top: 85px;
+		}
+
+		#build-menu {
+			top: 120px;
+		}
+
+		#build-menu input {
+			width: 150px;
+		}
+
+		#game-menu input {
+			width: 75px;
+		}
+
+		#color-menu {
+			top: 155px;
+		}
+
+		#preview {
+			z-index: 100;
+			position: fixed;
+			top: 190px;
+			right: 20px;
+			width: 450px;
+			height: 625px;
+			background-image: url('back.jpeg');
+			background-size: cover;
+			border-radius: 20px;
+		}
+
+		.commander {
+			box-shadow: 0px 10px 0px 0px rgb(255 0 0 / 100%);
+		}
+
+		.oathbreaker {
+			box-shadow: 10px 0px 0px 0px rgb(255 0 0 / 100%);
+		}
+
+		.commander.oathbreaker {
+			box-shadow: 10px 10px 0px 0px rgb(255 0 0 / 100%);
+		}
+
+		.card-section {
+			width: 1350px;
+			min-height: 105px;
+			outline: 1px solid black;
+			margin: 20px;
+			float: left;
+		}
+
+		.card-group {
+			width: 1350px;
+			min-height: 105px;
+			outline: 1px solid black;
+			float: left;
+		}
+
+		.card {
+			width: 75px;
+			height: 105px;
+			background-size: cover;
+			float: left;
+			display: flex;
+  			justify-content: center;
+  			align-items: center;
+		}
+
+		.card p {
+			color: #FFFFFF;
+			font-size: 75px;
+		}
+
+		.highlight {
+			outline: 10px lightgreen solid;
+			outline-offset: -10px;
+		}
+
+		#library-cards {
+			min-height: 105px;
+			outline: 1px solid black;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			margin-left: 15px;
+			float: left;
+		} 
+
+		#library-list {
+			min-height: 105px;
+			outline: 1px solid black;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			margin-right: 15px;
+			float: left;
+			overflow-y: scroll;
+		}
+
+		#hand {
+			min-height: 105px;
+			outline: 1px solid black;
+			margin: 15px;
+			float: left;
+		}
+
+		#graveyard  {
+			min-height: 105px;
+			outline: 1px solid black;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			margin-left: 15px;
+			float: left;
+		}
+
+		#token-box {
+			min-height: 105px;
+			outline: 1px solid black;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			float: left;
+		}
+
+		#command-zone {
+			min-height: 105px;
+			outline: 1px solid black;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			margin-right: 15px;
+			float: left;
+		}
+
+		#battlefield {
+			height: 525px;
+			outline: 1px solid black;
+			margin: 15px;
+			float: left;
+		}
+
+		.slot {
+			width: 75px;
+			height: 105px;
+			outline: 1px solid black;
+			float: left;
+		}
+
+		.exile {
+			width: 75px;
+			height: 105px;
+			outline: 1px solid black;
+			float: left;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: white;
+			background-image: url('exit.png');
+		}
+
+		.trash {
+			width: 75px;
+			height: 105px;
+			outline: 1px solid black;
+			float: left;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.trash-out {
+			background-color: white;
+			background-image: url('trash-out.png');
+		}
+
+		.trash-over {
+			background-color: black;
+			background-image: url('trash-over.png');
+		}
+
+		.charts {
+			width: 1200px;
+		}
+
+		.chart {
+			height: 300px;
+			float: left;
+		}
+
+		.bar-chart {
+			width: 1200px;
+		}
+
+		.pie-chart {
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div id="import-dialog" style="display: none;">
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<textarea id="import-text" cols="43" rows="15"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;"><button id="import-data">Import</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="save-dialog" style="display: none;">
+		<table>
+			<tbody>
+				<tr>
+					<td>Command zone</td>
+					<td><select id="set-command-zone" multiple="multiple"></select></td>
+				</tr>
+				<tr>
+					<td># Forests</td>
+					<td><input id="set-forests" type="number" min="0" /></td>
+				</tr>
+				<tr>
+					<td># Islands</td>
+					<td><input id="set-islands" type="number" min="0" /></td>
+				</tr>
+				<tr>
+					<td># Mountains</td>
+					<td><input id="set-mountains" type="number" min="0" /></td>
+				</tr>
+				<tr>
+					<td># Plains</td>
+					<td><input id="set-plains" type="number" min="0" /></td>
+				</tr>
+				<tr>
+					<td># Swamps</td>
+					<td><input id="set-swamps" type="number" min="0" /></td>
+				</tr>
+				<tr>
+					<td># Wastes</td>
+					<td><input id="set-wastes" type="number" min="0" /></td>
+				</tr>
+				<tr>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;"><button id="file-create" disabled>Create download</button></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;"><a id="file-link" style="display: none;">Click to download</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<button id="hud">HUD</button>
+
+	<div id="game-menu" class="top-menu">
+		<button id="reset" disabled>Reset</button>
+		<button id="shuffle" disabled>Shuffle</button>
+		<button id="draw-1" disabled>D 1</button>
+		<button id="draw-7" disabled>D 7</button>
+		<button id="discard" disabled>DC</button>
+		<button id="gy-to-lib" disabled>G -> S</button>
+		<button id="turn" disabled>Turn: 1</button>
+		<button id="toggle" disabled>Library</button>
+	</div>
+
+	<div id="data-menu" class="top-menu">
+		<input id="data-file" type="file" />
+		<button id="save">Save</button>
+	</div>
+
+	<div id="compare-menu" class="top-menu">
+		<input id="compare-file" type="file" />
+		<button id="compare">Compare</button>
+	</div>
+
+	<div id="build-menu" class="top-menu">
+		<input id="oracle_search" type="text" />
+		<button id="oracle">Oracle</button>
+		<button id="deck">Deck</button>
+		<button id="play">Play</button>
+		<button id="stats">Stats</button>
+		<button id="import">Import</button>
+	</div>
+
+	<div id="color-menu" class="top-menu">
+		<label for="artifact"><input id="artifact" type="checkbox" />Artifact</label>
+		<label for="black"><input id="black" type="checkbox" />Black</label>
+		<label for="blue"><input id="blue" type="checkbox" />Blue</label>
+		<label for="green"><input id="green" type="checkbox" />Green</label>
+		<label for="red"><input id="red" type="checkbox" />Red</label>
+		<label for="white"><input id="white" type="checkbox" />White</label>
+		<label for="and"><input id="and" name="and-or" value="and" type="radio" />&&</label>
+		<label for="or"><input id="or" name="and-or" value="or" type="radio" />||</label>
+	</div>
+
+	<div id="preview"></div>
+
+	<div id="content"></div>
+
+	<script>
+		(function($) {
+			const MTG = {
+				columnCount: 18,
+				rowCount: 5,
+				libraryListColumnCount: 4,
+
+				cardIds: {},
+				commandZoneIds: [],
+				deckIds: [],
+				tokenIds: [],
+				forestCount: 0,
+				islandCount: 0, 
+				mountainCount: 0,
+				plainsCount: 0,
+				swampCount: 0,
+				wastesCount: 0,
+				forestId: "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+				islandId: "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+				mountainId: "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+				plainsId: "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+				swampId: "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+				wastesId: "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+
+				cardData: [],
+				originalIds: [],
+				compareIds: [],
+
+				libraryIds: [],
+				handIds: [],
+				graveyardIds: [],
+				exileIds: [],
+				turn: 1,
+				mode: null,
+				saveFile: null,
+
+				untapData: [],
+				untapNames: {},
+
+				extra: []
+			};
+
+			MTG.init = function() {
+				this.getCardData();
+			};
+
+			MTG.setStyle = function() {
+				$('#hand, #battlefield').css({
+					width: this.columnCount * 75
+				});
+				$('#library-cards').css({
+					width: (this.columnCount - this.libraryListColumnCount) * 75
+				});
+				$('#library-list').css({
+					width: this.libraryListColumnCount * 75
+				});
+				$('#graveyard').css({
+					width: (this.columnCount - this.tokenIds.length - this.commandZoneIds.length) * 75
+				});
+				$('#token-box').css({
+					width: this.tokenIds.length * 75
+				});
+				$('#command-zone').css({
+					width: this.commandZoneIds.length * 75
+				});
+			};
+
+			MTG.setupUI = function() {
+				$('#import-dialog').dialog({
+					title: 'Import',
+					autoOpen: false,
+					modal: true,
+					width: 420,
+					height: 420,
+					position: {
+						my: 'center',
+						at: 'center',
+						of: "body"
+					},
+					open: function() {
+						$('.ui-widget-overlay').bind('click', function () {
+							$("#import-dialog").dialog('close');
+						});
+					}
+				});
+
+				$('#save-dialog').dialog({
+					title: 'Save',
+					autoOpen: false,
+					modal: true,
+					width: 420,
+					height: 420,
+					position: {
+						my: 'center',
+						at: 'center',
+						of: "body"
+					},
+					open: function() {
+						$('#set-forests').val(MTG.forestCount);
+						$('#set-islands').val(MTG.islandCount);
+						$('#set-mountains').val(MTG.mountainCount);
+						$('#set-plains').val(MTG.plainsCount);
+						$('#set-swamps').val(MTG.swampCount);
+						$('#set-wastes').val(MTG.wastesCount);
+
+						$('#set-command-zone').select2({
+							data: MTG.getCommandZoneOptions(),
+						});
+
+						$('#set-command-zone').val(MTG.commandZoneIds).trigger('change');
+
+						$('#file-create').attr('disabled', MTG.commandZoneIds.length === 0);
+
+						$('.ui-widget-overlay').bind('click', function () {
+							$("#save-dialog").dialog('close');
+						});
+					}
+				});
+
+				$('#set-command-zone').on('select2:select', function (e) {
+					if (MTG.commandZoneIds.includes(e.params.data.id)) {
+						MTG.commandZoneIds.splice(MTG.commandZoneIds.indexOf(e.params.data.id), 1);
+					} else {
+						MTG.commandZoneIds.push(e.params.data.id);
+					}
+
+					$('#file-create').attr('disabled', MTG.commandZoneIds.length === 0);
+				});
+
+				$('#hud').on('click', function() {
+					$('#data-menu').toggle();
+					$('#compare-menu').toggle();
+					$('#build-menu').toggle();
+					$('#color-menu').toggle();
+					$('#preview').toggle();
+				});
+
+				$('#data-file').on('change', function() {
+					let file = $(this).prop('files')[0];
+					let fileReader = new FileReader();
+
+					fileReader.onload = function() {
+						MTG.loadDataFile(fileReader.result);
+						MTG.clear();
+						MTG.getCardData();
+					};
+
+					fileReader.readAsText(file);
+				});
+
+				$('#save').on('click', function() {
+					$('#save-dialog').dialog('open');
+				});
+
+				$('#file-create').on('click', function() {
+					MTG.saveDataFile();
+				});
+
+				$('#file-link').on('click', function() {
+					$(this).hide()
+				});
+
+				$('#compare-file').on('change', function() {
+					let file = $(this).prop('files')[0];
+					let fileReader = new FileReader();
+
+					fileReader.onload = function() {
+						MTG.loadCompareFile(fileReader.result);
+					};
+
+					fileReader.readAsText(file);
+				});
+
+				$('#compare').on('click', function() {
+					MTG.clear();
+					MTG.createCardCompare();
+				});
+
+				$('#oracle_search').autocomplete({
+					minLength: 4,
+					source: masterIndex,
+					position: {
+						my: 'right top',
+						at: 'left top',
+					},
+					focus: function(event, ui) {
+						let card = masterData.find(function(masterDatum) {
+							if (masterDatum.oracle_id === ui.item.value) {
+								return masterDatum;
+							}
+						});
+
+						$('#preview').removeClass('commander');
+						$('#preview').removeClass('oathbreaker');
+						$('#preview').css({
+							backgroundImage: 'url(' + MTG.getNormalImage(card, 'front') + ')'
+						});
+
+						if (!card.commander) {
+							$('#preview').addClass('commander');
+						}
+
+						if (!card.oathbreaker) {
+							$('#preview').addClass('oathbreaker');
+						}
+					},
+					select: function(event, ui) {
+						let card = masterData.find(function(masterDatum) {
+							if (masterDatum.oracle_id === ui.item.value) {
+								return masterDatum;
+							}
+						});
+
+						if (!MTG.cardIds.hasOwnProperty(card.oracle_id)) {
+							MTG.cardIds[card.oracle_id] = card.name;
+							MTG.cardData.push(card);
+							MTG.clear();
+							MTG.createCardTree();
+							MTG.setCardCounts();
+
+							$('#oracle_search').val('');	
+						}
+
+						return false;
+					},
+					close: function(event, ui) {
+						$('#preview').removeClass('commander');
+						$('#preview').removeClass('oathbreaker');
+						$('#preview').css({
+							backgroundImage: 'url("back.jpeg")'
+						});
+					}
+				});
+
+				$('#oracle').on('click', function() {
+					MTG.mode = 'oracle';
+
+					MTG.clear();
+					MTG.createCardTree();
+					MTG.setCardCounts();
+				});
+
+				$('#deck').on('click', function() {
+					MTG.mode = 'deck';
+
+					MTG.clear();
+					MTG.createCardTree();
+				});
+
+				$('#stats').on('click', function() {
+					MTG.mode = 'stats';
+
+					MTG.clear();
+					MTG.createCardStats();
+				});
+
+				$('#import').on('click', function() {
+					$('#import-dialog').dialog('open');
+				});
+
+				$('#import-data').on('click', function() {
+					let cardNames = $('#import-text').val().split('\n');
+
+					console.log(cardNames.length);
+
+					for (let i = 0; i < cardNames.length; i++) {
+						let cardName = cardNames[i].trim();
+
+						let card = masterIndex.find(function(item) {
+							if (item.label === cardName) {
+								return item;
+							}
+						});
+
+						if (card) {
+							console.log(card);
+							MTG.cardIds[card.value] = card.label;
+						} else {
+							console.log(cardName);
+						}
+					}
+
+					$('#import-text').val('');
+					$("#import-dialog").dialog('close');
+					MTG.getCardData();
+				});
+
+				$('#play').on('click', function() {
+					MTG.mode = 'play';
+
+					MTG.clear();
+					MTG.createCardPlay();
+					MTG.setStyle();
+
+					$('#reset').trigger('click');
+				});
+
+				$('#reset').on('click', function() {
+					MTG.reset();
+					MTG.refreshTokenBox();
+					MTG.refreshCommandZone();
+					MTG.shuffle();
+					MTG.draw7();
+					MTG.refreshLibrary();
+					MTG.refreshHand();
+				});
+
+				$('#shuffle').on('click', function() {
+					MTG.shuffle();
+					MTG.refreshLibrary();
+				});
+
+				$('#draw-1').on('click', function() {
+					MTG.draw1();
+					MTG.refreshLibrary();
+					MTG.refreshHand();
+				});
+
+				$('#draw-7').on('click', function() {
+					MTG.draw7();
+					MTG.refreshLibrary();
+					MTG.refreshHand();
+				});
+
+				$('#discard').on('click', function() {
+					MTG.discard();
+					MTG.refreshGraveyard();
+					MTG.refreshHand();
+				});
+
+				$('#gy-to-lib').on('click', function() {
+					MTG.graveyardToLibrary();
+					MTG.refreshGraveyard();
+					MTG.refreshLibrary();
+				});
+
+				$('#turn').on('click', function() {
+					MTG.turn++;
+					$(this).text('Turn: ' + MTG.turn);
+				});
+
+				$('#toggle').on('click', function() {
+					$('#library-cards').toggle();
+					$('#library-list').toggle();
+				});
+
+				$(document).on('click', '.card', function() {
+					let card = $(this).data('card');
+
+					if ($(this).data('side') === 'front') {
+						$(this).data('side', 'back');
+
+						$(this).css({
+							backgroundImage: 'url(' + MTG.getSmallImage(card, 'back') + ')'
+						});
+
+						$('#preview').css({
+							backgroundImage: 'url(' + MTG.getNormalImage(card, 'back') + ')'
+						});
+					} else {
+						$(this).data('side', 'front');
+
+						$(this).css({
+							backgroundImage: 'url(' + MTG.getSmallImage(card, 'front') + ')'
+						});
+
+						$('#preview').css({
+							backgroundImage: 'url(' + MTG.getNormalImage(card, 'front') + ')'
+						});
+					}
+				});
+
+				$(document).on('dblclick', '.card', function() {
+					let card = $(this).data('card');
+					let isBasicLand = MTG.hasCardType(card, 'BasicLand');
+					let isToken = MTG.hasCardType(card, 'Token');
+
+					switch (MTG.mode) {
+						case 'oracle':
+							MTG.moveToDeck(card.oracle_id, isBasicLand, isToken);
+							MTG.clear();
+							MTG.createCardTree();
+							MTG.setCardCounts();
+
+							break;
+						case 'deck':
+							MTG.removeFromDeck(card.oracle_id, isBasicLand, isToken);
+							MTG.clear();
+							MTG.createCardTree();
+
+							break;
+						case 'play':
+							if ($(this).hasClass('library-card')) {
+								MTG.putIntoHand(card.oracle_id);
+								MTG.refreshLibrary();
+								MTG.refreshHand();
+							}
+
+							break;
+					}
+				});
+
+				$(document).on('mouseenter', '.card', function() {
+					let card = $(this).data('card');
+					let side = $(this).data('side');
+
+					$('#preview').removeClass('commander');
+					$('#preview').removeClass('oathbreaker');
+					$('#preview').css({
+						backgroundImage: 'url(' + MTG.getNormalImage(card, side) + ')'
+					});
+
+					if (!card.commander) {
+						$('#preview').addClass('commander');
+					}
+
+					if (!card.oathbreaker) {
+						$('#preview').addClass('oathbreaker');
+					}
+				});
+
+				$(document).on('mouseleave', '.card', function() {
+					$('#preview').removeClass('commander');
+					$('#preview').removeClass('oathbreaker');
+					$('#preview').css({
+						backgroundImage: 'url("back.jpeg")'
+					});
+				});
+
+				$(document).on('mousedown', '.list-card', function() {
+					let $libraryCard = $('#library-cards div[oracle_id="' + $(this).attr('oracle_id')  + '"]');
+
+					$libraryCard.addClass('highlight');
+				});
+
+				$(document).on('mouseup', '.list-card', function() {
+					let $libraryCard = $('#library-cards div[oracle_id="' + $(this).attr('oracle_id')  + '"]');
+
+					$libraryCard.removeClass('highlight');
+				});
+
+				$(document).on('click', '.exile', function() {
+					console.log(MTG.exileIds);
+				});
+			};
+
+
+
+			MTG.loadDataFile = function(json) {
+				let data = JSON.parse(json);
+
+				this.cardIds = data.cardIds;
+				this.deckIds = data.deckIds;
+				this.tokenIds = data.tokenIds;
+				this.commandZoneIds = data.commandZoneIds;
+				this.forestCount = data.forestCount;
+				this.islandCount = data.islandCount;
+				this.mountainCount = data.mountainCount;
+				this.plainsCount = data.plainsCount;
+				this.swampCount = data.swampCount;
+				this.wastesCount = data.wastesCount;
+
+				this.cardData = [];
+				this.originalIds = JSON.parse(JSON.stringify(data.deckIds));
+
+				this.setDeckCount();
+			};
+
+			MTG.saveDataFile = function() {
+				this.forestCount = parseInt($('#set-forests').val());
+				this.islandCount = parseInt($('#set-islands').val());
+				this.mountainCount = parseInt($('#set-mountains').val());
+				this.plainsCount = parseInt($('#set-plains').val());
+				this.swampCount = parseInt($('#set-swamps').val());
+				this.wastesCount = parseInt($('#set-wastes').val());
+
+				let build = {
+					cardIds: {},
+					deckIds: this.deckIds,
+					tokenIds: this.tokenIds,
+					commandZoneIds: this.commandZoneIds,
+					forestCount: this.forestCount,
+					islandCount: this.islandCount,
+					mountainCount: this.mountainCount,
+					plainsCount: this.plainsCount,
+					swampCount: this.swampCount,
+					wastesCount: this.wastesCount
+				};
+
+				let commandZoneCard = this.getCard(this.commandZoneIds[0]);
+
+				for (let i = 0; i < this.cardData.length; i++) {
+					let cardDatum = this.cardData[i];
+					build.cardIds[cardDatum.oracle_id] = cardDatum.name;
+				}
+
+				let blob = new Blob(
+					[
+						JSON.stringify(build, null, 2)
+					],
+					{
+						type: 'application/json'
+					}
+				);
+
+				if (this.saveFile !== null) {
+					window.URL.revokeObjectURL(this.saveFile);
+				}
+				this.saveFile = window.URL.createObjectURL(blob);
+
+				let $fileLink = $('#file-link');
+				$fileLink.text(commandZoneCard.name + '.json');
+				$fileLink.attr({
+					download: commandZoneCard.name + '.json',
+					href : this.saveFile
+				});
+				$fileLink.show();
+			};
+
+			MTG.loadCompareFile = function(json) {
+				let data = JSON.parse(json);
+
+				this.compareIds = data.deckIds;
+			};
+
+
+
+			MTG.getCardData = function() {
+				$('#data-menu button, #compare-menu button, #build-menu button, #game-menu button').attr('disabled', true);
+
+				let urls = [];
+
+				let landIds = [
+					this.forestId,
+					this.islandId,
+					this.mountainId,
+					this.plainsId,
+					this.swampId,
+					this.wastesId,
+				];
+
+				let cardIds = Object.keys(this.cardIds).filter(cardId => landIds.indexOf(cardId) === -1);
+
+				let ids = landIds.concat(cardIds);
+
+				this.cardData = [];
+				for (let i = 0; i < ids.length; i++) {
+					let cardId = ids[i];
+
+					for (let n = 0; n < masterData.length; n++) {
+						let masterDatum = masterData[n];
+
+						if (masterDatum.oracle_id === cardId) {
+							this.cardData.push(masterDatum);
+						}
+					}
+				}
+
+				$('#data-menu button, #compare-menu button, #build-menu button').attr('disabled', false);
+			};
+
+
+
+			MTG.clear = function() {
+				$('.card').remove();
+				$('.card-group').remove();
+				$('.card-section').remove();
+				$('#library-cards').remove();
+				$('#library-list').remove();
+				$('#hand').remove();
+				$('#graveyard').remove();
+				$('#token-box').remove();
+				$('#command-zone').remove();
+				$('#battlefield').remove();
+				$('.chart').remove();
+			};
+
+			MTG.createCardTree = function() {
+				$('#game-menu button').attr('disabled', true);
+
+				let cardData = [];
+				switch (this.mode) {
+					case 'oracle':
+						cardData = this.getOracleData();
+
+						break;
+					case 'deck':
+						deckData = this.getDeckData();
+						tokenData = this.getTokenData();
+						cardData = cardData.concat(deckData, tokenData);
+
+						console.log(deckData);
+
+						let allNames = [];
+						let cardNames = [];
+						let landNames = [];
+						for (let i = 0; i < deckData.length; i++) {
+							let card = deckData[i];
+
+							console.log(card);
+
+							allNames.push(card.name);
+							if (this.isLand(card)) {
+								cardNames.push(card.name);
+							} else {
+								landNames.push(card.name);
+							}
+						}
+
+						allNames.sort((a, b) => {
+							return a.localeCompare(b, undefined, {sensitivity: 'base'});
+						});
+						cardNames.sort((a, b) => {
+							return a.localeCompare(b, undefined, {sensitivity: 'base'});
+						});
+						landNames.sort((a, b) => {
+							return a.localeCompare(b, undefined, {sensitivity: 'base'});
+						});
+
+						console.log([
+							cardNames,
+							landNames,
+							allNames,
+						]);
+
+						break;
+				}
+
+				let cardTreeData = this.getCardTreeData(cardData);
+
+				let cardTypes = [
+					'Aura',
+					'Enchantment',
+					'EnchantmentCreature',
+					'Equipment',
+					'Artifact',
+					'ArtifactCreature',
+					'Creature',
+					'Planeswalker',
+					'Battle',
+					'Instant',
+					'Sorcery',
+					'Land',
+					'BasicLand',
+					'Token',
+				];
+
+				for (let i = 0; i < cardTypes.length; i++) {
+					let cardType = cardTypes[i];
+
+					if (cardTreeData.hasOwnProperty(cardType)) {
+						let cardTypeData = cardTreeData[cardType];
+
+						let $cardType = $('<div>', {
+							class: 'card-section'
+						});
+
+						for (let cardCmc in cardTypeData) {
+							let cardCmcData = cardTypeData[cardCmc];
+							let $cardCmc = $('<div>', {
+								class: 'card-group'
+							});
+
+							for (let i = 0; i < cardCmcData.length; i++) {
+								let card = cardCmcData[i];
+								let $card = this.createCard(card, 'card-' + card.oracle_id);
+
+								$cardCmc.append($card);
+							}
+
+							$cardType.append($cardCmc);
+						}
+
+						$('#content').append($cardType);
+					}
+				}
+			};
+
+			MTG.createCardCompare = function() {
+				let $deckSection = $('<div>', {
+					class: 'card-section'
+				});
+
+				let $deckGroup = $('<div>', {
+					class: 'card-group'
+				});
+
+				for (let i = 0; i < this.deckIds.length; i++) {
+					let cardId = this.deckIds[i];
+
+					if (this.compareIds.indexOf(cardId) === -1) {
+						let card = this.getCard(cardId);
+						let $card = this.createCard(card, 'card-' + card.oracle_id);
+						
+						$deckGroup.append($card);
+					}
+				}
+
+				$deckSection.append($deckGroup);
+				$('#content').append($deckSection);
+
+				let $compareSection = $('<div>', {
+					class: 'card-section'
+				});
+
+				let $compareGroup = $('<div>', {
+					class: 'card-group'
+				});
+
+				for (let i = 0; i < this.compareIds.length; i++) {
+					let cardId = this.compareIds[i];
+
+					if (this.deckIds.indexOf(cardId) === -1) {
+						let card = this.getCard(cardId);
+						let $card = this.createCard(card, 'card-' + card.oracle_id);
+
+						$compareGroup.append($card);
+					}
+				}
+
+				$compareSection.append($compareGroup);
+				$('#content').append($compareSection);
+			};
+
+			MTG.createCardPlay = function() {
+				this.createLibrary();
+				this.createHand();
+				this.createGraveyard();
+				this.createTokenBox();
+				this.createCommandZone();
+				this.createBattlefield();
+
+				$('#game-menu button').attr('disabled', false);
+			};
+
+			MTG.createCardStats = function() {
+				let $charts = $('<div>', {
+					class: 'charts',
+				});
+				$('#content').append($charts);
+
+				let deckData = this.getDeckData();
+
+				let manaCount = 0;
+				let spellCount = 0;
+
+				let manaCosts = {
+					'0': 0,
+					'1': 0,
+					'2': 0,
+					'3': 0,
+					'4': 0,
+					'5': 0,
+					'6': 0,
+					'7': 0,
+					'8': 0,
+					'9': 0,
+					'10': 0,
+					'11': 0,
+					'12': 0,
+					'13': 0,
+				};
+
+				let cardTypes = {
+					'Aura': 0,
+					'Enchantment': 0,
+					'EnchantmentCreature': 0,
+					'Equipment': 0,
+					'Artifact': 0,
+					'ArtifactCreature': 0,
+					'Creature': 0,
+					'Planeswalker': 0,
+					'Battle': 0,
+					'Instant': 0,
+					'Sorcery': 0,
+					'Land': 0,
+					'BasicLand': 0,
+					'Legendary': 0,
+				};
+
+				let devotions = {
+					'Black': 0,
+					'Blue': 0,
+					'Green': 0,
+					'Grey': 0,
+					'Red': 0,
+					'White': 0,
+				};
+
+				let rarities = {
+					'common': 0,
+					'uncommon': 0,
+					'rare': 0,
+					'mythic': 0,
+				}
+
+				for (let i = 0; i < deckData.length; i++) {
+					let card = deckData[i];
+					let cardType = null;
+					if (card.hasOwnProperty('type_line')) {
+						if (!this.isLand(card) && !this.hasCardType(card, 'Token')) {
+							manaCosts[card.cmc]++;
+							rarities[card.rarity]++;
+
+							manaCount += card.cmc;
+							spellCount++;
+						}
+
+						if (this.isLegendary(card)) {
+							cardTypes['Legendary']++;
+						}
+
+						cardType = this.getCardType(card);
+
+						if (cardType !== null) {
+							cardTypes[cardType]++;
+						}
+					}
+
+					if (card.hasOwnProperty('mana_cost')) {
+						devotions.Black += (card.mana_cost.match(/B/g) || []).length;
+						devotions.Blue += (card.mana_cost.match(/U/g) || []).length;
+						devotions.Green += (card.mana_cost.match(/G/g) || []).length;
+						devotions.Grey += (card.mana_cost.match(/C/g) || []).length;
+						devotions.Grey += parseInt(card.mana_cost.replace(/\D/g, "")) || 0;
+						devotions.Red += (card.mana_cost.match(/R/g) || []).length;
+						devotions.White += (card.mana_cost.match(/W/g) || []).length;
+					}
+				}
+				
+				let $manaCostChart = $('<div class="chart bar-chart"><canvas id="mana-cost-chart" width="1200" height="300"></canvas>');
+				$charts.append($manaCostChart);
+
+				let manaCostLabels = Object.keys(manaCosts);
+				let manaCostData = Object.values(manaCosts);
+
+				new Chart(document.getElementById('mana-cost-chart'), {
+					type: 'bar',
+					data: {
+						labels: manaCostLabels,
+						datasets: [
+							{
+								label: 'Number of cards',
+								data: manaCostData,
+								backgroundColor: 'gray',
+								borderColor: 'black',
+							}
+						]
+					},
+				});
+
+				let $cardTypeChart = $('<div class="chart bar-chart"><canvas id="card-type-chart" width="1200" height="300"></canvas>');
+				$charts.append($cardTypeChart);
+
+				let cardTypeLabels = Object.keys(cardTypes);
+				let cardTypeData = Object.values(cardTypes);
+
+				new Chart(document.getElementById('card-type-chart'), {
+					type: 'bar',
+					data: {
+						labels: cardTypeLabels,
+						datasets: [
+							{
+								label: 'Number of cards',
+								data: cardTypeData,
+								backgroundColor: 'gray',
+								borderColor: 'black',
+							}
+						]
+					},
+				});
+
+				let $devotionChart = $('<div class="chart pie-chart"><canvas id="devotion-chart" width="300" height="300"></canvas>');
+				$charts.append($devotionChart);
+
+				let devotionLabels = [];
+				let devotionData = [];
+				let devotionColors = [];
+				for (let color in devotions) {
+					let colorCount = devotions[color];
+
+					if (colorCount > 0) {
+						devotionLabels.push(color);
+						devotionData.push(colorCount);
+						devotionColors.push(color.toLowerCase());
+					}
+				}
+
+				new Chart(document.getElementById('devotion-chart'), {
+					type: 'pie',
+					borderColor: 'black',
+					data: {
+						labels: devotionLabels,
+						datasets: [
+							{
+								label: 'Devotion',
+								data: devotionData,
+								backgroundColor: devotionColors,
+								borderColor: 'black',
+							}
+						]
+					},
+				});
+
+				let $rarityChart = $('<div class="chart pie-chart"><canvas id="rarity-chart" width="300" height="300"></canvas>');
+				$charts.append($rarityChart);
+
+				let rarityLabels = [
+					'C',
+					'U',
+					'R',
+					'M',
+				];
+				let rarityData = Object.values(rarities);
+				let rarityColors = [
+					'#000000',
+					'#808080',
+					'#FFD700',
+					'#FF7A0E',
+				];
+
+				new Chart(document.getElementById('rarity-chart'), {
+					type: 'pie',
+					borderColor: 'black',
+					data: {
+						labels: rarityLabels,
+						datasets: [
+							{
+								label: 'Rarity',
+								data: rarityData,
+								backgroundColor: rarityColors,
+								borderColor: 'black',
+							}
+						]
+					},
+				});
+
+				console.log(manaCount / spellCount);
+			};
+
+
+
+			MTG.createLibrary = function() {
+				let $libraryCards = $('<div>', {
+					id: 'library-cards'
+				});
+				$('#content').append($libraryCards);
+
+				$libraryCards.droppable({
+					accept: '.hand-card, .graveyard-card, .battlefield-card',
+					drop: function(event, ui) {
+						let $card = ui.draggable;
+						let cardId = $card.data('card').oracle_id;
+
+						MTG.libraryIds.push(cardId);
+
+						if ($card.hasClass('hand-card')) {
+							let handIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.handIds.splice(handIndex, 1);
+
+							MTG.refreshHand();
+						}
+
+						if ($card.hasClass('graveyard-card')) {
+							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.graveyardIds.splice(graveyardIndex, 1);
+
+							MTG.refreshGraveyard();
+						}
+
+						$card.remove();
+						MTG.refreshLibrary();
+					}
+				});
+
+				$libraryCards.sortable({
+					stop: function(event, ui) {
+						MTG.libraryIds = []
+						$libraryCards.children().each(function() {
+							let cardId = $(this).data('card').oracle_id;
+
+							MTG.libraryIds.push(cardId);
+						});
+
+						MTG.refreshLibrary();
+					}
+				});
+
+				let $libraryList = $('<div>', {
+					id: 'library-list'
+				});
+				$('#content').append($libraryList);
+
+				$libraryCards.hide();
+
+				let $ul = $('<ul>');
+				$libraryList.append($ul);
+
+				$libraryList.hide();
+			};
+
+			MTG.createHand = function() {
+				let $hand = $('<div>', {
+					id: 'hand'
+				});
+
+				$('#content').append($hand);
+
+				$hand.droppable({
+					accept: '.library-card, .graveyard-card, .battlefield-card',
+					drop: function(event, ui) {
+						let $card = ui.draggable;
+						let cardId = $card.data('card').oracle_id;
+
+						MTG.handIds.push(cardId);
+
+						if ($card.hasClass('library-card')) {
+							let libraryIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.libraryIds.splice(libraryIndex, 1);
+
+							MTG.refreshLibrary();
+						}
+
+						if ($card.hasClass('graveyard-card')) {
+							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.graveyardIds.splice(graveyardIndex, 1);
+
+							MTG.refreshGraveyard();
+						}
+
+						$card.remove();
+						MTG.refreshHand();
+					}
+				});
+
+				$hand.sortable({
+					stop: function(event, ui) {
+						MTG.handIds = []
+						$hand.children().each(function() {
+							let cardId = $(this).data('card').oracle_id;
+
+							MTG.handIds.push(cardId);
+						});
+
+						MTG.refreshHand();
+					}
+				});
+			};
+
+			MTG.createGraveyard = function() {
+				let $graveyard = $('<div>', {
+					id: 'graveyard'
+				});
+
+				$('#content').append($graveyard);
+
+				$graveyard.droppable({
+					accept: '.library-card, .hand-card, .battlefield-card',
+					drop: function(event, ui) {
+						let $card = ui.draggable;
+						let cardId = $card.data('card').oracle_id;
+
+						MTG.graveyardIds.push(cardId);
+
+						if ($card.hasClass('library-card')) {
+							let libraryIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.libraryIds.splice(libraryIndex, 1);
+
+							MTG.refreshLibrary();
+						}
+
+						if ($card.hasClass('hand-card')) {
+							let handIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.handIds.splice(handIndex, 1);
+
+							MTG.refreshHand();
+						}
+
+						$card.remove();
+						MTG.refreshGraveyard();
+					}
+				});
+
+				$graveyard.sortable({
+					stop: function(event, ui) {
+						MTG.graveyardIds = []
+						$graveyard.children().each(function() {
+							let cardId = $(this).data('card').oracle_id;
+
+							MTG.graveyardIds.push(cardId);
+						});
+
+						MTG.refreshGraveyard();
+					}
+				});
+			};
+
+			MTG.createTokenBox = function() {
+				let $tokenBox = $('<div>', {
+					id: 'token-box'
+				});
+
+				$('#content').append($tokenBox);
+			};
+
+			MTG.createCommandZone = function() {
+				let $commandZone = $('<div>', {
+					id: 'command-zone'
+				});
+
+				$('#content').append($commandZone);
+			};
+
+			MTG.createBattlefield = function() {
+				let $battlefield = $('<div>', {
+					id: 'battlefield',
+					width: this.columnCount * 75
+				});
+
+				$('#content').append($battlefield);
+
+				for (let i = 0; i < this.rowCount; i++) {
+					for (let j = 0; j < this.columnCount; j++) {
+						let slotClass = 'slot';
+
+						if (i === this.rowCount - 1 && j === this.columnCount - 2) {
+							slotClass = 'exile';
+						}
+
+						if (i === this.rowCount - 1 && j === this.columnCount - 1) {
+							slotClass = 'trash trash-out';
+						}
+
+						let $slot = $('<div>', {
+							id: i + '_' + j,
+							class: slotClass
+						});
+
+						$battlefield.append($slot);
+					}
+				}
+
+				$('.slot').droppable({
+					accept: '.card',
+					drop: function(event, ui) {
+						let $card = ui.draggable;
+						let cardId = $card.data('card').oracle_id;
+
+						if ($card.hasClass('library-card')) {
+							let libraryIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.libraryIds.splice(libraryIndex, 1);
+
+							MTG.refreshLibrary();
+						}
+
+						if ($card.hasClass('hand-card')) {
+							let handIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.handIds.splice(handIndex, 1);
+
+							MTG.refreshHand();
+						}
+
+						if ($card.hasClass('graveyard-card')) {
+							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.graveyardIds.splice(graveyardIndex, 1);
+
+							MTG.refreshGraveyard();
+						}
+
+						let battlefieldCardClasses = [
+							'battlefield-card'
+						];
+
+						if ($card.hasClass('token-card') || $card.hasClass('battlefield-token-card')) {
+							MTG.refreshTokenBox();
+							battlefieldCardClasses.push('battlefield-token-card');
+						}
+
+						if ($card.hasClass('command-zone-card') || $card.hasClass('battlefield-command-zone-card')) {
+							MTG.refreshCommandZone();
+							battlefieldCardClasses.push('battlefield-command-zone-card');
+						}
+
+						$card.remove();
+
+						let card = MTG.getCard(cardId);
+						$card = MTG.createCard(card, 'battlefield-' + cardId);
+						$card.addClass(battlefieldCardClasses.join(' '));
+						$card.css({
+							top: 0,
+							left: 0
+						});
+						$card.draggable({
+							revert: 'invalid'
+						});
+
+						$(event.target).append($card);
+					}
+				});
+
+				$('.trash').droppable({
+					accept: '.battlefield-token-card, .battlefield-command-zone-card',
+					over: function(event, ui) {
+						$(this).removeClass('trash-out');
+						$(this).addClass('trash-over');
+					},
+					out: function(event, ui) {
+						$(this).removeClass('trash-over');
+						$(this).addClass('trash-out');
+					},
+					drop: function (event, ui) {
+						let $card = ui.draggable;
+
+						if ($card.hasClass('library-card')) {
+							let libraryIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.libraryIds.splice(libraryIndex, 1);
+
+							MTG.refreshLibrary();
+						}
+
+						if ($card.hasClass('hand-card')) {
+							let handIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.handIds.splice(handIndex, 1);
+
+							MTG.refreshHand();
+						}
+
+						if ($card.hasClass('graveyard-card')) {
+							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.graveyardIds.splice(graveyardIndex, 1);
+
+							MTG.refreshGraveyard();
+						}
+
+						$card.remove();
+
+						MTG.refreshTokenBox();
+						MTG.refreshCommandZone();
+
+						$(this).removeClass('trash-over');
+						$(this).addClass('trash-out');
+					}
+				});
+
+				$('.exile').droppable({
+					accept: '.card',
+					drop: function (event, ui) {
+						let $card = ui.draggable;
+						let cardId = $card.data('card').oracle_id;
+
+						if ($card.hasClass('library-card')) {
+							let libraryIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.libraryIds.splice(libraryIndex, 1);
+							MTG.exileIds.push(cardId);
+
+							MTG.refreshLibrary();
+						}
+
+						if ($card.hasClass('hand-card')) {
+							let handIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.handIds.splice(handIndex, 1);
+							MTG.exileIds.push(cardId);
+
+							MTG.refreshHand();
+						}
+
+						if ($card.hasClass('graveyard-card')) {
+							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
+							MTG.graveyardIds.splice(graveyardIndex, 1);
+							MTG.exileIds.push(cardId);
+
+							MTG.refreshGraveyard();
+						}
+
+						$card.remove();
+
+						MTG.refreshTokenBox();
+						MTG.refreshCommandZone();
+					}
+				});
+
+			};
+
+
+
+			MTG.getOracleData = function() {
+				let oracle = [];
+				for (let i = 0; i < this.cardData.length; i++) {
+					let card = this.cardData[i];
+					oracle.push(card);
+				}
+
+				return oracle;
+			};
+
+			MTG.getDeckData = function() {
+				let deck = [];
+
+				for (let i = 0; i < this.commandZoneIds.length; i++) {
+					let card = this.getCard(this.commandZoneIds[i]);
+
+					deck.push(card);
+				}
+
+				for (let i = 0; i < this.deckIds.length; i++) {
+					let card = this.getCard(this.deckIds[i]);
+
+					deck.push(card);
+				}
+
+				let forest = this.getCard(this.forestId);
+				for (let i = 0; i < this.forestCount; i++) {
+					deck.push(forest);
+				}
+
+				let island = this.getCard(this.islandId);
+				for (let i = 0; i < this.islandCount; i++) {
+					deck.push(island);
+				}
+
+				let mountain = this.getCard(this.mountainId);
+				for (let i = 0; i < this.mountainCount; i++) {
+					deck.push(mountain);
+				}
+
+				let plains = this.getCard(this.plainsId);
+				for (let i = 0; i < this.plainsCount; i++) {
+					deck.push(plains);
+				}
+
+				let swamp = this.getCard(this.swampId);
+				for (let i = 0; i < this.swampCount; i++) {
+					deck.push(swamp);
+				}
+
+				let wastes = this.getCard(this.wastesId);
+				for (let i = 0; i < this.wastesCount; i++) {
+					deck.push(wastes);
+				}
+
+				return deck;
+			};
+
+			MTG.getTokenData = function() {
+				let tokens = [];
+
+				for (let i = 0; i < this.cardData.length; i++) {
+					let card = this.cardData[i];
+
+					if (this.tokenIds.indexOf(card.oracle_id) > -1) {
+						tokens.push(card);
+					}
+				}
+
+				return tokens;
+			};
+
+			MTG.getCommandZoneOptions = function() {
+				let commandZoneOptions = $.map(MTG.cardData, function(card) {
+					return {
+						id: card.oracle_id,
+						text: card.name,
+					};
+				});
+
+				commandZoneOptions.sort(function(a, b) {
+					if (a.text > b.text) {
+						return 1;
+					}
+
+					if (a.text < b.text) {
+						return -1;
+					}
+
+					return 0;
+				});
+
+				return commandZoneOptions;
+			};
+
+			MTG.getCardTreeData = function(cardData) {
+				let cardTreeData = {};
+				for (let i = 0; i < cardData.length; i++) {
+					let card = cardData[i];
+
+					let cardType = null;
+					let cardCmc = null;
+
+					if (card.hasOwnProperty('cmc')) {
+						cardCmc = String(parseInt(card.cmc));
+					}
+
+					if (card.hasOwnProperty('type_line')) {
+						cardType = this.getCardType(card);
+					}
+
+					if (cardType !== null && cardCmc !== null) {
+						if (!cardTreeData.hasOwnProperty(cardType)) {
+							cardTreeData[cardType] = {};
+						}
+
+						if (!cardTreeData[cardType].hasOwnProperty(cardCmc)) {
+							cardTreeData[cardType][cardCmc] = [];
+						}
+
+						cardTreeData[cardType][cardCmc].push(card);
+					}
+				}
+
+				for (let cardType in cardTreeData) {
+					let cardTypeData = cardTreeData[cardType];
+
+					for (let cardCmc in cardTypeData) {
+						let cardCmcData = cardTypeData[cardCmc];
+
+						cardCmcData.sort(function(a, b) {
+							if (a.name.toLowerCase() < b.name.toLowerCase()) {
+								return -1;
+							}
+							if (a.name.toLowerCase() > b.name.toLowerCase()) {
+								return 1;
+							}
+							
+							return 0;
+						});
+					}
+				}
+
+				return cardTreeData;
+			};
+
+			MTG.filter = function(card) {
+
+			};
+
+
+
+			MTG.createCard = function(card, id) {
+				let $card = $('<div>', {
+					id: id,
+					class: 'card',
+					css: {
+						backgroundImage: 'url(' + this.getSmallImage(card, 'front') + ')'
+					},
+					data: {
+						card: card,
+						side: 'front'
+					},
+					attr: {
+						oracle_id: card.oracle_id
+					}
+				});
+
+				return $card; 
+			};
+
+
+
+			MTG.reset = function() {
+				this.libraryIds = [];
+				this.handIds = [];
+				this.graveyardIds = [];
+				this.turn = 1;
+
+				$('#library-cards').empty();
+				$('#library-list ul').empty();
+				$('#hand').empty();
+				$('#graveyard').empty();
+				$('#token-box').empty();
+				$('#command-zone').empty();
+				$('#battlefield .slot').empty();
+				$('#turn').text('Turn: ' + this.turn);
+
+				let deckData = this.getDeckData();
+
+				for (let i = 0; i < deckData.length; i++) {
+					let card = deckData[i];
+					let cardId = card.oracle_id;
+
+					if (!this.commandZoneIds.includes(cardId)) {
+						this.libraryIds.push(cardId);
+					}
+				}
+			};
+
+			MTG.shuffle = function() {
+				for (let i = this.libraryIds.length - 1; i > 0; i--) {
+					let j = Math.floor(Math.random() * (i + 1));
+					[this.libraryIds[i], this.libraryIds[j]] = [this.libraryIds[j], this.libraryIds[i]];
+				}
+			};
+
+			MTG.draw1 = function() {
+				this.handIds = this.handIds.concat(this.libraryIds.splice(0, 1));
+			};
+
+			MTG.draw7 = function() {
+				this.handIds = this.handIds.concat(this.libraryIds.splice(0, 7));
+			};
+
+			MTG.discard = function() {
+				this.graveyardIds = this.graveyardIds.concat(this.handIds);
+				this.handIds = [];
+			};
+
+			MTG.graveyardToLibrary = function() {
+				this.libraryIds = this.libraryIds.concat(this.graveyardIds);
+				this.graveyardIds = [];
+			};
+
+			MTG.putIntoHand = function(cardId) {
+				this.handIds.push(cardId);
+				this.libraryIds.splice(this.libraryIds.indexOf(cardId), 1);
+			};
+
+			MTG.refreshLibrary = function() {
+				$('.library-card').remove();
+				$('#library-list ul').empty();
+
+				let libraryCards = {};
+				let cardNames = [];
+				for (let i = 0; i < this.libraryIds.length; i++) {
+					let cardId = this.libraryIds[i];
+					let card = this.getCard(cardId);
+					let $card = this.createCard(card, 'library-' + i);
+
+					$card.addClass('library-card');
+					$card.draggable({
+						revert: 'invalid',
+						connectToSortable: '#library-cards'
+					});
+
+					$('#library-cards').append($card);
+
+					libraryCards[card.name.toLowerCase()] = card;
+					cardNames.push(card.name.toLowerCase());
+				}
+
+				cardNames.sort();
+
+				for (let i = 0; i < cardNames.length; i++) {
+					let card = libraryCards[cardNames[i]];
+
+					let $li = $('<li>', {
+						class: 'list-card',
+						text: card.name.split(' // ').shift(),
+						attr: {
+							oracle_id: card.oracle_id
+						}
+					});
+
+					$('#library-list ul').append($li);
+				}
+
+				$('#library-list').css('height', Math.ceil(this.libraryIds.length / (this.columnCount - this.libraryListColumnCount)) * 105);
+			};
+
+			MTG.refreshHand = function() {
+				$('.hand-card').remove();
+
+				for (let i = 0; i < this.handIds.length; i++) {
+					let cardId = this.handIds[i];
+					let card = this.getCard(cardId);
+					let $card = this.createCard(card, 'hand-' + i);
+
+					$card.addClass('hand-card');
+					$card.draggable({
+						revert: 'invalid',
+						connectToSortable: '#hand'
+					});
+
+					$('#hand').append($card);
+				}
+			};
+
+			MTG.refreshGraveyard = function() {
+				$('.graveyard-card').remove();
+
+				for (let i = 0; i < this.graveyardIds.length; i++) {
+					let cardId = this.graveyardIds[i];
+					let card = this.getCard(cardId);
+					let $card = this.createCard(card, 'graveyard-' + i);
+
+					$card.addClass('graveyard-card');
+					$card.draggable({
+						revert: 'invalid',
+						connectToSortable: '#graveyard'
+					});
+
+					$('#graveyard').append($card);
+				}
+			};
+
+			MTG.refreshTokenBox = function() {
+				$('.token-card').remove();
+
+				let tokenData = this.getTokenData();
+				for (let i = 0; i < tokenData.length; i++) {
+					let token = tokenData[i];
+					let $token = this.createCard(token, 'token-' + token.oracle_id);
+					$token.addClass('token-card');
+					$token.draggable({
+						revert: 'invalid'
+					});
+
+					$('#token-box').append($token);
+				}
+			};
+
+			MTG.refreshCommandZone = function() {
+				$('.command-zone-card').remove();
+
+				for (let commandZoneId of this.commandZoneIds) {
+					let $commandZoneCard = this.createCard(this.getCard(commandZoneId), 'command-zone-card-' + commandZoneId);
+					$commandZoneCard.addClass('command-zone-card');
+					$commandZoneCard.draggable({
+						revert: 'invalid'
+					});
+
+					$('#command-zone').append($commandZoneCard);
+				}
+			};
+
+
+
+			MTG.setDeckCount = function() {
+				let deckCounts = [
+					this.deckIds.length,
+					this.forestCount,
+					this.islandCount,
+					this.mountainCount,
+					this.plainsCount,
+					this.swampCount,
+					this.wastesCount,
+				];
+				let deckCount = this.commandZoneIds.length + deckCounts.reduce(function(acc, val) { return acc + val; }, 0);
+
+				$('#deck').text('Deck ' + deckCount);
+			};
+
+			MTG.setCardCounts = function() {
+				let cardCounts = {};
+
+				for (let i = 0; i < this.deckIds.length; i++) {
+					let deckId = this.deckIds[i];
+
+					cardCounts[deckId] = cardCounts.hasOwnProperty(deckId) ? cardCounts[deckId] + 1 : 1;
+				}
+
+				if (this.forestCount > 0) {
+					cardCounts[this.forestId] = this.forestCount;
+				}
+
+				if (this.islandCount > 0) {
+					cardCounts[this.islandId] = this.islandCount;
+				}
+
+				if (this.mountainCount > 0) {
+					cardCounts[this.mountainId] = this.mountainCount;
+				}
+
+				if (this.plainsCount > 0) {
+					cardCounts[this.plainsId] = this.plainsCount;
+				}
+
+				if (this.swampCount > 0) {
+					cardCounts[this.swampId] = this.swampCount;
+				}
+
+				if (this.wastesCount > 0) {
+					cardCounts[this.wastesId] = this.wastesCount;
+				}
+
+				$('.card').empty();
+				for (let deckId in cardCounts) {
+					let cardCount = cardCounts[deckId];
+
+					$('#card-' + deckId).append($('<p>', {
+						text: cardCount
+					}));
+				}
+			};
+
+			MTG.moveToDeck = function(id, isBasicLand, isToken) {
+				if (!isBasicLand && !isToken) {
+					this.deckIds.push(id);
+				}
+
+				if (isBasicLand) {
+					switch (id) {
+						case this.forestId: this.forestCount++; break;
+						case this.islandId: this.islandCount++; break;
+						case this.mountainId: this.mountainCount++; break;
+						case this.plainsId: this.plainsCount++; break;
+						case this.swampId: this.swampCount++; break;
+						case this.wastesId: this.wastesCount++; break;
+					}
+				}
+
+				if (isToken) {
+					if (this.tokenIds.indexOf(id) === -1) {
+						this.tokenIds.push(id);
+					}
+				}
+
+				this.setDeckCount();
+
+				$('#preview').css({
+					backgroundImage: 'url("back.jpeg")'
+				});
+			};
+
+			MTG.removeFromDeck = function(id, isBasicLand, isToken) {
+				if (!isBasicLand && !isToken) {
+					if (this.deckIds.indexOf(id) > -1) {
+						this.deckIds.splice(this.deckIds.indexOf(id), 1);
+					}
+				}
+
+				if (isBasicLand) {
+					switch (id) {
+						case this.forestId: this.forestCount--; break;
+						case this.islandId: this.islandCount--; break;
+						case this.mountainId: this.mountainCount--; break;
+						case this.plainsId: this.plainsCount--; break;
+						case this.swampId: this.swampCount--; break;
+						case this.wastesId: this.wastesCount--; break;
+					}
+				}
+
+				if (isToken) {
+					if (this.tokenIds.indexOf(id) > -1) {
+						this.tokenIds.splice(this.tokenIds.indexOf(id), 1);
+					}
+				}
+
+				this.setDeckCount();
+
+				$('#preview').css({
+					backgroundImage: 'url("back.jpeg")'
+				});
+			};
+
+
+
+			MTG.getCard = function(cardId) {
+				for (let i = 0; i < this.cardData.length; i++) {
+					let card = this.cardData[i];
+
+					if (card.oracle_id === cardId) {
+						return JSON.parse(JSON.stringify(card));
+					}
+				}
+			};
+
+			MTG.getCardType = function(card) {
+				let cardType = null;
+
+				if (card.hasOwnProperty('type_line')) {
+					let cardTypeLine = card.type_line.split('//').shift();
+
+					if (cardTypeLine.indexOf('Land') > -1) {
+						cardType = 'Land';
+					}
+
+					if (cardTypeLine.indexOf('Basic Land') > -1) {
+						cardType = 'BasicLand';
+					}
+
+					if (cardTypeLine.indexOf('Instant') > -1) {
+						cardType = 'Instant';
+					}
+
+					if (cardTypeLine.indexOf('Sorcery') > -1) {
+						cardType = 'Sorcery';
+					}
+
+					if (cardTypeLine.indexOf('Creature') > -1) {
+						cardType = 'Creature';
+					}
+
+					if (cardTypeLine.indexOf('Battle') > -1) {
+						cardType = 'Battle';
+					}
+
+					if (cardTypeLine.indexOf('Planeswalker') > -1) {
+						cardType = 'Planeswalker';
+					}
+
+					if (cardTypeLine.indexOf('Artifact') > -1) {
+						cardType = 'Artifact';
+					}
+
+					if (cardTypeLine.indexOf('Artifact') > -1 && cardTypeLine.indexOf('Equipment') > -1) {
+						cardType = 'Equipment';
+					}
+
+					if (cardTypeLine.indexOf('Artifact') > -1 && cardTypeLine.indexOf('Creature') > -1) {
+						cardType = 'ArtifactCreature';
+					}
+
+					if (cardTypeLine.indexOf('Artifact Land') > -1) {
+						cardType = 'Land';
+					}
+
+					if (cardTypeLine.indexOf('Enchantment') > -1) {
+						cardType = 'Enchantment';
+					}
+
+					if (cardTypeLine.indexOf('Enchantment') > -1 && cardTypeLine.indexOf('Aura') > -1) {
+						cardType = 'Aura';
+					}
+
+					if (cardTypeLine.indexOf('Enchantment') > -1 && cardTypeLine.indexOf('Class') > -1) {
+						cardType = 'Enchantment';
+					}
+
+					if (cardTypeLine.indexOf('Enchantment') > -1 && cardTypeLine.indexOf('Creature') > -1) {
+						cardType = 'EnchantmentCreature';
+					}
+
+					if (cardTypeLine.indexOf('Enchantment') > -1 && cardTypeLine.indexOf('Saga') > -1) {
+						cardType = 'Enchantment';
+					}
+
+					if (cardTypeLine.indexOf('Enchantment Land') > -1) {
+						cardType = 'Land';
+					}
+
+					if (cardTypeLine.indexOf('Token') > -1) {
+						cardType = 'Token';
+					}
+				}
+
+				return cardType;
+			};
+
+			MTG.hasCardType = function(card, cardType) {
+				return this.getCardType(card) === cardType;
+			};
+
+			MTG.isLand = function(card) {
+				return this.getCardType(card) === 'Land' || this.getCardType(card) === 'BasicLand';
+			};
+
+			MTG.isLegendary = function(card) {
+				if (card.hasOwnProperty('type_line')) {
+					let cardTypeLine = card.type_line.split('//').shift();
+
+					return cardTypeLine.indexOf('Legendary') > -1;
+				}
+
+				return false;
+			};
+
+			MTG.getSmallImage = function(card, side) {
+				return card.images[side].small;
+			};
+
+			MTG.getNormalImage = function(card, side) {
+				return card.images[side].normal;
+			};
+
+			$(document).ready(function() {
+				MTG.setupUI();
+				MTG.init();
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>
