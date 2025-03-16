@@ -144,6 +144,15 @@
 			font-size: 75px;
 		}
 
+		.meta {
+			min-height: 105px;
+			outline: 1px solid black;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			margin-left: 15px;
+			float: left;
+		}
+
 		.highlight {
 			outline: 10px lightgreen solid;
 			outline-offset: -10px;
@@ -410,11 +419,11 @@
 				exileIds: [],
 
 				meta: {
-					strategyIds: [],
-					advantageIds: [],
-					interactionIds: [],
-					rampIds: [],
-					landIds: []
+					strategy: [],
+					ramp: [],
+					advantage: [],
+					interaction: [],
+					land: []
 				},
 
 				turn: 1,
@@ -639,6 +648,8 @@
 
 					MTG.clear();
 					MTG.createCardMeta();
+					MTG.refreshDeckGroup();
+					MTG.refreshMetaGroups();
 				});
 
 				$('#stats').on('click', function() {
@@ -924,7 +935,7 @@
 
 				let urls = [];
 
-				let landIds = [
+				let land = [
 					this.forestId,
 					this.islandId,
 					this.mountainId,
@@ -933,9 +944,9 @@
 					this.wastesId,
 				];
 
-				let cardIds = Object.keys(this.cardIds).filter(cardId => landIds.indexOf(cardId) === -1);
+				let cardIds = Object.keys(this.cardIds).filter(cardId => land.indexOf(cardId) === -1);
 
-				let ids = landIds.concat(cardIds);
+				let ids = land.concat(cardIds);
 
 				this.cardData = [];
 				for (let i = 0; i < ids.length; i++) {
@@ -1113,62 +1124,11 @@
 			};
 
 			MTG.createCardMeta = function() {
-				$('#game-menu button').attr('disabled', true);
+				this.createDeckGroup();
+				this.createMetaGroups();
 
-				let $basicLandSection = $('<div>', {
-					class: 'card-section'
-				});
-				let $basicLandGroup = $('<div>', {
-					class: 'card-group'
-				});
-				$basicLandSection.append($basicLandGroup);
-
-				let deckData = this.getDeckData();
-				let metaData = {
-					strategy: [],
-					ramp: [],
-					advantage: [],
-					interaction: [],
-					land: [],
-					deck: []
-				};
-
-				for (let i = 0; i < deckData.length; i++) {
-					let card = deckData[i];
-					let $card = this.createCard(card);
-
-					if (this.getCardType(card) === 'BasicLand') {
-						$basicLandGroup.append($card);
-
-						continue;
-					}
-
-					metaData[this.getMetaType(card)].push(card);
-				}
-
-				for (let metaType in metaData) {
-					let metaTypeCards = metaData[metaType];
-
-					let $metaSection = $('<div>', {
-						class: 'card-section'
-					});
-					let $metaGroup = $('<div>', {
-						id: metaType + '-group',
-						class: 'card-group'
-					});
-					$metaSection.append($metaGroup);
-
-					for (let i = 0; i < metaTypeCards.length; i++) {
-						let card = metaTypeCards[i];
-						let $card = this.createCard(card);
-
-						$metaGroup.append($card);
-					}
-
-					$('#content').append($metaSection);
-				}
-					
-				$('#content').append($basicLandSection);
+				this.refreshDeckGroup();
+				this.refreshMetaGroups();
 			};
 
 			MTG.createCardPlay = function() {
@@ -1389,6 +1349,81 @@
 
 
 
+			MTG.createDeckGroup = function() {
+				let $deckSection = $('<div>', {
+					class: 'card-section'
+				});
+				let $deckGroup = $('<div>', {
+					id: 'deck-group',
+					class: 'card-group'
+				});
+				$deckSection.append($deckGroup);
+				$('#content').append($deckSection);
+
+				$deckGroup.droppable({
+					accept: '.card',
+					drop: function(event, ui) {
+						let $card = ui.draggable;
+						let cardId = $card.data('card').oracle_id;
+
+						for (let groupMetaType in MTG.meta) {
+							if (MTG.meta[metaType].indexOf(cardId) > -1) {
+								MTG.meta[metaType].splice(MTG.meta[metaType].indexOf(cardId), 1);
+							}
+						}
+
+						MTG.refreshDeckGroup();
+						MTG.refreshMetaGroups();
+					}
+				});
+			};
+
+			MTG.createMetaGroups = function() {
+				for (let metaType in MTG.meta) {
+					let $metaSection = $('<div>', {
+						class: 'card-section'
+					});
+					let $metaGroup = $('<div>', {
+						id: metaType + '-group',
+						class: 'card-group'
+					});
+					$metaSection.append($metaGroup);
+					$('#content').append($metaSection);
+
+					$metaGroup.droppable({
+						accept: '.card',
+						drop: function(event, ui) {
+							let $card = ui.draggable;
+							let cardId = $card.data('card').oracle_id;
+
+							for (let groupMetaType in MTG.meta) {
+								if (MTG.meta[groupMetaType].indexOf(cardId) === -1) {
+									MTG.meta[groupMetaType].splice(MTG.meta[groupMetaType].indexOf(cardId), 1);
+								}
+							}
+
+							MTG.meta[metaType].push(cardId);
+
+							MTG.refreshDeckGroup();
+							MTG.refreshMetaGroups();
+						}
+					});
+
+					$metaGroup.sortable({
+						stop: function(event, ui) {
+							MTG.meta[metaType] = []
+							$metaGroup.children().each(function() {
+								let cardId = $(this).data('card').oracle_id;
+
+								MTG.meta[metaType].push(cardId);
+							});
+						}
+					});
+				}
+			};
+
+
+
 			MTG.createLibrary = function() {
 				let $libraryCards = $('<div>', {
 					id: 'library-cards'
@@ -1452,7 +1487,6 @@
 				let $hand = $('<div>', {
 					id: 'hand'
 				});
-
 				$('#content').append($hand);
 
 				$hand.droppable({
@@ -1789,6 +1823,26 @@
 				return deck;
 			};
 
+			MTG.getMetaData = function() {
+				let deckData = this.getDeckData();
+				let metaData = {
+					strategy: [],
+					ramp: [],
+					advantage: [],
+					interaction: [],
+					land: [],
+					deck: []
+				};
+
+				for (const card of deckData) {
+					if (this.getCardType(card) !== 'BasicLand') {
+						metaData[this.getMetaType(card)].push(card.oracle_id);
+					}
+				}
+
+				return metaData;
+			};
+
 			MTG.getTokenData = function() {
 				let tokens = [];
 
@@ -1899,6 +1953,44 @@
 				});
 
 				return $card; 
+			};
+
+
+
+			MTG.refreshDeckGroup = function() {
+				let metaData = this.getMetaData();
+
+				$('#deck-group').empty();
+				for (let cardId of metaData.deck) {
+					let card = MTG.getCard(cardId);
+					let $card = this.createCard(card, card.oracle_id);
+
+					$card.draggable({
+						revert: 'invalid',
+						connectToSortable: '#deck-group'
+					});
+
+					$('#deck-group').append($card);
+				}
+			};
+
+			MTG.refreshMetaGroups = function() {
+				for (let metaType in MTG.meta) {
+					let $metaGroup = $('#' + metaType + '-group');
+					$metaGroup.empty();
+
+					for (const cardId of MTG.meta[metaType]) {
+						let card = MTG.getCard(cardId);
+						let $card = MTG.createCard(card, cardId);
+
+						$card.draggable({
+							revert: 'invalid',
+							connectToSortable: '#' + metaType + '-group'
+						});
+
+						$metaGroup.append($card);
+					}
+				}
 			};
 
 
@@ -2291,19 +2383,19 @@
 					return 'land';
 				}
 
-				if (this.meta.strategyIds.indexOf(card.oracle_id) > -1) {
+				if (this.meta.strategy.indexOf(card.oracle_id) > -1) {
 					return 'strategy';
 				}
 
-				if (this.meta.rampIds.indexOf(card.oracle_id) > -1) {
+				if (this.meta.ramp.indexOf(card.oracle_id) > -1) {
 					return 'ramp';
 				}
 
-				if (this.meta.advantageIds.indexOf(card.oracle_id) > -1) {
+				if (this.meta.advantage.indexOf(card.oracle_id) > -1) {
 					return 'advantage';
 				}
 
-				if (this.meta.interactionIds.indexOf(card.oracle_id) > -1) {
+				if (this.meta.interaction.indexOf(card.oracle_id) > -1) {
 					return 'interaction';
 				}
 
@@ -2325,7 +2417,6 @@
 			};
 
 			MTG.getSmallImage = function(card, side) {
-				console.log(card);
 				return card.images[side].small;
 			};
 
