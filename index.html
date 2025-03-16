@@ -79,7 +79,7 @@
 		}
 
 		#build-menu input {
-			width: 150px;
+			width: 75px;
 		}
 
 		#game-menu input {
@@ -355,6 +355,7 @@
 		<input id="oracle_search" type="text" />
 		<button id="oracle">Oracle</button>
 		<button id="deck">Deck</button>
+		<button id="meta">Meta</button>
 		<button id="play">Play</button>
 		<button id="stats">Stats</button>
 		<button id="import">Import</button>
@@ -407,6 +408,15 @@
 				handIds: [],
 				graveyardIds: [],
 				exileIds: [],
+
+				meta: {
+					strategyIds: [],
+					advantageIds: [],
+					interactionIds: [],
+					rampIds: [],
+					landIds: []
+				},
+
 				turn: 1,
 				mode: null,
 				saveFile: null,
@@ -622,6 +632,13 @@
 
 					MTG.clear();
 					MTG.createCardTree();
+				});
+
+				$('#meta').on('click', function() {
+					MTG.mode = 'meta';
+
+					MTG.clear();
+					MTG.createCardMeta();
 				});
 
 				$('#stats').on('click', function() {
@@ -966,15 +983,11 @@
 						tokenData = this.getTokenData();
 						cardData = cardData.concat(deckData, tokenData);
 
-						console.log(deckData);
-
 						let allNames = [];
 						let cardNames = [];
 						let landNames = [];
 						for (let i = 0; i < deckData.length; i++) {
 							let card = deckData[i];
-
-							console.log(card);
 
 							allNames.push(card.name);
 							if (this.isLand(card)) {
@@ -1097,6 +1110,65 @@
 
 				$compareSection.append($compareGroup);
 				$('#content').append($compareSection);
+			};
+
+			MTG.createCardMeta = function() {
+				$('#game-menu button').attr('disabled', true);
+
+				let $basicLandSection = $('<div>', {
+					class: 'card-section'
+				});
+				let $basicLandGroup = $('<div>', {
+					class: 'card-group'
+				});
+				$basicLandSection.append($basicLandGroup);
+
+				let deckData = this.getDeckData();
+				let metaData = {
+					strategy: [],
+					ramp: [],
+					advantage: [],
+					interaction: [],
+					land: [],
+					deck: []
+				};
+
+				for (let i = 0; i < deckData.length; i++) {
+					let card = deckData[i];
+					let $card = this.createCard(card);
+
+					if (this.getCardType(card) === 'BasicLand') {
+						$basicLandGroup.append($card);
+
+						continue;
+					}
+
+					metaData[this.getMetaType(card)].push(card);
+				}
+
+				for (let metaType in metaData) {
+					let metaTypeCards = metaData[metaType];
+
+					let $metaSection = $('<div>', {
+						class: 'card-section'
+					});
+					let $metaGroup = $('<div>', {
+						id: metaType + '-group',
+						class: 'card-group'
+					});
+					$metaSection.append($metaGroup);
+
+					for (let i = 0; i < metaTypeCards.length; i++) {
+						let card = metaTypeCards[i];
+						let $card = this.createCard(card);
+
+						$metaGroup.append($card);
+					}
+
+					$('#content').append($metaSection);
+				}
+					
+				$('#content').append($basicLandSection);
 			};
 
 			MTG.createCardPlay = function() {
@@ -1655,7 +1727,6 @@
 						MTG.refreshCommandZone();
 					}
 				});
-
 			};
 
 
@@ -1807,7 +1878,6 @@
 			};
 
 			MTG.filter = function(card) {
-
 			};
 
 
@@ -2216,6 +2286,30 @@
 				return this.getCardType(card) === cardType;
 			};
 
+			MTG.getMetaType = function(card) {
+				if (this.getCardType(card) === 'Land') {
+					return 'land';
+				}
+
+				if (this.meta.strategyIds.indexOf(card.oracle_id) > -1) {
+					return 'strategy';
+				}
+
+				if (this.meta.rampIds.indexOf(card.oracle_id) > -1) {
+					return 'ramp';
+				}
+
+				if (this.meta.advantageIds.indexOf(card.oracle_id) > -1) {
+					return 'advantage';
+				}
+
+				if (this.meta.interactionIds.indexOf(card.oracle_id) > -1) {
+					return 'interaction';
+				}
+
+				return 'deck';
+			};
+
 			MTG.isLand = function(card) {
 				return this.getCardType(card) === 'Land' || this.getCardType(card) === 'BasicLand';
 			};
@@ -2231,6 +2325,7 @@
 			};
 
 			MTG.getSmallImage = function(card, side) {
+				console.log(card);
 				return card.images[side].small;
 			};
 

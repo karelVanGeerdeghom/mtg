@@ -467,14 +467,14 @@
     "d5ea905b-4bb6-48d0-9082-c472703db550",
     "7ca3aa03-e62d-464a-9111-e754abe17f76",
     "956381ba-6d37-4a8a-846c-bad79222dbee",
-    "00fdcc19-88ed-46c3-91f0-095806228105",
     "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
     "53236dd7-845a-444c-96d5-f41ed7325d8f",
     "eb9c9a34-88a8-4afe-a053-806f6b29834f",
     "23d3e5fe-3f82-44cf-91a1-6646a12a0255",
     "ab31b652-ddf2-480f-a955-e8b5c87728f9",
     "90f54959-2c9b-4b8a-84c9-d6893eb43553",
-    "7ffae8f8-3006-4969-a339-6d30678f87ea"
+    "7ffae8f8-3006-4969-a339-6d30678f87ea",
+    "f525cf10-e24c-4c46-9a13-6f8579d09d50"
   ],
   "tokenIds": [
     "02d1dc2f-625e-4be3-9daf-e48c44bc9bf7"
@@ -483,9 +483,9 @@
     "8a5e3c8e-8e22-49b9-8ee5-4a36361f0da6"
   ],
   "forestCount": 0,
-  "islandCount": 3,
+  "islandCount": 4,
   "mountainCount": 2,
   "plainsCount": 0,
-  "swampCount": 2,
+  "swampCount": 1,
   "wastesCount": 0
 }
