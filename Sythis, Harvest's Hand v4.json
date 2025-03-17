@@ -376,5 +376,12 @@
   "mountainCount": 0,
   "plainsCount": 9,
   "swampCount": 0,
-  "wastesCount": 0
+  "wastesCount": 0,
+  "meta": {
+    "strategy": [],
+    "ramp": [],
+    "advantage": [],
+    "interaction": [],
+    "land": []
+  }
 }
