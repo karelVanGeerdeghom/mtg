@@ -182,6 +182,7 @@
 			outline: 1px solid black;
 			margin: 15px;
 			float: left;
+			clear: both;
 		}
 
 		#graveyard  {
@@ -191,6 +192,7 @@
 			margin-bottom: 15px;
 			margin-left: 15px;
 			float: left;
+			clear: left;
 		}
 
 		#token-box {
@@ -574,7 +576,7 @@
 				});
 
 				$('#oracle_search').autocomplete({
-					minLength: 4,
+					minLength: 3,
 					source: masterIndex,
 					position: {
 						my: 'right top',
