@@ -1854,14 +1854,24 @@
 			};
 
 			MTG.getTokenData = function() {
-				let tokens = [];
+				let tokenData = {};
+				let tokenNames = [];
 
 				for (let i = 0; i < this.cardData.length; i++) {
 					let card = this.cardData[i];
 
 					if (this.tokenIds.indexOf(card.oracle_id) > -1) {
-						tokens.push(card);
+						let tokenName = card.name.toLowerCase() + '-' + card.oracle_id;
+
+						tokenNames.push(tokenName);
+						tokenData[tokenName] = card;
 					}
+				}
+				tokenNames.sort();
+
+				let tokens = [];
+				for (let i = 0; i < tokenNames.length; i++) {
+					tokens.push(tokenData[tokenNames[i]]);
 				}
 
 				return tokens;
@@ -1968,9 +1978,10 @@
 
 
 			MTG.refreshDeckMeta = function() {
-				let metaData = this.getMetaData();
-
+				$('#deck-meta').parent('.card-section').hide();
 				$('.deck-card').remove();
+
+				let metaData = this.getMetaData();
 				for (let cardId of this.deckIds) {
 					if (!this.hasMetaType(cardId)) {
 						let card = this.getCard(cardId);
@@ -1982,6 +1993,7 @@
 							connectToSortable: '#deck-meta'
 						});
 
+						$('#deck-meta').parent('.card-section').show();
 						$('#deck-meta').append($card);
 					}
 				}
