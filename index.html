@@ -791,6 +791,7 @@
 							break;
 						case 'deck':
 							MTG.removeFromDeck(card.oracle_id, isBasicLand, isToken);
+							MTG.removeMetaType(card.oracle_id);
 							MTG.clear();
 							MTG.createCardTree();
 
@@ -1142,6 +1143,22 @@
 
 				this.refreshDeckMeta();
 				this.refreshMeta();
+
+
+				let meta = {
+					strategy: [],
+					ramp: [],
+					advantage: [],
+					interaction: []
+				}
+
+				for (let metaType in meta) {
+					for (let cardId of this.meta[metaType]) {
+						meta[metaType].push(this.getCardName(cardId));
+					}
+				}
+				console.log(meta);
+
 			};
 
 			MTG.createCardPlay = function() {
@@ -2309,6 +2326,68 @@
 
 
 
+			MTG.getMetaType = function(card) {
+				if (this.getCardType(card) === 'Land') {
+					return 'land';
+				}
+
+				if (this.meta.strategy.indexOf(card.oracle_id) > -1) {
+					return 'strategy';
+				}
+
+				if (this.meta.ramp.indexOf(card.oracle_id) > -1) {
+					return 'ramp';
+				}
+
+				if (this.meta.advantage.indexOf(card.oracle_id) > -1) {
+					return 'advantage';
+				}
+
+				if (this.meta.interaction.indexOf(card.oracle_id) > -1) {
+					return 'interaction';
+				}
+
+				return null;
+			};
+
+			MTG.hasMetaType = function(cardId) {
+				let isStrategy = this.meta.strategy.indexOf(cardId) > -1;
+				let isRamp = this.meta.ramp.indexOf(cardId) > -1;
+				let isAdvantage = this.meta.advantage.indexOf(cardId) > -1;
+				let isInteraction = this.meta.interaction.indexOf(cardId) > -1;
+				let isLand = this.meta.land.indexOf(cardId) > -1;
+
+				return isStrategy || isRamp || isAdvantage || isInteraction || isLand;
+			};
+
+			MTG.addMetaType = function(cardId, metaType) {
+				this.meta[metaType].push(cardId);
+			};
+
+			MTG.removeMetaType = function(cardId) {
+				for (let metaType in this.meta) {
+					if (this.meta[metaType].indexOf(cardId) > -1) {
+						this.meta[metaType].splice(this.meta[metaType].indexOf(cardId), 1);
+					}
+				}
+			};
+
+			MTG.getMetaAccept = function(metaType) {
+				let classes = [
+					'.deck-card'
+				];
+				for (let type in MTG.meta) {
+					if (type !== metaType) {
+						classes.push('.' + type + '-card');
+					}
+				}
+
+				return classes.join(', ');
+			};
+
+
+
+
 			MTG.getCard = function(cardId) {
 				for (let i = 0; i < this.cardData.length; i++) {
 					let card = this.cardData[i];
@@ -2405,63 +2484,10 @@
 				return this.getCardType(card) === cardType;
 			};
 
-			MTG.getMetaType = function(card) {
-				if (this.getCardType(card) === 'Land') {
-					return 'land';
-				}
+			MTG.getCardName = function(cardId) {
+				let card = this.getCard(cardId);
 
-				if (this.meta.strategy.indexOf(card.oracle_id) > -1) {
-					return 'strategy';
-				}
-
-				if (this.meta.ramp.indexOf(card.oracle_id) > -1) {
-					return 'ramp';
-				}
-
-				if (this.meta.advantage.indexOf(card.oracle_id) > -1) {
-					return 'advantage';
-				}
-
-				if (this.meta.interaction.indexOf(card.oracle_id) > -1) {
-					return 'interaction';
-				}
-
-				return null;
-			};
-
-			MTG.hasMetaType = function(cardId) {
-				let isStrategy = this.meta.strategy.indexOf(cardId) > -1;
-				let isRamp = this.meta.ramp.indexOf(cardId) > -1;
-				let isAdvantage = this.meta.advantage.indexOf(cardId) > -1;
-				let isInteraction = this.meta.interaction.indexOf(cardId) > -1;
-				let isLand = this.meta.land.indexOf(cardId) > -1;
-
-				return isStrategy || isRamp || isAdvantage || isInteraction || isLand;
-			};
-
-			MTG.addMetaType = function(cardId, metaType) {
-				this.meta[metaType].push(cardId);
-			};
-
-			MTG.removeMetaType = function(cardId) {
-				for (let metaType in this.meta) {
-					if (this.meta[metaType].indexOf(cardId) > -1) {
-						this.meta[metaType].splice(this.meta[metaType].indexOf(cardId), 1);
-					}
-				}
-			};
-
-			MTG.getMetaAccept = function(metaType) {
-				let classes = [
-					'.deck-card'
-				];
-				for (let type in MTG.meta) {
-					if (type !== metaType) {
-						classes.push('.' + type + '-card');
-					}
-				}
-
-				return classes.join(', ');
+				return card.name;
 			};
 
 			MTG.isLand = function(card) {
