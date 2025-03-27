@@ -1229,15 +1229,26 @@
 					'uncommon': 0,
 					'rare': 0,
 					'mythic': 0,
-				}
+				};
+
+				let metaTypes = {
+					'strategy': 0,
+					'advantage': 0,
+					'interaction': 0,
+					'ramp': 0,
+					'land': 0,
+					'none': 0
+				};
 
 				for (let i = 0; i < deckData.length; i++) {
 					let card = deckData[i];
 					let cardType = null;
 					if (card.hasOwnProperty('type_line')) {
+						rarities[card.rarity]++;
+						metaTypes[this.getMetaType(card)]++;
+
 						if (!this.isLand(card) && !this.hasCardType(card, 'Token')) {
 							manaCosts[card.cmc]++;
-							rarities[card.rarity]++;
 
 							manaCount += card.cmc;
 							spellCount++;
@@ -1265,6 +1276,16 @@
 					}
 				}
 				
+				let $manaCostChart = this.createManaCostChart($charts, manaCosts);
+				let $cardTypeChart = this.createCardTypeChart($charts, cardTypes);
+				let $devotionChart = this.createDevotionChart($charts, devotions);
+				let $rarityChart = this.createRarityChart($charts, rarities);
+				let $metaTypeChart = this.createMetaTypeChart($charts, metaTypes);
+
+				console.log(manaCount / spellCount);
+			};
+
+			MTG.createManaCostChart = function($charts, manaCosts) {
 				let $manaCostChart = $('<div class="chart bar-chart"><canvas id="mana-cost-chart" width="1200" height="300"></canvas>');
 				$charts.append($manaCostChart);
 
@@ -1285,7 +1306,9 @@
 						]
 					},
 				});
+			};
 
+			MTG.createCardTypeChart = function($charts, cardTypes) {
 				let $cardTypeChart = $('<div class="chart bar-chart"><canvas id="card-type-chart" width="1200" height="300"></canvas>');
 				$charts.append($cardTypeChart);
 
@@ -1306,7 +1329,9 @@
 						]
 					},
 				});
+			};
 
+			MTG.createDevotionChart = function($charts, devotions) {
 				let $devotionChart = $('<div class="chart pie-chart"><canvas id="devotion-chart" width="300" height="300"></canvas>');
 				$charts.append($devotionChart);
 
@@ -1338,15 +1363,17 @@
 						]
 					},
 				});
+			};
 
+			MTG.createRarityChart = function($charts, rarities) {
 				let $rarityChart = $('<div class="chart pie-chart"><canvas id="rarity-chart" width="300" height="300"></canvas>');
 				$charts.append($rarityChart);
 
 				let rarityLabels = [
-					'C',
-					'U',
-					'R',
-					'M',
+					'Common',
+					'Uncommon',
+					'Rare',
+					'Mythic',
 				];
 				let rarityData = Object.values(rarities);
 				let rarityColors = [
@@ -1371,9 +1398,47 @@
 						]
 					},
 				});
-
-				console.log(manaCount / spellCount);
 			};
+
+			MTG.createMetaTypeChart = function($charts, metaTypes) {
+				let $metaTypeChart = $('<div class="chart pie-chart"><canvas id="meta-type-chart" width="300" height="300"></canvas>');
+				$charts.append($metaTypeChart);
+
+				let metaTypeLabels = [
+					'Strat',
+					'Adv',
+					'Int',
+					'Ramp',
+					'Land',
+					'none'
+				];
+				let metaTypeData = Object.values(metaTypes);
+				let metaTypeColors = [
+					'#FF0000',
+					'#0000FF',
+					'#FFFFFF',
+					'#00FF00',
+					'#888888',
+					'#000000'
+				];
+
+				new Chart(document.getElementById('meta-type-chart'), {
+					type: 'pie',
+					borderColor: 'black',
+					data: {
+						labels: metaTypeLabels,
+						datasets: [
+							{
+								label: 'Rarity',
+								data: metaTypeData,
+								backgroundColor: metaTypeColors,
+								borderColor: 'black',
+							}
+						]
+					},
+				});
+			};
+
 
 
 
@@ -1860,7 +1925,7 @@
 				for (let cardId of this.commandZoneIds.concat(this.deckIds)) {
 					let card = this.getCard(cardId);
 
-					if (this.getMetaType(card) && this.getCardType(card) !== 'BasicLand') {
+					if (this.getMetaType(card) !== 'none' && this.getCardType(card) !== 'BasicLand') {
 						metaData[this.getMetaType(card)].push(card.oracle_id);
 					}
 				}
@@ -2345,7 +2410,7 @@
 					return 'interaction';
 				}
 
-				return null;
+				return 'none';
 			};
 
 			MTG.hasMetaType = function(cardId) {
