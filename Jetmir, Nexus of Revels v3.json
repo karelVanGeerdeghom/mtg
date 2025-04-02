@@ -506,7 +506,10 @@
     "112f2b3f-32e7-40b1-b80e-0b99184a840c": "Electroduplicate",
     "9c329f3d-4d0a-4012-8aa6-92afdd120a52": "Blade of Selves",
     "7f4b0233-a2b0-41a2-8448-2df1f845148c": "Yisan, the Wanderer Bard",
-    "74cd099c-8476-4f75-bc1a-8b166f696163": "Ultramarines Honour Guard"
+    "74cd099c-8476-4f75-bc1a-8b166f696163": "Ultramarines Honour Guard",
+    "6a880a0f-0a98-4505-9c27-9821be3e4818": "Warrior",
+    "ffbc4833-01db-45f8-b8b4-c2e2c8235d0c": "Citizen",
+    "a5ab7f2d-a434-4342-a178-754bdd0181b6": "Soldier"
   },
   "deckIds": [
     "67f43ac6-2a58-4b53-b5d7-0330e2a252e2",
@@ -540,7 +543,6 @@
     "92eed395-62ca-4293-882b-8565c40daab5",
     "5def9f38-0a0b-4e8d-9f9d-29dcb46520b4",
     "e8863518-0bfa-49c3-8c6e-6c9116a81051",
-    "a8e707ec-ce77-4bc5-8c76-5ea3e81e8c7f",
     "ea9c459a-6047-43aa-968f-a582be4000e8",
     "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
     "d683d985-9888-4d21-8b5f-69e69ce4a03b",
@@ -584,7 +586,6 @@
     "bd912666-f37f-4767-af6f-9e6d0fcccacf",
     "5eb8b497-ec9a-4a89-ad29-1ec3ca82da7c",
     "486bb9a5-73f1-4cec-b097-fb07ac80b72e",
-    "27ffa6e9-c161-4f53-8b41-7fae5f199f41",
     "c0adbddc-b070-4c5f-afe0-0474c72a9251",
     "9f12bf9a-6e1a-4377-b4af-e8cabd3ee58a",
     "5f4d0c87-7d59-41d5-9910-86765a0c144b",
@@ -593,33 +594,34 @@
     "69872a9a-fe54-4e58-940c-89395af71acd",
     "0d96b60b-a060-48ee-bb83-93f1c4a10669",
     "bcd5e175-2ef0-48f4-b9bd-14383dd234e0",
-    "53d6113d-acdb-4754-9641-f7991a96c7b9",
     "1093fdb6-bd4f-46a8-92e3-5aa46b52bb4f",
     "c749f23c-40c0-4159-b84c-a70cbb062c14",
     "8e356df5-ca92-4be2-871e-8965c2510fbe",
     "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c",
     "4acb6612-54e8-428d-acb6-c7259a5ad6a8",
     "dc600c06-8239-409e-b53d-20f813a3f5e7",
-    "5fae52ed-1b84-406e-951d-b0d329dc48a7",
     "b2347910-d6c6-4681-8316-7ef27056485c",
-    "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e",
-    "7eff84f1-f772-497a-b350-bbc93d0230f7",
-    "5da7eea8-bb9e-47ce-a554-8a1ee058bd7a"
+    "ee24bf27-484d-4e1c-998e-6a74e3d3f6c4",
+    "ff01b408-6d17-40a3-9efd-a1b341ec1307",
+    "6ad8011d-3471-4369-9d68-b264cc027487",
+    "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
+    "0c26ab0d-80f6-4e5b-9d0e-af17c1519583"
   ],
   "tokenIds": [
     "3aaf906a-e749-4e86-ac79-97650b92f271",
     "1a6c2152-71ca-46be-ab83-c84633442257",
     "dac8a765-6845-4b57-bb79-4ec463436f92",
-    "4465eff4-5851-4721-a248-866c686c2ab8",
     "30272edf-097c-4918-84d2-9fa6c42dbe0a",
     "1ee82580-9d1d-4908-8d58-99f7781b08f4",
-    "fee35fc4-a5b5-4c2c-8c6a-62dad166ea72",
-    "b2580667-88dc-4916-a64c-3080956b24bc"
+    "b2580667-88dc-4916-a64c-3080956b24bc",
+    "6a880a0f-0a98-4505-9c27-9821be3e4818",
+    "ffbc4833-01db-45f8-b8b4-c2e2c8235d0c",
+    "a5ab7f2d-a434-4342-a178-754bdd0181b6"
   ],
   "commandZoneIds": [
     "da72a4bc-ce6f-4b72-bc66-2ee33cfa87df"
   ],
-  "forestCount": 1,
+  "forestCount": 2,
   "islandCount": 0,
   "mountainCount": 1,
   "plainsCount": 1,
@@ -627,6 +629,7 @@
   "wastesCount": 0,
   "meta": {
     "strategy": [
+      "ff01b408-6d17-40a3-9efd-a1b341ec1307",
       "27ad3e00-6ffb-48f7-8469-8868d066d1e2",
       "b80df711-af51-4f9a-9a3f-f7a4cddc9c2c",
       "bcd5e175-2ef0-48f4-b9bd-14383dd234e0",
@@ -634,23 +637,25 @@
       "037355be-71e7-4866-80a6-80352c304970",
       "b2347910-d6c6-4681-8316-7ef27056485c",
       "dc600c06-8239-409e-b53d-20f813a3f5e7",
+      "0c26ab0d-80f6-4e5b-9d0e-af17c1519583",
       "8e356df5-ca92-4be2-871e-8965c2510fbe",
       "5f4d0c87-7d59-41d5-9910-86765a0c144b",
       "35807c14-4647-482f-9ba1-6d640fd5e8d8",
       "830d3450-18e7-4bac-b330-3906ef5e4514",
+      "f7252190-ad24-4ba3-a644-2790dd1d680d",
       "38515f89-348b-4cf3-b7bd-1f6fe4ce2fba",
       "3beed054-a099-4887-b1bd-39cf9e514e94",
       "84dc94b2-95fb-4d53-aaa2-191cb645639f",
       "7246d45b-2185-4cdd-981b-5419b7d52bce",
       "fe83087d-c6c1-40be-9295-baaa1c6b2db1",
-      "486bb9a5-73f1-4cec-b097-fb07ac80b72e",
-      "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e",
-      "f7252190-ad24-4ba3-a644-2790dd1d680d"
+      "486bb9a5-73f1-4cec-b097-fb07ac80b72e"
     ],
     "ramp": [
-      "1093fdb6-bd4f-46a8-92e3-5aa46b52bb4f",
       "28b46183-c62f-47b1-9fee-3ba148202cab",
+      "1093fdb6-bd4f-46a8-92e3-5aa46b52bb4f",
+      "ee24bf27-484d-4e1c-998e-6a74e3d3f6c4",
       "ea9c459a-6047-43aa-968f-a582be4000e8",
+      "6ad8011d-3471-4369-9d68-b264cc027487",
       "d3a0b660-358c-41bd-9cd2-41fbf3491b1a",
       "f9d3b046-0b95-4103-a630-4b3fb88bb60b",
       "68954295-54e3-4303-a6bc-fc4547a4e3a3",
@@ -659,35 +664,31 @@
       "069f6530-e65c-4d52-85f3-e0a2acd148c5",
       "3577c47e-76d3-4659-b922-31c4b74be3a0",
       "0c23fefe-9891-4dd8-9bb1-eebdb3274e31",
-      "7973820b-fdaf-46ec-9e3e-d4c0e77b5067",
       "70a6f08e-854d-4e2f-9d8c-c45ec3231157",
+      "7973820b-fdaf-46ec-9e3e-d4c0e77b5067",
       "e9319f13-1f2b-429c-9d61-e58a3cbec86a",
       "3f92c684-f2fd-4fe5-bfb5-e27061d2c45b",
       "c1b276b7-f1b3-4f6f-b6a2-1315d805e0f2"
     ],
     "advantage": [
       "e8863518-0bfa-49c3-8c6e-6c9116a81051",
+      "4acb6612-54e8-428d-acb6-c7259a5ad6a8",
       "935e0cac-51ee-4cb7-a209-f085e0f099ed",
       "0d96b60b-a060-48ee-bb83-93f1c4a10669",
       "69872a9a-fe54-4e58-940c-89395af71acd",
-      "4acb6612-54e8-428d-acb6-c7259a5ad6a8",
       "35b8fa77-4e85-418b-b335-cd1af127075c",
       "d521a329-a53a-4962-810a-2abed80df260",
       "4d6a1391-817a-4ddc-840d-886b138eeb3f",
       "5def9f38-0a0b-4e8d-9f9d-29dcb46520b4",
       "92eed395-62ca-4293-882b-8565c40daab5",
       "9aff3d55-e25d-4f06-a783-c3aa9eb9fd50",
-      "5fae52ed-1b84-406e-951d-b0d329dc48a7",
-      "5da7eea8-bb9e-47ce-a554-8a1ee058bd7a",
-      "a8e707ec-ce77-4bc5-8c76-5ea3e81e8c7f",
-      "7eff84f1-f772-497a-b350-bbc93d0230f7"
+      "3aa83ed2-f48b-4ce6-a614-2c54ddf50538"
     ],
     "interaction": [
       "d683d985-9888-4d21-8b5f-69e69ce4a03b",
       "b1544f21-7e98-461b-aed5-e748b0168c52",
       "7735eeba-693b-47e2-bd51-414379cf1016",
       "fae37e28-e137-4177-b973-fa8b4dd8f409",
-      "27ffa6e9-c161-4f53-8b41-7fae5f199f41",
       "958d71ff-c9f7-46f0-96ca-79e7f4d65a16",
       "26d3a818-7faf-443a-a6bd-9773edaedf17",
       "8aed54cb-d1bb-45ad-adbe-38e55d84ff31",
@@ -729,7 +730,6 @@
       "7edb3d15-4f70-4ebe-8c5e-caf6a225076d",
       "bf1341dd-41a3-49f6-87ec-63170dde4324",
       "9f12bf9a-6e1a-4377-b4af-e8cabd3ee58a",
-      "53d6113d-acdb-4754-9641-f7991a96c7b9",
       "23467047-6dba-4498-b783-1ebc4f74b8c2"
     ]
   }
