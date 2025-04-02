@@ -509,7 +509,19 @@
     "74cd099c-8476-4f75-bc1a-8b166f696163": "Ultramarines Honour Guard",
     "6a880a0f-0a98-4505-9c27-9821be3e4818": "Warrior",
     "ffbc4833-01db-45f8-b8b4-c2e2c8235d0c": "Citizen",
-    "a5ab7f2d-a434-4342-a178-754bdd0181b6": "Soldier"
+    "a5ab7f2d-a434-4342-a178-754bdd0181b6": "Soldier",
+    "463865bc-087e-477b-9e86-84e77f1ad931": "Seedborn Muse",
+    "7663ac7c-1de3-4250-b96a-fae9dbd66a27": "Memnite",
+    "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba": "Ornithopter",
+    "8695c3c1-fb4b-4429-ae33-ec186f68796b": "Instill Energy",
+    "7f425406-2746-45a1-86bf-f9645015ffc2": "Nature's Chosen",
+    "f293da27-e42d-4e87-8b61-d3c27e4c6d71": "Burrowguard Mentor",
+    "ea384b0d-3091-4d50-b15f-1f6763647b7c": "Crusader of Odric",
+    "2d8eba16-cfca-4a38-bde0-6ee36c67231a": "Hanweir Militia Captain // Westvale Cult Leader",
+    "abc49dc3-03b3-48a4-afe1-5fc435b65d0f": "Ironroot Warlord",
+    "07b6fbd3-03f9-4aef-929e-514c799d75b9": "Kolaghan Forerunners",
+    "c39dca94-3849-4edb-bba9-e7a2eefa5021": "Majestic Myriarch",
+    "369e90e5-a31b-49cc-b594-8a853f244be1": "Mana Echoes"
   },
   "deckIds": [
     "67f43ac6-2a58-4b53-b5d7-0330e2a252e2",
@@ -551,7 +563,6 @@
     "ae120613-97d6-4393-b39d-c3e6c076f5d6",
     "7735eeba-693b-47e2-bd51-414379cf1016",
     "fae37e28-e137-4177-b973-fa8b4dd8f409",
-    "27ad3e00-6ffb-48f7-8469-8868d066d1e2",
     "7973820b-fdaf-46ec-9e3e-d4c0e77b5067",
     "38515f89-348b-4cf3-b7bd-1f6fe4ce2fba",
     "c549b0fd-1e08-4873-952e-a14dc45a0fd2",
@@ -595,7 +606,6 @@
     "0d96b60b-a060-48ee-bb83-93f1c4a10669",
     "bcd5e175-2ef0-48f4-b9bd-14383dd234e0",
     "1093fdb6-bd4f-46a8-92e3-5aa46b52bb4f",
-    "c749f23c-40c0-4159-b84c-a70cbb062c14",
     "8e356df5-ca92-4be2-871e-8965c2510fbe",
     "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c",
     "4acb6612-54e8-428d-acb6-c7259a5ad6a8",
@@ -605,7 +615,11 @@
     "ff01b408-6d17-40a3-9efd-a1b341ec1307",
     "6ad8011d-3471-4369-9d68-b264cc027487",
     "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
-    "0c26ab0d-80f6-4e5b-9d0e-af17c1519583"
+    "0c26ab0d-80f6-4e5b-9d0e-af17c1519583",
+    "4c6a0c30-b547-4eff-8ff4-0ca25803c076",
+    "463865bc-087e-477b-9e86-84e77f1ad931",
+    "c39dca94-3849-4edb-bba9-e7a2eefa5021",
+    "c749f23c-40c0-4159-b84c-a70cbb062c14"
   ],
   "tokenIds": [
     "3aaf906a-e749-4e86-ac79-97650b92f271",
@@ -621,7 +635,7 @@
   "commandZoneIds": [
     "da72a4bc-ce6f-4b72-bc66-2ee33cfa87df"
   ],
-  "forestCount": 2,
+  "forestCount": 1,
   "islandCount": 0,
   "mountainCount": 1,
   "plainsCount": 1,
@@ -630,11 +644,11 @@
   "meta": {
     "strategy": [
       "ff01b408-6d17-40a3-9efd-a1b341ec1307",
-      "27ad3e00-6ffb-48f7-8469-8868d066d1e2",
       "b80df711-af51-4f9a-9a3f-f7a4cddc9c2c",
       "bcd5e175-2ef0-48f4-b9bd-14383dd234e0",
       "c549b0fd-1e08-4873-952e-a14dc45a0fd2",
       "037355be-71e7-4866-80a6-80352c304970",
+      "c39dca94-3849-4edb-bba9-e7a2eefa5021",
       "b2347910-d6c6-4681-8316-7ef27056485c",
       "dc600c06-8239-409e-b53d-20f813a3f5e7",
       "0c26ab0d-80f6-4e5b-9d0e-af17c1519583",
@@ -666,6 +680,7 @@
       "0c23fefe-9891-4dd8-9bb1-eebdb3274e31",
       "70a6f08e-854d-4e2f-9d8c-c45ec3231157",
       "7973820b-fdaf-46ec-9e3e-d4c0e77b5067",
+      "463865bc-087e-477b-9e86-84e77f1ad931",
       "e9319f13-1f2b-429c-9d61-e58a3cbec86a",
       "3f92c684-f2fd-4fe5-bfb5-e27061d2c45b",
       "c1b276b7-f1b3-4f6f-b6a2-1315d805e0f2"
@@ -729,6 +744,7 @@
       "8dd5f5af-d2d8-4356-8617-8381081b930c",
       "7edb3d15-4f70-4ebe-8c5e-caf6a225076d",
       "bf1341dd-41a3-49f6-87ec-63170dde4324",
+      "4c6a0c30-b547-4eff-8ff4-0ca25803c076",
       "9f12bf9a-6e1a-4377-b4af-e8cabd3ee58a",
       "23467047-6dba-4498-b783-1ebc4f74b8c2"
     ]
