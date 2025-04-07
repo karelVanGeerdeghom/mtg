@@ -93,7 +93,7 @@
 		#preview {
 			z-index: 100;
 			position: fixed;
-			top: 190px;
+			top: 155px;
 			right: 20px;
 			width: 450px;
 			height: 625px;
@@ -370,17 +370,6 @@
 		<button id="play">Play</button>
 		<button id="stats">Stats</button>
 		<button id="import">Import</button>
-	</div>
-
-	<div id="color-menu" class="top-menu">
-		<label for="artifact"><input id="artifact" type="checkbox" />Artifact</label>
-		<label for="black"><input id="black" type="checkbox" />Black</label>
-		<label for="blue"><input id="blue" type="checkbox" />Blue</label>
-		<label for="green"><input id="green" type="checkbox" />Green</label>
-		<label for="red"><input id="red" type="checkbox" />Red</label>
-		<label for="white"><input id="white" type="checkbox" />White</label>
-		<label for="and"><input id="and" name="and-or" value="and" type="radio" />&&</label>
-		<label for="or"><input id="or" name="and-or" value="or" type="radio" />||</label>
 	</div>
 
 	<div id="preview"></div>
@@ -1417,9 +1406,9 @@
 					'#FF0000',
 					'#0000FF',
 					'#FFFFFF',
-					'#00FF00',
-					'#888888',
-					'#000000'
+					'#008000',
+					'#005000',
+					'#002000'
 				];
 
 				new Chart(document.getElementById('meta-type-chart'), {
