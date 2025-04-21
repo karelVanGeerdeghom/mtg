@@ -483,7 +483,9 @@
     "c151e8b7-4b28-4f03-8a81-9bf623f893d7": "Sorin Markov",
     "7cc4a635-8730-4018-a8fd-b29fb5479928": "Tallyman of Nurgle",
     "ea9c459a-6047-43aa-968f-a582be4000e8": "Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun",
-    "88cf4c1a-5863-45fc-b76d-7ad33b175b2b": "Burgeoning"
+    "88cf4c1a-5863-45fc-b76d-7ad33b175b2b": "Burgeoning",
+    "e97f9c2b-b41e-4f36-9245-77c0ac125647": "Bloodghast",
+    "09ff28b1-b6c9-48e6-b12e-2f0e644f709f": "Gravecrawler"
   },
   "deckIds": [
     "6ca2a89e-7032-4864-b4e9-66f3178f90ab",
@@ -549,7 +551,8 @@
     "544acde0-850d-4c4f-8389-e22930d87345",
     "ee38377f-8d3a-402e-a5d7-a01cfe3a5322",
     "78826359-fe63-44ad-adc4-a17ffcd710e4",
-    "1b882a0e-0ede-4d1a-bd1a-9b7cffbcde8e"
+    "1b882a0e-0ede-4d1a-bd1a-9b7cffbcde8e",
+    "e97f9c2b-b41e-4f36-9245-77c0ac125647"
   ],
   "tokenIds": [],
   "commandZoneIds": [
