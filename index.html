@@ -278,18 +278,6 @@
 			float: left;
 		}
 
-		.exile {
-			width: 75px;
-			height: 105px;
-			outline: 1px solid black;
-			float: left;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-color: white;
-			background-image: url('exit.png');
-		}
-
 		.trash {
 			width: 75px;
 			height: 105px;
@@ -468,7 +456,6 @@
 				libraryIds: [],
 				handIds: [],
 				graveyardIds: [],
-				exileIds: [],
 
 				turn: 1,
 				mode: null,
@@ -922,10 +909,6 @@
 
 					$cardCounter.data('count', newCount);
 					MTG.showCardCounterCount($cardCounter);
-				});
-
-				$(document).on('click', '.exile', function() {
-					console.log(MTG.exileIds);
 				});
 			};
 
@@ -1767,10 +1750,6 @@
 					for (let j = 0; j < this.columnCount; j++) {
 						let slotClass = 'slot';
 
-						if (i === this.rowCount - 1 && j === this.columnCount - 2) {
-							slotClass = 'exile';
-						}
-
 						if (i === this.rowCount - 1 && j === this.columnCount - 1) {
 							slotClass = 'trash trash-out';
 						}
@@ -1884,43 +1863,6 @@
 
 						$(this).removeClass('trash-over');
 						$(this).addClass('trash-out');
-					}
-				});
-
-				$('.exile').droppable({
-					accept: '.card',
-					drop: function (event, ui) {
-						let $card = ui.draggable;
-						let cardId = $card.data('card').oracle_id;
-
-						if ($card.hasClass('library-card')) {
-							let libraryIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.libraryIds.splice(libraryIndex, 1);
-							MTG.exileIds.push(cardId);
-
-							MTG.refreshLibrary();
-						}
-
-						if ($card.hasClass('hand-card')) {
-							let handIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.handIds.splice(handIndex, 1);
-							MTG.exileIds.push(cardId);
-
-							MTG.refreshHand();
-						}
-
-						if ($card.hasClass('graveyard-card')) {
-							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.graveyardIds.splice(graveyardIndex, 1);
-							MTG.exileIds.push(cardId);
-
-							MTG.refreshGraveyard();
-						}
-
-						$card.remove();
-
-						MTG.refreshTokenBox();
-						MTG.refreshCommandZone();
 					}
 				});
 			};
