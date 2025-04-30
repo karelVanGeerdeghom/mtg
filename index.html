@@ -144,6 +144,58 @@
 			font-size: 75px;
 		}
 
+		.card-counter-button {
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: 15ox;
+			height: 15px;
+		}
+
+		.card-counter {
+			position: relative;
+			width: 75px;
+			height: 40px;
+			margin-top: 65px;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.card-counter-minus-button {
+			position: absolute;
+			width: 12px;
+			height: 34px;
+			top: 3px;
+			left: 3px;
+			text-align: center;
+			padding: 0px;
+		}
+
+		.card-counter-plus-button {
+			position: absolute;
+			width: 12px;
+			height: 34px;
+			top: 3px;
+			right: 3px;
+			text-align: center;
+			padding: 0px;
+		}
+
+		.card-counter-count {
+			position: absolute;
+			width: 45px;
+			height: 34px;
+			top: 0px;
+			left: 15px;
+			text-align: center;
+		}
+
+		.card-counter-count p {
+			position: relative;
+			margin: auto;
+			color: #FFFFFF;
+			font-size: 35px;
+		}
+
 		.meta {
 			min-height: 105px;
 			outline: 1px solid black;
@@ -840,6 +892,36 @@
 					let $libraryCard = $('#library-cards div[oracle_id="' + $(this).attr('oracle_id')  + '"]');
 
 					$libraryCard.removeClass('highlight');
+				});
+
+				$(document).on('click', '.card-counter-button', function(event) {
+					event.stopPropagation();
+
+					$(this).parent().children('.card-counter').each(function() {
+						$(this).toggle();
+					});
+				});
+
+				$(document).on('click', '.card-counter-minus-button', function(event) {
+					event.stopPropagation();
+
+					let $cardCounter = $(this).parent();
+					let currentCount = $cardCounter.data('count');
+					let newCount = currentCount > 0 ? currentCount - 1 : 0;
+
+					$cardCounter.data('count', newCount);
+					MTG.showCardCounterCount($cardCounter);
+				});
+
+				$(document).on('click', '.card-counter-plus-button', function(event) {
+					event.stopPropagation();
+
+					let $cardCounter = $(this).parent();
+					let currentCount = $cardCounter.data('count');
+					let newCount = currentCount + 1;
+
+					$cardCounter.data('count', newCount);
+					MTG.showCardCounterCount($cardCounter);
 				});
 
 				$(document).on('click', '.exile', function() {
@@ -1706,54 +1788,55 @@
 					accept: '.card',
 					drop: function(event, ui) {
 						let $card = ui.draggable;
-						let cardId = $card.data('card').oracle_id;
 
-						if ($card.hasClass('library-card')) {
-							let libraryIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.libraryIds.splice(libraryIndex, 1);
+						if (!$card.hasClass('battlefield-card')) {
+							let cardId = $card.data('card').oracle_id;
 
-							MTG.refreshLibrary();
+							if ($card.hasClass('library-card')) {
+								let libraryIndex = parseInt($card.attr('id').split('-').pop());
+								MTG.libraryIds.splice(libraryIndex, 1);
+
+								MTG.refreshLibrary();
+							}
+
+							if ($card.hasClass('hand-card')) {
+								let handIndex = parseInt($card.attr('id').split('-').pop());
+								MTG.handIds.splice(handIndex, 1);
+
+								MTG.refreshHand();
+							}
+
+							if ($card.hasClass('graveyard-card')) {
+								let graveyardIndex = parseInt($card.attr('id').split('-').pop());
+								MTG.graveyardIds.splice(graveyardIndex, 1);
+
+								MTG.refreshGraveyard();
+							}
+
+							if ($card.hasClass('token-card')) {
+								MTG.refreshTokenBox();
+							}
+
+							if ($card.hasClass('command-zone-card')) {
+								MTG.refreshCommandZone();
+							}
+
+							$card.remove();
+
+							let card = MTG.getCard(cardId);
+							$card = MTG.createCard(card, 'battlefield-' + cardId);
+							$card.addClass('battlefield-card');
+							$card.draggable({
+								revert: 'invalid'
+							});
+
+							MTG.addCardCounterButton($card);
+							MTG.addCardCounter($card);
 						}
 
-						if ($card.hasClass('hand-card')) {
-							let handIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.handIds.splice(handIndex, 1);
-
-							MTG.refreshHand();
-						}
-
-						if ($card.hasClass('graveyard-card')) {
-							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.graveyardIds.splice(graveyardIndex, 1);
-
-							MTG.refreshGraveyard();
-						}
-
-						let battlefieldCardClasses = [
-							'battlefield-card'
-						];
-
-						if ($card.hasClass('token-card') || $card.hasClass('battlefield-token-card')) {
-							MTG.refreshTokenBox();
-							battlefieldCardClasses.push('battlefield-token-card');
-						}
-
-						if ($card.hasClass('command-zone-card') || $card.hasClass('battlefield-command-zone-card')) {
-							MTG.refreshCommandZone();
-							battlefieldCardClasses.push('battlefield-command-zone-card');
-						}
-
-						$card.remove();
-
-						let card = MTG.getCard(cardId);
-						$card = MTG.createCard(card, 'battlefield-' + cardId);
-						$card.addClass(battlefieldCardClasses.join(' '));
 						$card.css({
 							top: 0,
 							left: 0
-						});
-						$card.draggable({
-							revert: 'invalid'
 						});
 
 						$(event.target).append($card);
@@ -1761,7 +1844,7 @@
 				});
 
 				$('.trash').droppable({
-					accept: '.battlefield-token-card, .battlefield-command-zone-card',
+					accept: '.card',
 					over: function(event, ui) {
 						$(this).removeClass('trash-out');
 						$(this).addClass('trash-over');
@@ -2042,6 +2125,57 @@
 				});
 
 				return $card; 
+			};
+
+			MTG.addCardCounterButton = function($card) {
+				let $cardCounterButton = $('<button>', {
+					class: 'card-counter-button'
+				});
+
+				$card.append($cardCounterButton);
+			};
+
+			MTG.addCardCounter = function($card) {
+				let $cardCounter = $('<div>', {
+					class: 'card-counter',
+					data: {
+						count: 0
+					}
+				});
+
+				let $minusButton = $('<button>', {
+					class: 'card-counter-minus-button',
+					text: '-'
+				});
+
+				let $plusButton = $('<button>', {
+					class: 'card-counter-plus-button',
+					text: '+'
+				});
+
+				let $count = $('<div>', {
+					class: 'card-counter-count'
+				});
+
+				$cardCounter
+					.append($minusButton)
+					.append($plusButton)
+					.append($count);
+
+				$card.append($cardCounter);
+				$cardCounter.toggle();
+			};
+
+			MTG.showCardCounterCount = function($cardCounter) {
+				let count = $cardCounter.data('count');
+				let $cardCounterCount = $cardCounter.find('.card-counter-count');
+
+				$cardCounterCount.empty();
+				if (count > 0) {
+					$cardCounterCount.append($('<p>', {
+						text: count
+					}));
+				}
 			};
 
 

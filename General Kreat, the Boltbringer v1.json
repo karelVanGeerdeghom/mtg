@@ -231,7 +231,6 @@
     "37108cd4-bbab-4ce3-9ed6-f60e8422e703": "Ragavan, Nimble Pilferer",
     "895f23a2-55b7-4cc0-8939-2efaaf097e6f": "Solphim, Mayhem Dominus",
     "44e0ffa3-8915-4c1f-8f1a-4aeea1365f07": "Simian Spirit Guide",
-    "88222fd2-8316-426c-8218-64f6be5ca0f8": "_____ Goblin",
     "c1d6cce8-085f-42cb-8b0c-b6fbbf88b16a": "Goblin Engineer",
     "04152e7a-969c-4858-841b-0a569a9fc1bf": "Professional Face-Breaker",
     "e0c00a74-bdf8-4fee-8042-42c5878e9e3c": "Broadside Bombardiers",
@@ -303,7 +302,6 @@
     "df67597f-42a8-4fa7-b426-d7db8b384445": "Goblin Motivator",
     "50bebbb9-01b7-4eb6-8efd-307c9bcd2517": "Goblin Vandal",
     "9fc28e1f-f4ea-4bf8-9442-a36dba3b3b29": "Goblin Welder",
-    "4ece8767-a2e0-42fc-aadf-86a4ae863343": "Goblin Shaman",
     "37445e06-88a1-4e2e-a432-383736c9b977": "Grim Lavamancer",
     "1a20e805-c80b-4710-917b-706d29ec395e": "Hope of Ghirapur",
     "cd0c8db0-67ee-483b-8298-455cce35fef7": "Iron Apprentice",
@@ -378,7 +376,12 @@
     "176f5ba8-6e7b-4234-a298-b6164f51656f": "Inti, Seneschal of the Sun",
     "786baa29-afd4-40f0-95c8-920a972b9175": "Kari Zev, Skyship Raider",
     "86f7d513-1f5f-4551-83e6-56d24da5ab39": "Rosnakht, Heir of Rohgahh",
-    "eca27964-accc-46cc-8aff-a06183e61e9c": "Grinning Ignus"
+    "eca27964-accc-46cc-8aff-a06183e61e9c": "Grinning Ignus",
+    "3c549374-6c37-42e0-8d88-a8555d46732d": "Treasure",
+    "4465eff4-5851-4721-a248-866c686c2ab8": "Goblin",
+    "1a6c2152-71ca-46be-ab83-c84633442257": "Elemental",
+    "b2580667-88dc-4916-a64c-3080956b24bc": "Rat",
+    "6790eb4e-f6ed-44f5-85f1-bd7e167b828c": "Kobolds of Kher Keep"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -450,10 +453,7 @@
     "786baa29-afd4-40f0-95c8-920a972b9175",
     "eca27964-accc-46cc-8aff-a06183e61e9c",
     "68418069-f615-40ef-ae0d-764192acae00",
-    "560a5452-0dc3-421d-bf16-8843a35dae6f",
-    "213fbbdd-f1bc-4bba-9124-7b26e9a706c8",
-    "7ed9a887-9942-4482-942e-b3b05feb6342",
-    "cef82674-1f61-407b-801b-a76a3803e598"
+    "cd45a29f-73bc-435c-9d50-09a4ecaa77be"
   ],
   "tokenIds": [],
   "commandZoneIds": [
