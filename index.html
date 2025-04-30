@@ -1763,6 +1763,63 @@
 					}
 				}
 
+				let $manaCounters = [];
+				if (this.forestCount > 0) {
+					let forest = this.getCard(this.forestId);
+					let $forest = this.createCard(forest, 'forest');
+					this.addCardCounter($forest, false);
+
+					$manaCounters.push($forest);
+				}
+
+				if (this.islandCount > 0) {
+					let island = this.getCard(this.islandId);
+					let $island = this.createCard(island, 'island');
+					this.addCardCounter($island, false);
+
+					$manaCounters.push($island);
+				}
+
+				if (this.mountainCount > 0) {
+					let mountain = this.getCard(this.mountainId);
+					let $mountain = this.createCard(mountain, 'mountain');
+					this.addCardCounter($mountain, false);
+
+					$manaCounters.push($mountain);
+				}
+
+				if (this.plainsCount > 0) {
+					let plains = this.getCard(this.plainsId);
+					let $plains = this.createCard(plains, 'plains');
+					this.addCardCounter($plains, false);
+
+					$manaCounters.push($plains);
+				}
+
+				if (this.swampCount > 0) {
+					let swamp = this.getCard(this.swampId);
+					let $swamp = this.createCard(swamp, 'swamp');
+					this.addCardCounter($swamp, false);
+
+					$manaCounters.push($swamp);
+				}
+
+				if ($manaCounters.length <= 3) {
+					for (let i = 0; i < $manaCounters.length; i++) {
+						let $slot = $('#' + i + '_' + (this.columnCount - 1));
+						let $manaCounter = $manaCounters[i];
+						$slot.append($manaCounter);
+						$slot.removeClass('slot');
+					}
+
+					let $slot = $('#' + $manaCounters.length + '_' + (this.columnCount - 1));
+					let wastes = this.getCard(this.wastesId);
+					let $wastes = this.createCard(wastes, 'wastes');
+					this.addCardCounter($wastes, false);
+					$slot.append($wastes);
+					$slot.removeClass('slot');
+				}
+
 				$('.slot').droppable({
 					accept: '.card',
 					drop: function(event, ui) {
@@ -1810,7 +1867,7 @@
 							});
 
 							MTG.addCardCounterButton($card);
-							MTG.addCardCounter($card);
+							MTG.addCardCounter($card, true);
 						}
 
 						$card.css({
@@ -2077,7 +2134,7 @@
 				$card.append($cardCounterButton);
 			};
 
-			MTG.addCardCounter = function($card) {
+			MTG.addCardCounter = function($card, hidden) {
 				let $cardCounter = $('<div>', {
 					class: 'card-counter',
 					data: {
@@ -2105,7 +2162,10 @@
 					.append($count);
 
 				$card.append($cardCounter);
-				$cardCounter.toggle();
+
+				if (hidden) {
+					$cardCounter.hide();
+				}
 			};
 
 			MTG.showCardCounterCount = function($cardCounter) {
