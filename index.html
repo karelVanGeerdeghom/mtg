@@ -129,7 +129,7 @@
 			float: left;
 		}
 
-		.card {
+		.card, .mana-counter {
 			width: 75px;
 			height: 105px;
 			background-size: cover;
@@ -148,20 +148,12 @@
 			font-size: 75px;
 		}
 
-		.card-counter-button {
+		.card-counter-toggle {
 			position: absolute;
-			top: 1px;
-			left: 1px;
-			width: 27px;
-			height: 18px;
-		}
-
-		.card-tap-button {
-			position: absolute;
-			top: 1px;
-			right: 1px;
-			width: 27px;
-			height: 18px;
+			top: 20px;
+			left: 15px;
+			width: 45px;
+			height: 30px;
 		}
 
 		.card-counter {
@@ -805,7 +797,7 @@
 					$('#library-list').toggle();
 				});
 
-				$(document).on('click', '.card', function() {
+				$(document).on('click', '.card:not(.battlefield-card)', function() {
 					let card = $(this).data('card');
 
 					if ($(this).data('side') === 'front') {
@@ -910,7 +902,7 @@
 					$libraryCard.removeClass('highlight');
 				});
 
-				$(document).on('click', '.card-counter-button', function(event) {
+				$(document).on('click', '.card-counter-toggle', function(event) {
 					event.stopPropagation();
 
 					$(this).parent().children('.card-counter').each(function() {
@@ -918,14 +910,11 @@
 					});
 				});
 
-				$(document).on('click', '.card-tap-button', function(event) {
-					event.stopPropagation();
-
-					let $card = $(this).parent();
-					if ($card.hasClass('tapped')) {
-						$card.removeClass('tapped');
+				$(document).on('click', '.battlefield-card', function(event) {
+					if ($(this).hasClass('tapped')) {
+						$(this).removeClass('tapped');
 					} else {
-						$card.addClass('tapped');
+						$(this).addClass('tapped');
 					}
 				});
 
@@ -948,6 +937,15 @@
 					let newCount = currentCount + 1;
 
 					$cardCounter.data('count', newCount);
+					MTG.showCardCounterCount($cardCounter);
+				});
+
+				$(document).on('click', '.card-counter-count', function(event) {
+					event.stopPropagation();
+
+					let $cardCounter = $(this).parent();
+
+					$cardCounter.data('count', 0);
 					MTG.showCardCounterCount($cardCounter);
 				});
 			};
@@ -1862,8 +1860,7 @@
 								revert: 'invalid'
 							});
 
-							MTG.addCardCounterButton($card);
-							MTG.addCardTapButton($card);
+							MTG.addCardCounterToggle($card);
 							MTG.addCardCounter($card, true);
 						}
 
@@ -1919,41 +1916,6 @@
 						$(this).addClass('trash-out');
 					}
 				});
-			};
-
-			MTG.addManaCounters = function($battlefield) {
-				let landTypes = [
-					'forest',
-					'island',
-					'mountain',
-					'plains',
-					'swamp'
-				];
-
-				let $manaCounters = [];
-				for (let landType of landTypes) {
-					if (this[landType + 'Count'] > 0) {
-						$manaCounters.push(this.createManaCounter(landType));
-					}
-				}
-				$manaCounters.push(this.createManaCounter('wastes'));
-
-				if ($manaCounters.length <= 4) {
-					for (let i = 0; i < $manaCounters.length; i++) {
-						let $slot = $('#' + i + '_' + (this.columnCount - 1));
-						let $manaCounter = $manaCounters[i];
-						$slot.append($manaCounter);
-						$slot.removeClass('slot');
-					}
-				}
-			};
-
-			MTG.createManaCounter = function(landType) {
-				let manaCounter = this.getCard(this[landType + 'Id']);
-				let $manaCounter = this.createCard(manaCounter, landType);
-				this.addCardCounter($manaCounter, false);
-
-				return $manaCounter;
 			};
 
 
@@ -2158,17 +2120,9 @@
 				return $card; 
 			};
 
-			MTG.addCardCounterButton = function($card) {
-				let $button = $('<button>', {
-					class: 'card-counter-button'
-				});
-
-				$card.append($button);
-			};
-
-			MTG.addCardTapButton = function($card) {
-				let $button = $('<button>', {
-					class: 'card-tap-button'
+			MTG.addCardCounterToggle = function($card) {
+				let $button = $('<div>', {
+					class: 'card-counter-toggle'
 				});
 
 				$card.append($button);
@@ -2218,6 +2172,42 @@
 						text: count
 					}));
 				}
+			};
+
+			MTG.addManaCounters = function($battlefield) {
+				let landTypes = [
+					'forest',
+					'island',
+					'mountain',
+					'plains',
+					'swamp'
+				];
+
+				let $manaCounters = [];
+				for (let landType of landTypes) {
+					if (this[landType + 'Count'] > 0) {
+						$manaCounters.push(this.createManaCounter(landType));
+					}
+				}
+				$manaCounters.push(this.createManaCounter('wastes'));
+
+				if ($manaCounters.length <= 4) {
+					for (let i = 0; i < $manaCounters.length; i++) {
+						let $slot = $('#' + i + '_' + (this.columnCount - 1));
+						let $manaCounter = $manaCounters[i];
+						$slot.append($manaCounter);
+						$slot.removeClass('slot');
+					}
+				}
+			};
+
+			MTG.createManaCounter = function(landType) {
+				let manaCounter = this.getCard(this[landType + 'Id']);
+				let $manaCounter = this.createCard(manaCounter, landType);
+				$manaCounter.removeClass('card').addClass('mana-counter');
+				this.addCardCounter($manaCounter, false);
+
+				return $manaCounter;
 			};
 
 
@@ -2278,7 +2268,7 @@
 				$('#graveyard').empty();
 				$('#token-box').empty();
 				$('#command-zone').empty();
-				$('#damage-counter').children('.card-counter').each(function() {
+				$('.card-counter').each(function() {
 					$(this).data('count', 0);
 					MTG.showCardCounterCount($(this));
 				});
