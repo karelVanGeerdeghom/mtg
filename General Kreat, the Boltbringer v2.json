@@ -382,7 +382,14 @@
     "1a6c2152-71ca-46be-ab83-c84633442257": "Elemental",
     "b2580667-88dc-4916-a64c-3080956b24bc": "Rat",
     "6790eb4e-f6ed-44f5-85f1-bd7e167b828c": "Kobolds of Kher Keep",
-    "830d3450-18e7-4bac-b330-3906ef5e4514": "Tilonalli's Summoner"
+    "830d3450-18e7-4bac-b330-3906ef5e4514": "Tilonalli's Summoner",
+    "60e7130a-d321-4e50-93a4-999013c76054": "Gut, True Soul Zealot",
+    "eae15f7d-1f6e-4dfc-afea-7698b93cd145": "Goblin Smuggler",
+    "6db90f86-205a-4e0b-944b-74742bc4e59d": "Sardian Avenger",
+    "84b55e6b-5ce3-49af-95fe-46c029e0260c": "Goblin Diplomats",
+    "240746f5-caab-46b9-914f-c2c7ecce6ca9": "Mogg Raider",
+    "ae93292a-458a-441b-a7de-4b10f0d20cc0": "Goblin Sledder",
+    "1005bc16-8a6a-476a-a647-4ed40d2e96de": "Goblin Tunneler"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -417,7 +424,6 @@
     "f586ecb8-310c-4f40-a766-6a7ca46a254d",
     "c5ee72d5-3a9e-4fe5-8802-3286ee612055",
     "37108cd4-bbab-4ce3-9ed6-f60e8422e703",
-    "f7620c46-b3d8-4694-ac7c-a43933c86c22",
     "792e1072-00bf-4f63-b956-5f20cdf09f11",
     "7b8f4879-578e-40e4-863a-41d0c32c6bdd",
     "b8b51a29-a2be-4b97-a73c-ea512d3d5622",
@@ -428,7 +434,6 @@
     "61023b48-0433-4993-9534-308c08cef07e",
     "badf0669-9f65-44e3-bf91-6c57ac2fecff",
     "65986c1b-8e51-4604-b685-d82fa7d1263a",
-    "1a668cef-bdc5-410b-b9e3-044e4203a0aa",
     "46808926-d95b-4313-89d1-6bdfe13fcb77",
     "d8cfa20a-343e-4661-9f5a-a8265f6917a8",
     "c18013e4-0b99-44e3-a2b2-027ace68723a",
@@ -438,7 +443,6 @@
     "ea55db87-a5c3-49f7-b968-77510cdeb469",
     "d6585e30-4ca0-4701-b274-b24f3508dd97",
     "46d6bc30-9a21-4476-947b-87951cd9c882",
-    "cd8a90a7-5502-405f-a49e-ad4252872595",
     "c18ab011-c5e0-4174-b623-d89e4d745ce6",
     "ffc84ff4-22eb-4652-9723-2f40d637a427",
     "895f23a2-55b7-4cc0-8939-2efaaf097e6f",
@@ -455,7 +459,10 @@
     "68418069-f615-40ef-ae0d-764192acae00",
     "cd45a29f-73bc-435c-9d50-09a4ecaa77be",
     "830d3450-18e7-4bac-b330-3906ef5e4514",
-    "b5fa5651-d714-44d6-867b-be0e3224b7ed"
+    "b5fa5651-d714-44d6-867b-be0e3224b7ed",
+    "8b022754-6d16-470e-b754-4df6e4f4709e",
+    "0ccb9af3-6902-4130-a59c-4c882dc3a2fd",
+    "1005bc16-8a6a-476a-a647-4ed40d2e96de"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d",
@@ -506,14 +513,15 @@
       "61023b48-0433-4993-9534-308c08cef07e",
       "584cee10-f18c-4633-95cc-f2e7a11841ac",
       "d8cfa20a-343e-4661-9f5a-a8265f6917a8",
+      "8b022754-6d16-470e-b754-4df6e4f4709e",
       "7b8f4879-578e-40e4-863a-41d0c32c6bdd",
+      "0ccb9af3-6902-4130-a59c-4c882dc3a2fd",
+      "cd45a29f-73bc-435c-9d50-09a4ecaa77be",
       "68418069-f615-40ef-ae0d-764192acae00",
       "8e356df5-ca92-4be2-871e-8965c2510fbe",
       "5f4d0c87-7d59-41d5-9910-86765a0c144b",
       "830d3450-18e7-4bac-b330-3906ef5e4514",
-      "cd8a90a7-5502-405f-a49e-ad4252872595",
-      "1a668cef-bdc5-410b-b9e3-044e4203a0aa",
-      "f7620c46-b3d8-4694-ac7c-a43933c86c22"
+      "1005bc16-8a6a-476a-a647-4ed40d2e96de"
     ],
     "ramp": [
       "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
@@ -529,8 +537,7 @@
       "fb81e4d3-1d8c-4779-be62-87cf49277e51",
       "0c367958-729e-416d-988b-098e90e7a1fd",
       "c18013e4-0b99-44e3-a2b2-027ace68723a",
-      "7d9fc9e7-d80b-49c3-871c-ed25b3059ae8",
-      "cd45a29f-73bc-435c-9d50-09a4ecaa77be"
+      "7d9fc9e7-d80b-49c3-871c-ed25b3059ae8"
     ],
     "advantage": [
       "65986c1b-8e51-4604-b685-d82fa7d1263a",
