@@ -148,7 +148,7 @@
 			font-size: 75px;
 		}
 
-		.card-counter-toggle {
+		.counter-toggle {
 			position: absolute;
 			top: 20px;
 			left: 15px;
@@ -156,7 +156,7 @@
 			height: 30px;
 		}
 
-		.card-counter {
+		.counter {
 			position: relative;
 			width: 75px;
 			height: 40px;
@@ -164,7 +164,7 @@
 			background-color: rgba(0, 0, 0, 0.5);
 		}
 
-		.card-counter-minus-button {
+		.counter-minus-button {
 			position: absolute;
 			width: 18px;
 			height: 38px;
@@ -174,7 +174,7 @@
 			padding: 0px;
 		}
 
-		.card-counter-plus-button {
+		.counter-plus-button {
 			position: absolute;
 			width: 18px;
 			height: 38px;
@@ -184,7 +184,7 @@
 			padding: 0px;
 		}
 
-		.card-counter-count {
+		.counter-count {
 			position: absolute;
 			width: 35px;
 			height: 34px;
@@ -193,7 +193,7 @@
 			text-align: center;
 		}
 
-		.card-counter-count p {
+		.counter-count p {
 			position: relative;
 			width: 35px;
 			margin: 0px;
@@ -790,6 +790,10 @@
 					$('.tapped').each(function() {
 						$(this).removeClass('tapped');
 					});
+					$('.mana-counter').find('.counter').each(function() {
+						$(this).data('count', 0);
+						MTG.showCounterCount($(this));
+					});
 				});
 
 				$('#toggle').on('click', function() {
@@ -902,10 +906,10 @@
 					$libraryCard.removeClass('highlight');
 				});
 
-				$(document).on('click', '.card-counter-toggle', function(event) {
+				$(document).on('click', '.counter-toggle', function(event) {
 					event.stopPropagation();
 
-					$(this).parent().children('.card-counter').each(function() {
+					$(this).parent().children('.counter').each(function() {
 						$(this).toggle();
 					});
 				});
@@ -918,7 +922,7 @@
 					}
 				});
 
-				$(document).on('click', '.card-counter-minus-button', function(event) {
+				$(document).on('click', '.counter-minus-button', function(event) {
 					event.stopPropagation();
 
 					let $cardCounter = $(this).parent();
@@ -926,10 +930,10 @@
 					let newCount = currentCount > 0 ? currentCount - 1 : 0;
 
 					$cardCounter.data('count', newCount);
-					MTG.showCardCounterCount($cardCounter);
+					MTG.showCounterCount($cardCounter);
 				});
 
-				$(document).on('click', '.card-counter-plus-button', function(event) {
+				$(document).on('click', '.counter-plus-button', function(event) {
 					event.stopPropagation();
 
 					let $cardCounter = $(this).parent();
@@ -937,16 +941,16 @@
 					let newCount = currentCount + 1;
 
 					$cardCounter.data('count', newCount);
-					MTG.showCardCounterCount($cardCounter);
+					MTG.showCounterCount($cardCounter);
 				});
 
-				$(document).on('click', '.card-counter-count', function(event) {
+				$(document).on('click', '.counter-count', function(event) {
 					event.stopPropagation();
 
 					let $cardCounter = $(this).parent();
 
 					$cardCounter.data('count', 0);
-					MTG.showCardCounterCount($cardCounter);
+					MTG.showCounterCount($cardCounter);
 				});
 			};
 
@@ -1782,7 +1786,7 @@
 					id: 'damage-counter'
 				});
 
-				this.addCardCounter($damageCounter, false);
+				this.addCounter($damageCounter, false);
 
 				$('#content').append($damageCounter);
 			};
@@ -1860,8 +1864,8 @@
 								revert: 'invalid'
 							});
 
-							MTG.addCardCounterToggle($card);
-							MTG.addCardCounter($card, true);
+							MTG.addCounterToggle($card);
+							MTG.addCounter($card, true);
 						}
 
 						$card.css({
@@ -2120,35 +2124,41 @@
 				return $card; 
 			};
 
-			MTG.addCardCounterToggle = function($card) {
+			MTG.addCounterToggle = function($card) {
 				let $button = $('<div>', {
-					class: 'card-counter-toggle'
+					class: 'counter-toggle'
 				});
 
 				$card.append($button);
 			};
 
-			MTG.addCardCounter = function($card, hidden) {
+			MTG.addCounter = function($card, hidden) {
 				let $cardCounter = $('<div>', {
-					class: 'card-counter',
+					class: 'counter',
 					data: {
 						count: 0
 					}
 				});
 
 				let $minusButton = $('<button>', {
-					class: 'card-counter-minus-button',
+					class: 'counter-minus-button',
 					text: '-'
 				});
 
 				let $plusButton = $('<button>', {
-					class: 'card-counter-plus-button',
+					class: 'counter-plus-button',
 					text: '+'
 				});
 
 				let $count = $('<div>', {
-					class: 'card-counter-count'
+					class: 'counter-count'
 				});
+
+				let $p = $('<p>', {
+					text: 0
+				});
+
+				$count.append($p);
 
 				$cardCounter
 					.append($minusButton)
@@ -2162,12 +2172,12 @@
 				}
 			};
 
-			MTG.showCardCounterCount = function($cardCounter) {
+			MTG.showCounterCount = function($cardCounter) {
 				let count = $cardCounter.data('count');
-				let $cardCounterCount = $cardCounter.find('.card-counter-count');
+				let $cardCounterCount = $cardCounter.find('.counter-count');
 
 				$cardCounterCount.empty();
-				if (count > 0) {
+				if (count >= 0) {
 					$cardCounterCount.append($('<p>', {
 						text: count
 					}));
@@ -2205,7 +2215,7 @@
 				let manaCounter = this.getCard(this[landType + 'Id']);
 				let $manaCounter = this.createCard(manaCounter, landType);
 				$manaCounter.removeClass('card').addClass('mana-counter');
-				this.addCardCounter($manaCounter, false);
+				this.addCounter($manaCounter, false);
 
 				return $manaCounter;
 			};
@@ -2268,9 +2278,9 @@
 				$('#graveyard').empty();
 				$('#token-box').empty();
 				$('#command-zone').empty();
-				$('.card-counter').each(function() {
+				$('.counter').each(function() {
 					$(this).data('count', 0);
-					MTG.showCardCounterCount($(this));
+					MTG.showCounterCount($(this));
 				});
 				$('#battlefield .slot').empty();
 				$('#turn').text('Turn: ' + this.turn);
