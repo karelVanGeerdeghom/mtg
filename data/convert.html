@@ -36,7 +36,8 @@
 					if (
 						masterDatum.legalities.commander === 'legal' || 
 						masterDatum.legalities.oathbreaker === 'legal' || 
-						masterDatum.set_type === 'token'
+						masterDatum.set_type === 'token' ||
+						masterDatum.set === 'fin'
 					) {
 						let card = {
 							oracle_id: masterDatum.oracle_id,

@@ -28,6 +28,10 @@ masterIndex=[
     "label": "A Mysterious Creature"
   },
   {
+    "value": "fd230ab5-874e-4827-9b5c-6d39d079cee6",
+    "label": "A Realm Reborn"
+  },
+  {
     "value": "682a0770-8fe0-4142-aa0c-b60af3628a33",
     "label": "A Tale for the Ages"
   },
@@ -194,6 +198,10 @@ masterIndex=[
   {
     "value": "f4aa8391-34d5-4ad2-a981-9aa08f8229db",
     "label": "Absolute Law"
+  },
+  {
+    "value": "d4fddf20-6b3a-42c3-a245-002dacbb4725",
+    "label": "Absolute Virtue"
   },
   {
     "value": "a9002245-0f33-48cb-96d3-fde884236eb5",
@@ -784,6 +792,10 @@ masterIndex=[
     "label": "Adventure Awaits"
   },
   {
+    "value": "232bd88c-ecdb-43dd-b34a-d381cb3bedf2",
+    "label": "Adventurer's Inn"
+  },
+  {
     "value": "bf29b215-d4f5-4641-97ef-b65d4c463e72",
     "label": "Adventurers' Guildhouse"
   },
@@ -942,6 +954,10 @@ masterIndex=[
   {
     "value": "674c34eb-1080-4811-8f2a-5006e08d98b8",
     "label": "Aerie Worshippers"
+  },
+  {
+    "value": "dd9a6f6b-f9b7-4292-bc80-b7da326de032",
+    "label": "Aerith Gainsborough"
   },
   {
     "value": "1e276998-9c54-4d68-a901-657853312d06",
@@ -1906,6 +1922,10 @@ masterIndex=[
   {
     "value": "29169659-309f-4e1c-86ba-1d36420ed41e",
     "label": "Akuta, Born of Ash"
+  },
+  {
+    "value": "43f81514-e812-4e17-9b1a-704c136d8ffd",
+    "label": "Al Bhed Salvagers"
   },
   {
     "value": "0f5b0c77-1e3d-46a1-ae0e-03ed79196cd9",
@@ -3304,6 +3324,10 @@ masterIndex=[
     "label": "Angelic Wall"
   },
   {
+    "value": "83806bcf-aeaf-4cf0-95dd-a5301839662e",
+    "label": "Angelo"
+  },
+  {
     "value": "fe7bad80-f853-4af9-82e2-5ccf8038d93b",
     "label": "Angelsong"
   },
@@ -4604,6 +4628,10 @@ masterIndex=[
     "label": "Ardoz, Cobbler of War"
   },
   {
+    "value": "9ae13026-960a-4d31-b775-d47209a1e313",
+    "label": "Ardyn, the Usurper"
+  },
+  {
     "value": "12326d23-1fb5-4084-a23a-d6e2c90ea36c",
     "label": "Arena"
   },
@@ -5660,6 +5688,10 @@ masterIndex=[
     "label": "Astrolabe"
   },
   {
+    "value": "4dcd0583-cee0-46a6-ba43-93bca5eb0428",
+    "label": "Astrologian's Planisphere"
+  },
+  {
     "value": "870deab4-8570-40e9-aeda-ac3726cebb84",
     "label": "Asylum Visitor"
   },
@@ -6050,6 +6082,10 @@ masterIndex=[
   {
     "value": "b07bd1cd-4000-4e6b-b16b-283c76593377",
     "label": "Aurochs Herd"
+  },
+  {
+    "value": "53a4d9ee-6dfa-4a8b-a1e4-7f671a666188",
+    "label": "Auron's Inspiration"
   },
   {
     "value": "a4499cf9-04a0-45c5-9c73-19f8e7e95da6",
@@ -7180,6 +7216,10 @@ masterIndex=[
     "label": "Balshan Griffin"
   },
   {
+    "value": "570cb560-c246-4652-b230-ab34f966c78a",
+    "label": "Balthier and Fran"
+  },
+  {
     "value": "dfd8e6c2-e425-41fa-af55-985271f771b3",
     "label": "Balthor the Defiled"
   },
@@ -7616,6 +7656,10 @@ masterIndex=[
     "label": "Barrenton Medic"
   },
   {
+    "value": "913672bc-cc88-4964-a331-7dbce40f2bda",
+    "label": "Barret Wallace"
+  },
+  {
     "value": "93491d5c-8579-42ed-a700-e5c6f4238dea",
     "label": "Barricade Breaker"
   },
@@ -7694,6 +7738,10 @@ masterIndex=[
   {
     "value": "f47e4c56-0a0b-422d-bf3d-7a20ee289f15",
     "label": "Bartolomé del Presidio"
+  },
+  {
+    "value": "2d995c47-e548-4fc4-9182-fef46af20ca5",
+    "label": "Bartz and Boko"
   },
   {
     "value": "b6021700-992a-4faa-8f83-a9af03dc7296",
@@ -8394,6 +8442,10 @@ masterIndex=[
   {
     "value": "9b0bc2d3-d64b-455a-a258-d3c91892f1a7",
     "label": "Beasts of Bogardan"
+  },
+  {
+    "value": "2f24637d-8d8e-49de-b229-4cdb97595ed7",
+    "label": "Beatrix, Loyal General"
   },
   {
     "value": "f051ca18-23ff-4f43-b890-77ad3837720c",
@@ -9148,6 +9200,10 @@ masterIndex=[
     "label": "Bird"
   },
   {
+    "value": "4038cf0b-eb9b-4251-b4f1-da1e35700b07",
+    "label": "Bird"
+  },
+  {
     "value": "5c462040-1ae1-4c9d-bb20-69429ee66e27",
     "label": "Bird"
   },
@@ -9358,6 +9414,10 @@ masterIndex=[
   {
     "value": "9456c5b6-946d-403a-8ed0-dff9f921d98c",
     "label": "Black Knight"
+  },
+  {
+    "value": "909b3d90-5762-461b-b49a-004a9e72733d",
+    "label": "Black Mage's Rod"
   },
   {
     "value": "dc3b2bab-755d-4b2f-97c0-70a74d721a79",
@@ -13604,6 +13664,10 @@ masterIndex=[
     "label": "Bushy Bodyguard"
   },
   {
+    "value": "5e060d58-4d6e-425c-b7d4-727669fcce5b",
+    "label": "Buster Sword"
+  },
+  {
     "value": "20f92504-d03c-437e-9814-b25ee384b3ba",
     "label": "Butch DeLoria, Tunnel Snake"
   },
@@ -14430,6 +14494,10 @@ masterIndex=[
   {
     "value": "568432d1-c7fb-4da6-922a-22d4fa26284e",
     "label": "Capenna Express"
+  },
+  {
+    "value": "2c96ab90-155b-4bf4-acc9-65a2f0cd3189",
+    "label": "Capital City"
   },
   {
     "value": "c2902f4f-b40e-49f7-8ab0-5b6a70021482",
@@ -15434,6 +15502,10 @@ masterIndex=[
   {
     "value": "bbed284c-987a-4765-b3a8-4f18a228ad0e",
     "label": "Ceaseless Searblades"
+  },
+  {
+    "value": "e4719557-d94e-490f-8a56-c1867a01d2ef",
+    "label": "Cecil, Dark Knight // Cecil, Redeemed Paladin"
   },
   {
     "value": "a726c27d-2955-4d41-b8a6-fca654c020a2",
@@ -16892,6 +16964,10 @@ masterIndex=[
     "label": "Cho-Manno, Revolutionary"
   },
   {
+    "value": "7979bf83-5091-4e62-8885-ca1833a97306",
+    "label": "Choco, Seeker of Paradise"
+  },
+  {
     "value": "506714a8-b9c2-443a-a9e8-ef9130e674ba",
     "label": "Choice of Damnations"
   },
@@ -17096,6 +17172,10 @@ masterIndex=[
     "label": "Churning Reservoir"
   },
   {
+    "value": "87050537-99c9-4993-a770-4329b2e749e4",
+    "label": "Cid, Timeless Artificer"
+  },
+  {
     "value": "f155a05f-9f5e-4875-a407-103b85ce30ee",
     "label": "Cinder Barrens"
   },
@@ -17198,6 +17278,10 @@ masterIndex=[
   {
     "value": "c31801e6-2444-4158-8e19-2afe751d7cff",
     "label": "Circle of Flame"
+  },
+  {
+    "value": "2d41fd1f-4a98-45dd-a3c5-f7c5e0152109",
+    "label": "Circle of Power"
   },
   {
     "value": "2e61e9c0-a2b9-4a24-8cb0-5160accce183",
@@ -17772,6 +17856,10 @@ masterIndex=[
     "label": "Clip Wings"
   },
   {
+    "value": "ceba3d03-be5a-4dd7-b829-7db216a0f44e",
+    "label": "Clive, Ifrit's Dominant // Ifrit, Warden of Inferno"
+  },
+  {
     "value": "73ca14bb-0586-4716-8d4c-738a93950ed5",
     "label": "Cloak and Dagger"
   },
@@ -17960,8 +18048,20 @@ masterIndex=[
     "label": "Cloud of Faeries"
   },
   {
+    "value": "33d2584b-bf29-4c22-bd45-14ba2fb98c0e",
+    "label": "Cloud, Midgar Mercenary"
+  },
+  {
+    "value": "8512bd08-ecba-4e0e-b65c-8209764a65e5",
+    "label": "Cloud, Planet's Champion"
+  },
+  {
     "value": "f84d1291-1f82-4b67-a26e-b79624b4ce1d",
     "label": "Cloudblazer"
+  },
+  {
+    "value": "f718b520-d79d-4b91-9d85-de1f1c90c176",
+    "label": "Cloudbound Moogle"
   },
   {
     "value": "add18787-2329-4355-a524-66fefda8d06e",
@@ -18278,6 +18378,10 @@ masterIndex=[
   {
     "value": "ad33530c-a8df-4c1c-a863-501e583290b6",
     "label": "Coercive Recruiter"
+  },
+  {
+    "value": "00d1596a-c3e2-4109-86da-388934a0c652",
+    "label": "Coeurl"
   },
   {
     "value": "e49771ab-cabb-4a5f-aef3-a0ac8147e6bf",
@@ -18742,6 +18846,10 @@ masterIndex=[
   {
     "value": "99deac41-584b-43f2-804e-c56ae0fef047",
     "label": "Communal Brewing"
+  },
+  {
+    "value": "9108fffb-90f4-444e-8d3e-46a3d4ff3681",
+    "label": "Commune with Beavers"
   },
   {
     "value": "27ca27f0-95a5-4292-b30b-1db3e9d639f8",
@@ -23288,6 +23396,10 @@ masterIndex=[
     "label": "Deadly Dispute"
   },
   {
+    "value": "32ad99a9-b5ed-41a1-8060-22265f7c5da1",
+    "label": "Deadly Embrace"
+  },
+  {
     "value": "093112dd-ebfd-4983-9357-0a9b07e10bb1",
     "label": "Deadly Grub"
   },
@@ -27328,6 +27440,14 @@ masterIndex=[
     "label": "Dragonwing Glider"
   },
   {
+    "value": "a66c35fc-d5db-4cfd-9b85-d70b001d83d3",
+    "label": "Dragoon's Lance"
+  },
+  {
+    "value": "f328012f-4696-47bb-ab43-247bdcb13f03",
+    "label": "Dragoon's Wyvern"
+  },
+  {
     "value": "e75ba79f-4cc2-4ede-8641-559ab94e7e36",
     "label": "Drain Life"
   },
@@ -27770,6 +27890,10 @@ masterIndex=[
   {
     "value": "dd8538e6-cd5f-4a88-aff5-eb5e76ce8ddb",
     "label": "Dreamroot Cascade"
+  },
+  {
+    "value": "e060bf7a-f266-40b4-9772-e243dcbf965b",
+    "label": "Dreams of Laguna"
   },
   {
     "value": "8c308ebf-df5e-4f47-9b97-5c31944fe91c",
@@ -30744,6 +30868,10 @@ masterIndex=[
     "label": "Emeria, the Sky Ruin"
   },
   {
+    "value": "3b102ccc-7629-457c-aba6-e9b00fd50c85",
+    "label": "Emet-Selch, Unsundered // Hades, Sorcerer of Eld"
+  },
+  {
     "value": "b11c250c-f191-4c52-ba02-a9176f163447",
     "label": "Emiel the Blessed"
   },
@@ -31888,6 +32016,10 @@ masterIndex=[
     "label": "Esper Cormorants"
   },
   {
+    "value": "947b40a2-e272-4ef6-85fb-3d767a21bc7a",
+    "label": "Esper Origins // Summon: Esper Maduin"
+  },
+  {
     "value": "6b9cd3d0-4316-4945-b960-12f51052d260",
     "label": "Esper Panorama"
   },
@@ -32394,6 +32526,10 @@ masterIndex=[
   {
     "value": "3d8ac41c-0566-48b2-a744-39db2f72272c",
     "label": "Evil Presence"
+  },
+  {
+    "value": "264f944b-386b-4378-9764-4a8bde246809",
+    "label": "Evil Reawakened"
   },
   {
     "value": "da17da9b-f300-4613-978b-ba3026d4e275",
@@ -33820,6 +33956,10 @@ masterIndex=[
     "label": "Fang of the Pack"
   },
   {
+    "value": "04ac8b2c-95e9-40e9-8cc0-af9b075a94c0",
+    "label": "Fang, Fearless l'Cie"
+  },
+  {
     "value": "1a9bfe76-6c74-4393-b04e-461422a29ddb",
     "label": "Fang-Druid Summoner"
   },
@@ -34030,6 +34170,10 @@ masterIndex=[
   {
     "value": "7d66f67d-3148-4636-ac5a-2cf8a51d5e50",
     "label": "Fate Unraveler"
+  },
+  {
+    "value": "0ffeec93-89d7-42c2-8abf-802e9f6dc992",
+    "label": "Fate of the Sun-Cryst"
   },
   {
     "value": "ac0a110a-0721-4aa6-a891-95e3fcc847df",
@@ -35364,6 +35508,10 @@ masterIndex=[
     "label": "Fire Juggler"
   },
   {
+    "value": "c87db803-3490-41bc-af7a-78f99bcd77c8",
+    "label": "Fire Magic"
+  },
+  {
     "value": "b5e51171-2e36-4b09-b43d-e5d437a19305",
     "label": "Fire Prophecy"
   },
@@ -35610,6 +35758,10 @@ masterIndex=[
   {
     "value": "326d9b5c-ac04-45b5-9a8c-a9be7d8cca1b",
     "label": "Firewing Phoenix"
+  },
+  {
+    "value": "df42c768-34ca-4ebf-8f66-eaccf7261f70",
+    "label": "Firion, Wild Rose Warrior"
   },
   {
     "value": "fea32d4e-ceef-4954-a84d-e7e2509e4a13",
@@ -37708,6 +37860,10 @@ masterIndex=[
     "label": "Fretwork Colony"
   },
   {
+    "value": "7e3085d8-9d46-41e0-ad9d-54c44d9ef267",
+    "label": "Freya Crescent"
+  },
+  {
     "value": "c28a7641-49e3-43b1-a366-8d6e9c8dab9c",
     "label": "Freyalise Supplicant"
   },
@@ -38648,6 +38804,10 @@ masterIndex=[
     "label": "Gallows at Willow Hill"
   },
   {
+    "value": "9268d369-173e-4325-98f6-348beeb8ba62",
+    "label": "Galuf's Final Act"
+  },
+  {
     "value": "694b78c6-443a-4044-84ea-46ac85c8d2cd",
     "label": "Galvanic Alchemist"
   },
@@ -38822,6 +38982,10 @@ masterIndex=[
   {
     "value": "893f319f-6e3d-4230-bb65-4f9179b18fad",
     "label": "Gargoyle Sentinel"
+  },
+  {
+    "value": "75e930dd-32e9-4c39-81a7-d833a3976b8d",
+    "label": "Garland, Knight of Cornelia // Chaos, the Endless"
   },
   {
     "value": "3fb83218-e18d-405d-91c8-46b5e4e672a9",
@@ -40384,6 +40548,10 @@ masterIndex=[
     "label": "Gilder Bairn"
   },
   {
+    "value": "c9432e87-38f6-4889-8f07-ae7cd045e532",
+    "label": "Gilgamesh, Master-at-Arms"
+  },
+  {
     "value": "27e83bae-0ffe-4cc7-a6c0-cbca25f2ba4e",
     "label": "Gilraen, Dúnedain Protector"
   },
@@ -40638,6 +40806,10 @@ masterIndex=[
   {
     "value": "37420ccd-c6c6-4f15-a696-d8986934afb5",
     "label": "Gladewalker Ritualist"
+  },
+  {
+    "value": "fb5a05d1-baa5-459d-a2e5-438f4a60b82f",
+    "label": "Gladiolus Amicitia"
   },
   {
     "value": "178a1b0b-30af-4afd-8976-4a0e2133007a",
@@ -46752,6 +46924,10 @@ masterIndex=[
     "label": "Hermitic Nautilus"
   },
   {
+    "value": "fcf819ef-28e4-46be-a28d-5865ff90e15a",
+    "label": "Hero"
+  },
+  {
     "value": "454a8902-8120-4373-96ee-bbf352b04e8d",
     "label": "Hero of Bladehold"
   },
@@ -49096,6 +49272,10 @@ masterIndex=[
     "label": "Ice Floe"
   },
   {
+    "value": "88b0bd3b-d832-4059-b0d9-04630917ae94",
+    "label": "Ice Magic"
+  },
+  {
     "value": "fed3bc35-4269-48f0-9133-a595ce49c2d1",
     "label": "Ice Out"
   },
@@ -51000,6 +51180,10 @@ masterIndex=[
     "label": "Inspirited Vanguard"
   },
   {
+    "value": "2283e409-c6c7-4de9-899b-2b3caea5f35e",
+    "label": "Instant Ramen"
+  },
+  {
     "value": "0fe1a1f7-41c9-415e-a5e3-b5ba0c0271e5",
     "label": "Instigator"
   },
@@ -51860,6 +52044,10 @@ masterIndex=[
     "label": "Ishai, Ojutai Dragonspeaker"
   },
   {
+    "value": "4f4358cb-59df-46d9-be27-69929f5a615c",
+    "label": "Ishgard, the Holy See // Faith & Grief"
+  },
+  {
     "value": "30265fce-28e6-4994-83f7-0e4c4b22df35",
     "label": "Ishi-Ishi, Akki Crackshot"
   },
@@ -51954,6 +52142,10 @@ masterIndex=[
   {
     "value": "f4ad190a-6c82-4923-af54-b4cce8d6465f",
     "label": "It of the Horrid Swarm"
+  },
+  {
+    "value": "7532f0ea-9d13-43ca-9b7d-2d22f2a66017",
+    "label": "Item Shopkeep"
   },
   {
     "value": "eb933723-b879-44c8-bbc8-d8c84ce5ab12",
@@ -52572,6 +52764,10 @@ masterIndex=[
     "label": "Jazal Goldmane"
   },
   {
+    "value": "b6cebf8d-37e1-42de-b3f1-1c174ab17ac8",
+    "label": "Jecht, Reluctant Guardian // Braska's Final Aeon"
+  },
+  {
     "value": "523cca7d-7d21-45de-b82d-58e777bf7f72",
     "label": "Jedit Ojanen"
   },
@@ -52830,6 +53026,14 @@ masterIndex=[
   {
     "value": "9cda6cb8-c254-413a-babd-0e24e7b89cc4",
     "label": "Jibbirik Omnivore"
+  },
+  {
+    "value": "bd513d9d-5aa2-4860-bd86-8b5d9430f133",
+    "label": "Jidoor, Aristocratic Capital // Overture"
+  },
+  {
+    "value": "c6655e05-9e31-4a74-a97d-1eeb473fe900",
+    "label": "Jill, Shiva's Dominant // Shiva, Warden of Ice"
   },
   {
     "value": "382bc554-d170-4c19-82dd-829f254e855e",
@@ -53144,6 +53348,10 @@ masterIndex=[
     "label": "Judge's Familiar"
   },
   {
+    "value": "aad9f9f2-4c6b-48d0-80bd-77b73a9ea5f1",
+    "label": "Judgment Bolt"
+  },
+  {
     "value": "e86c965b-ac10-4fff-b682-dddd6d9747c6",
     "label": "Judith, Carnage Connoisseur"
   },
@@ -53186,6 +53394,10 @@ masterIndex=[
   {
     "value": "cb9fa34d-1d5f-461c-acad-bc573d41ceb2",
     "label": "Jukai Trainee"
+  },
+  {
+    "value": "e0bdfbb4-3060-4492-bd9b-0c47e719400a",
+    "label": "Jumbo Cactuar"
   },
   {
     "value": "f7518456-45ed-41d4-bd3c-5aacea28eb35",
@@ -53522,6 +53734,10 @@ masterIndex=[
   {
     "value": "3d8f9b58-d011-4ed2-99ae-c626243fab26",
     "label": "Kaima, the Fractured Calm"
+  },
+  {
+    "value": "70fbb378-d905-47cf-8c54-cc166a7867b3",
+    "label": "Kain, Traitorous Dragoon"
   },
   {
     "value": "85aa53e8-f062-4d02-bc69-1413f7f0dcf1",
@@ -54410,6 +54626,10 @@ masterIndex=[
   {
     "value": "3aa58e5a-1b5e-4fb3-bf2d-9bad8126b6e6",
     "label": "Keepsake Gorgon"
+  },
+  {
+    "value": "6d3ca5cb-781d-4608-b7f1-38c020536376",
+    "label": "Kefka, Court Mage // Kefka, Ruler of Ruin"
   },
   {
     "value": "caf626a8-7abc-496b-9d3a-23194ce70e01",
@@ -56400,6 +56620,10 @@ masterIndex=[
     "label": "Kudzu"
   },
   {
+    "value": "3998a60d-9521-4100-8d41-3e612972a3de",
+    "label": "Kuja, Genome Sorcerer // Trance Kuja, Fate Defied"
+  },
+  {
     "value": "93f817c7-2a3d-4346-94c1-3ba8bafb485d",
     "label": "Kujar Seedsculptor"
   },
@@ -57090,6 +57314,10 @@ masterIndex=[
   {
     "value": "bd7c5a8b-cf62-41e1-a664-b16e3e5d142b",
     "label": "Laughing Jasper Flint"
+  },
+  {
+    "value": "4f65e6a9-0d90-44b9-9b76-00814db2dbd8",
+    "label": "Laughing Mad"
   },
   {
     "value": "9e3b373f-05f5-44df-9568-bd1f8039aa54",
@@ -58406,6 +58634,14 @@ masterIndex=[
   {
     "value": "d50f1ff7-d2bc-4e36-876d-77648f447f5b",
     "label": "Lightning Wolf"
+  },
+  {
+    "value": "585eb5bc-5a3d-44d8-b593-1ff0d67f96a7",
+    "label": "Lightning, Army of One"
+  },
+  {
+    "value": "e1626880-0fa3-441a-9978-b293fc87c418",
+    "label": "Lightning, Security Sergeant"
   },
   {
     "value": "cdaf3711-5bec-41bf-b333-c5f34ccb12ef",
@@ -60224,6 +60460,10 @@ masterIndex=[
     "label": "Machine Over Matter"
   },
   {
+    "value": "e7fff34e-9b80-4a67-a917-fd9efddb5a1f",
+    "label": "Machinist's Arsenal"
+  },
+  {
     "value": "b582b696-17fa-4eea-8124-293f9bd3a208",
     "label": "Mad Auntie"
   },
@@ -60454,6 +60694,10 @@ masterIndex=[
   {
     "value": "f50f8cac-35bf-4d4d-88c0-1c0c581f862c",
     "label": "Magistrate's Veto"
+  },
+  {
+    "value": "0d5bbde7-6f33-4708-b3ab-34d4528af649",
+    "label": "Magitek Scythe"
   },
   {
     "value": "f5af6d60-decd-4e04-8841-da2d3000a405",
@@ -60898,6 +61142,10 @@ masterIndex=[
   {
     "value": "0f99e921-61e7-4fc8-8115-4162712b4737",
     "label": "Malanthrope"
+  },
+  {
+    "value": "6804e329-800b-4aa4-9a00-b9a1f4b9537b",
+    "label": "Malboro"
   },
   {
     "value": "b0493924-dc6d-4655-865f-7e9b40f547ea",
@@ -62294,6 +62542,10 @@ masterIndex=[
   {
     "value": "0308b9f2-11da-41d0-8d18-18e8c0c600ab",
     "label": "Matopi Golem"
+  },
+  {
+    "value": "ef6c0054-3a89-4fac-b822-37c7d2514489",
+    "label": "Matoya, Archon Elder"
   },
   {
     "value": "4c90ca5c-551c-4da5-9482-62521b1ae17c",
@@ -65512,6 +65764,14 @@ masterIndex=[
     "label": "Moodmark Painter"
   },
   {
+    "value": "14f83370-fb60-453a-993a-c3aaa8565f16",
+    "label": "Moogle"
+  },
+  {
+    "value": "9627ed9a-5ade-412d-bf8d-f0705b1c9405",
+    "label": "Moogles' Valor"
+  },
+  {
     "value": "57dfe4aa-1e9a-4891-851b-201edd1fc79c",
     "label": "Moon Heron"
   },
@@ -67120,6 +67380,10 @@ masterIndex=[
     "label": "Nalia de'Arnise"
   },
   {
+    "value": "3d01c351-6dbd-4d63-9843-3aa1a3c039a6",
+    "label": "Namazu Trader"
+  },
+  {
     "value": "d6911456-42cb-4b23-a560-dc98784530f5",
     "label": "Nameless Inversion"
   },
@@ -68316,6 +68580,10 @@ masterIndex=[
     "label": "Niambi, Faithful Healer"
   },
   {
+    "value": "eab5eef8-d180-4b08-a770-6b3a1df03745",
+    "label": "Nibelheim Aflame"
+  },
+  {
     "value": "d14d41a5-6f38-43c7-b95c-b4a723002c20",
     "label": "Niblis of Dusk"
   },
@@ -69094,6 +69362,10 @@ masterIndex=[
   {
     "value": "f3f10173-fead-48a2-9726-a4e7efec3951",
     "label": "Noble's Purse"
+  },
+  {
+    "value": "2d44bdd2-aa31-415a-be71-d9e98ef12334",
+    "label": "Noctis, Prince of Lucis"
   },
   {
     "value": "f71bbaf2-02ea-4fc0-9a39-49d6689b36cd",
@@ -72360,6 +72632,10 @@ masterIndex=[
     "label": "Paladin of the Bloodstained"
   },
   {
+    "value": "22076484-e9d5-4f33-8cf3-b9b427436b05",
+    "label": "Paladin's Arms"
+  },
+  {
     "value": "dc548b03-ef5f-40df-8311-35d4cf26f3c5",
     "label": "Paladin's Shield"
   },
@@ -73748,6 +74024,10 @@ masterIndex=[
     "label": "Phantom Tiger"
   },
   {
+    "value": "a0c4eb78-bee0-42c6-ab1e-64bacde87960",
+    "label": "Phantom Train"
+  },
+  {
     "value": "23745133-e5e2-4ce3-b94a-73d0d3d8a013",
     "label": "Phantom Warrior"
   },
@@ -73858,6 +74138,10 @@ masterIndex=[
   {
     "value": "40bb7b6b-a75d-4b59-ba45-a5801dcd59a1",
     "label": "Phoenix Chick"
+  },
+  {
+    "value": "8cc7e418-cc5e-4aef-9757-874223fccd74",
+    "label": "Phoenix Down"
   },
   {
     "value": "0ad557fc-6b7e-4f7e-b060-e3c8ec8acf6d",
@@ -75222,6 +75506,10 @@ masterIndex=[
   {
     "value": "58020778-554c-4af6-8484-0b90f64bc5d9",
     "label": "Poison the Cup"
+  },
+  {
+    "value": "2c9bf40b-ddcb-4f46-a81e-56b91dfc784f",
+    "label": "Poison the Waters"
   },
   {
     "value": "a47ae84f-dcbc-4a60-9266-c1a02f92e7f8",
@@ -77988,12 +78276,20 @@ masterIndex=[
     "label": "Quirion Trailblazer"
   },
   {
+    "value": "821e8648-222c-4b33-a8bd-e8bfff7dcd9e",
+    "label": "Quistis Trepe"
+  },
+  {
     "value": "cec11318-4578-4c66-a9be-1704df0c296c",
     "label": "Qumulox"
   },
   {
     "value": "6754753d-790e-4a95-a150-76741c4a02d4",
     "label": "RMS Titanic"
+  },
+  {
+    "value": "bd39e333-b0b8-4a85-8645-d77f4a3941db",
+    "label": "Rabanastre, Royal City"
   },
   {
     "value": "fee35fc4-a5b5-4c2c-8c6a-62dad166ea72",
@@ -78378,6 +78674,10 @@ masterIndex=[
   {
     "value": "6d474413-e72f-414e-872f-aa00d38b7da4",
     "label": "Ragnar"
+  },
+  {
+    "value": "14b839ef-80b1-4e7d-b2fd-38e973899cde",
+    "label": "Ragnarok, Divine Deliverance"
   },
   {
     "value": "c2c66419-c2ca-4259-afc6-eaec6d3bb897",
@@ -80788,6 +81088,10 @@ masterIndex=[
     "label": "Relive the Past"
   },
   {
+    "value": "dd6601c6-810d-4883-89d2-5d31419fb1cc",
+    "label": "Relm's Sketching"
+  },
+  {
     "value": "8d24c12a-a300-4199-b2a9-3d5ead8df617",
     "label": "Reluctant Role Model"
   },
@@ -80962,6 +81266,10 @@ masterIndex=[
   {
     "value": "1bd5fd97-f898-4e17-9e8f-5fa93b9eef71",
     "label": "Renewing Touch"
+  },
+  {
+    "value": "f749a6d6-2c55-439f-bb02-e95fa54c2ef3",
+    "label": "Reno and Rude"
   },
   {
     "value": "72f9a6f7-ea26-438d-aafa-758239fd3681",
@@ -81530,6 +81838,10 @@ masterIndex=[
   {
     "value": "157a4cba-b2e6-4c42-b7dc-62db19625c9c",
     "label": "Retrieve"
+  },
+  {
+    "value": "9d6fdbd4-ba51-4df1-b383-9b709b36a8d7",
+    "label": "Retrieve the Esper"
   },
   {
     "value": "279e573d-b7a3-4e62-a708-3ec992d97972",
@@ -82350,6 +82662,10 @@ masterIndex=[
   {
     "value": "f09278dc-1e67-4cd8-977d-4b3b94430aac",
     "label": "Ringwraiths"
+  },
+  {
+    "value": "8896c74b-d466-4c25-94cf-82b5e2b1fdef",
+    "label": "Rinoa Heartilly"
   },
   {
     "value": "be4f47e9-1bd2-4aa9-bc85-3f203ad21639",
@@ -83578,6 +83894,10 @@ masterIndex=[
   {
     "value": "16a44586-ea1d-45f1-b9de-da1c11f729df",
     "label": "Rory Williams"
+  },
+  {
+    "value": "9c4fdd20-0396-40b7-8687-43b1035b6956",
+    "label": "Rosa, Resolute White Mage"
   },
   {
     "value": "cf66067b-8f5e-46f6-9d61-cffb8875d858",
@@ -84848,6 +85168,10 @@ masterIndex=[
     "label": "Sage's Knowledge"
   },
   {
+    "value": "97248734-6e99-42a2-8f11-f3337b25f8ab",
+    "label": "Sage's Nouliths"
+  },
+  {
     "value": "bd92cacd-c7d8-43a2-a261-ea4754fefdc5",
     "label": "Sage's Reverie"
   },
@@ -84890,6 +85214,10 @@ masterIndex=[
   {
     "value": "7cee6d43-5dec-4989-85ec-c635ec783ec7",
     "label": "Sagu Wildling // Roost Seek"
+  },
+  {
+    "value": "24310f49-2156-4c0d-b3b1-40ca3182474f",
+    "label": "Sahagin"
   },
   {
     "value": "5f3fe679-aff1-41b3-8d75-c78c2c0636f0",
@@ -85190,6 +85518,10 @@ masterIndex=[
   {
     "value": "6df6e834-1917-4bf4-b0b7-09834bf90fb2",
     "label": "Samurai of the Pale Curtain"
+  },
+  {
+    "value": "9b8b5812-73bd-453e-bdff-aad1fafa9226",
+    "label": "Samurai's Katana"
   },
   {
     "value": "7d07821e-d34b-4441-a137-836ffce7127b",
@@ -86150,6 +86482,14 @@ masterIndex=[
   {
     "value": "ac7d1986-8388-4e4c-973e-d90382b12acf",
     "label": "Sazacap's Brew"
+  },
+  {
+    "value": "0e5b40dc-debf-48a1-8398-5ea00b5a5166",
+    "label": "Sazh Katzroy"
+  },
+  {
+    "value": "c2b082b4-5d9c-4125-b353-d1cf4f334720",
+    "label": "Sazh's Chocobo"
   },
   {
     "value": "d4f659ba-c277-47a2-8b95-ce81ddac34fb",
@@ -88080,6 +88420,10 @@ masterIndex=[
     "label": "Self-Assembler"
   },
   {
+    "value": "98bf6311-bc9b-4bf8-ac83-c041973b86d0",
+    "label": "Self-Destruct"
+  },
+  {
     "value": "28956db0-985c-402d-abae-1075c68b97e7",
     "label": "Self-Inflicted Wound"
   },
@@ -88316,6 +88660,18 @@ masterIndex=[
     "label": "Sephara, Sky's Blade"
   },
   {
+    "value": "94ac2990-58a5-43d4-bdac-ec2f6daf0b51",
+    "label": "Sephiroth's Intervention"
+  },
+  {
+    "value": "70113003-be5e-406a-9aec-cb480468c36d",
+    "label": "Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel"
+  },
+  {
+    "value": "6af71c5a-2c1b-4120-b3c9-c3c70d94a5c9",
+    "label": "Sephiroth, Planet's Heir"
+  },
+  {
     "value": "c7335845-ace9-402d-a5be-3bfe3fe9b089",
     "label": "Septic Rats"
   },
@@ -88334,6 +88690,10 @@ masterIndex=[
   {
     "value": "b6fe779f-b20d-49cc-96dd-54f1ffb312e1",
     "label": "Sequestered Stash"
+  },
+  {
+    "value": "a8a7a3b7-015c-4fbd-8b90-e0ddf71663e4",
+    "label": "Serah Farron // Crystallized Serah"
   },
   {
     "value": "a1c50bd1-120d-44ac-af20-13a90fc991e6",
@@ -88812,6 +89172,10 @@ masterIndex=[
     "label": "Sewn-Eye Drake"
   },
   {
+    "value": "7312efc2-8a02-47cd-874b-c3338241435e",
+    "label": "Seymour Flux"
+  },
+  {
     "value": "7599fe9a-b6a5-491b-a308-aef3bf1e9daf",
     "label": "Shabraz, the Skyshark"
   },
@@ -89108,6 +89472,10 @@ masterIndex=[
     "label": "Shambling Attendants"
   },
   {
+    "value": "d3f4aa87-a89e-43f8-abc3-712e6bf08889",
+    "label": "Shambling Cie'th"
+  },
+  {
     "value": "e5e6229a-3422-4afd-9a87-86daa2d31d3a",
     "label": "Shambling Ghast"
   },
@@ -89162,6 +89530,10 @@ masterIndex=[
   {
     "value": "998484cc-fefc-4da5-9987-5d6e89599c34",
     "label": "Shanodin Dryads"
+  },
+  {
+    "value": "381df197-5fb7-44ab-a31f-96c4993a0e53",
+    "label": "Shantotto, Tactician Magician"
   },
   {
     "value": "126aab4d-df6e-4840-8cdc-49e890b1557f",
@@ -89900,6 +90272,10 @@ masterIndex=[
     "label": "Shinka, the Bloodsoaked Keep"
   },
   {
+    "value": "6cfe63ac-3581-461b-8ed3-3e231851e3f8",
+    "label": "Shinra Reinforcements"
+  },
+  {
     "value": "aae76e5c-f5e0-4d18-b465-e6a829be908a",
     "label": "Shiny Impetus"
   },
@@ -90478,6 +90854,10 @@ masterIndex=[
   {
     "value": "331b6834-6bb4-40fa-b80b-22d67b34734f",
     "label": "Sidar Kondo of Jamuraa"
+  },
+  {
+    "value": "bd7c328e-0380-46f8-bb85-7bf4e201b7ac",
+    "label": "Sidequest: Catch a Fish // Cooking Campsite"
   },
   {
     "value": "07180afc-5c63-42e0-907b-0ed52f777165",
@@ -91226,6 +91606,10 @@ masterIndex=[
   {
     "value": "745efa76-7063-4971-9d1b-b2b4cb336a57",
     "label": "Sin Prodder"
+  },
+  {
+    "value": "3bcc378c-4470-4757-a0d5-025a32c918ea",
+    "label": "Sin, Spira's Punishment"
   },
   {
     "value": "dc81069b-b2cf-44b3-98fc-45bb24b815cb",
@@ -93924,10 +94308,6 @@ masterIndex=[
     "label": "Soraya the Falconer"
   },
   {
-    "value": "2af1ecc5-6396-43ed-98a1-b25a32758004",
-    "label": "Sorcerer // Virtuous"
-  },
-  {
     "value": "19ba0f2d-4de3-49a0-be7d-da0aa220cd8a",
     "label": "Sorcerer Class"
   },
@@ -96348,6 +96728,10 @@ masterIndex=[
     "label": "Squall Line"
   },
   {
+    "value": "e2348e0e-eeca-47b5-9417-bf4470ec29bb",
+    "label": "Squall, SeeD Mercenary"
+  },
+  {
     "value": "50bf5af6-50d7-4dea-936e-508e24db0a03",
     "label": "Squallmonger"
   },
@@ -96900,6 +97284,10 @@ masterIndex=[
     "label": "Starting Column"
   },
   {
+    "value": "d04e0975-f401-41b8-a9db-9bcf9cbbce66",
+    "label": "Starting Town"
+  },
+  {
     "value": "7996222e-68c8-4a5c-9531-c60cdd88ae05",
     "label": "Startle"
   },
@@ -97386,6 +97774,10 @@ masterIndex=[
   {
     "value": "9c0d7d7d-5513-4e2b-b834-1ff999ab24f5",
     "label": "Stiltstrider"
+  },
+  {
+    "value": "958c2a27-9fb1-42b4-a0ef-296584763a98",
+    "label": "Stiltzkin, Moogle Merchant"
   },
   {
     "value": "ce76d17e-d536-46f0-98e2-3e1b1b4f61a4",
@@ -98964,12 +99356,52 @@ masterIndex=[
     "label": "Summon the School"
   },
   {
+    "value": "0990e57f-279e-4348-a049-e06187cc38d4",
+    "label": "Summon: Anima"
+  },
+  {
+    "value": "fe9f6825-597b-4d80-ab7c-f4ee4e824b6f",
+    "label": "Summon: Bahamut"
+  },
+  {
+    "value": "0d054301-8465-4a4c-91e7-9a28dda92e57",
+    "label": "Summon: Esper Ramuh"
+  },
+  {
+    "value": "3509171e-8d7d-4e9e-97a1-58e6c7d225ed",
+    "label": "Summon: Fenrir"
+  },
+  {
+    "value": "73122880-d7f4-422f-a336-18773bcb7bfe",
+    "label": "Summon: Knights of Round"
+  },
+  {
+    "value": "b38d1811-64d7-4a35-a86c-3291eecd8391",
+    "label": "Summon: Leviathan"
+  },
+  {
+    "value": "aaf9e711-94e1-4869-81b0-baa6380ee873",
+    "label": "Summon: Primal Garuda"
+  },
+  {
+    "value": "032f59c3-9f47-4db3-a43c-065a99ed7efe",
+    "label": "Summon: Primal Odin"
+  },
+  {
+    "value": "5846718c-7d31-4d2c-80a2-b1534e2aebc1",
+    "label": "Summon: Shiva"
+  },
+  {
     "value": "b9b0c209-e346-45ee-a272-0b53589c21df",
     "label": "Summoner's Bane"
   },
   {
     "value": "2209ebd4-1131-4b8e-b0f5-aa9506dc0057",
     "label": "Summoner's Egg"
+  },
+  {
+    "value": "d4453b3e-733e-4038-81da-135a6a03079c",
+    "label": "Summoner's Grimoire"
   },
   {
     "value": "782dcbc4-5a11-42f5-b8d9-4572e36d45b3",
@@ -99394,6 +99826,10 @@ masterIndex=[
   {
     "value": "65756e6d-9825-4ed6-91c4-79f1e3bd4ae5",
     "label": "Supernatural Stamina"
+  },
+  {
+    "value": "2d1bbeda-2e81-4aaa-9494-094ec3dd6c3b",
+    "label": "Suplex"
   },
   {
     "value": "7e49f689-996a-477e-a327-32b69fbc0d85",
@@ -102276,6 +102712,10 @@ masterIndex=[
     "label": "Terra Stomper"
   },
   {
+    "value": "54ca5904-9099-497a-9684-101656025487",
+    "label": "Terra, Magical Adept // Esper Terra"
+  },
+  {
     "value": "683089a8-d5a9-438a-a463-77cc6148125e",
     "label": "Terraformer"
   },
@@ -102844,6 +103284,10 @@ masterIndex=[
     "label": "The Black Gate"
   },
   {
+    "value": "8c0aa0c3-4513-4525-b682-2be7203d3bc7",
+    "label": "The Blackjack"
+  },
+  {
     "value": "a4faed58-4b1b-4cab-8a12-4fcd20b320ab",
     "label": "The Blackstaff of Waterdeep"
   },
@@ -102920,6 +103364,10 @@ masterIndex=[
     "label": "The Cruelty of Gix"
   },
   {
+    "value": "df4ef2f8-2591-4be3-b905-4f9ff9c538ea",
+    "label": "The Crystal's Chosen"
+  },
+  {
     "value": "ef7fce1b-0d95-4f92-a8ad-09d9756fa0e4",
     "label": "The Curse of Fenric"
   },
@@ -102930,6 +103378,10 @@ masterIndex=[
   {
     "value": "07799012-7051-400e-adde-b54b41b80c70",
     "label": "The Dalek Emperor"
+  },
+  {
+    "value": "660f370a-b25b-4ea5-b765-7abf96899c1c",
+    "label": "The Darkness Crystal"
   },
   {
     "value": "c2ee17b2-6119-4ade-b806-1add64513c3a",
@@ -102970,6 +103422,10 @@ masterIndex=[
   {
     "value": "6b3e1aaf-6909-400a-88f2-9e9fde9a0cf7",
     "label": "The Eleventh Hour"
+  },
+  {
+    "value": "042c01ec-9f1f-432b-bea9-d64d822cd91e",
+    "label": "The Emperor of Palamecia // The Lord Master of Hell"
   },
   {
     "value": "835c195a-8c35-4076-896d-8d2972cac270",
@@ -103358,6 +103814,10 @@ masterIndex=[
   {
     "value": "bbd7b756-bbee-451e-9446-06019791cb36",
     "label": "The Pride of Hull Clade"
+  },
+  {
+    "value": "a09d9754-a321-4018-a237-e613e915b642",
+    "label": "The Prima Vista"
   },
   {
     "value": "70d52457-1867-482c-ba7a-1f7dacc4514f",
@@ -105128,6 +105588,10 @@ masterIndex=[
     "label": "Tidy Conclusion"
   },
   {
+    "value": "878df304-9d6d-4ce9-b65b-1439c251f3e0",
+    "label": "Tifa Lockhart"
+  },
+  {
     "value": "2ef8ebc9-4f95-42f8-86e6-85eff0b8f021",
     "label": "Tiger Claws"
   },
@@ -105836,6 +106300,10 @@ masterIndex=[
     "label": "Tomorrow, Azami's Familiar"
   },
   {
+    "value": "a26f3cbb-39b5-4688-92f7-26534613a9f3",
+    "label": "Tonberry"
+  },
+  {
     "value": "9039f59a-915b-4b16-a5c4-1a5fbfb0b639",
     "label": "Tonic Peddler"
   },
@@ -106320,6 +106788,10 @@ masterIndex=[
     "label": "Town Gossipmonger // Incited Rabble"
   },
   {
+    "value": "9dc61ef6-da22-42a8-b348-dfd5722deadf",
+    "label": "Town Greeter"
+  },
+  {
     "value": "ec1ac4df-b031-43b4-a2de-ca58a1599053",
     "label": "Town Sentry"
   },
@@ -106758,6 +107230,10 @@ masterIndex=[
   {
     "value": "14934ab0-41ab-44f8-bb28-2b0457eb6f5f",
     "label": "Traveling Botanist"
+  },
+  {
+    "value": "2e5675d3-3fb0-43b5-a65c-95aacbe48bf9",
+    "label": "Traveling Chocobo"
   },
   {
     "value": "1d789ccd-8192-41b1-a5bb-1e2174657698",
@@ -107262,6 +107738,10 @@ masterIndex=[
   {
     "value": "5751df7a-aa9a-4a27-b7ab-445ec4bcbdee",
     "label": "Trip Wire"
+  },
+  {
+    "value": "9567d963-4815-466b-a319-6d138b6a0cd2",
+    "label": "Triple Triad"
   },
   {
     "value": "48090c64-f41a-447b-ad7a-54e3194f759b",
@@ -108340,8 +108820,24 @@ masterIndex=[
     "label": "Ulrich's Kindred"
   },
   {
+    "value": "0dc4bf39-67d6-44e5-8993-dd18b20cfdee",
+    "label": "Ultima Weapon"
+  },
+  {
+    "value": "baa337ce-edc6-4ee5-a898-68e9dbb4ab93",
+    "label": "Ultima, Origin of Oblivion"
+  },
+  {
     "value": "d740453b-d8f8-48d0-8c50-72a7cdb791b5",
     "label": "Ultimate Price"
+  },
+  {
+    "value": "5a8e7e35-e9ea-4808-8aa7-7580a23b9d9d",
+    "label": "Ultimecia, Temporal Threat"
+  },
+  {
+    "value": "70773879-b773-4e81-99ca-8f4bba478962",
+    "label": "Ultimecia, Time Sorceress // Ultimecia, Omnipotent"
   },
   {
     "value": "48e913c0-efeb-47f5-9dcb-b795751e6b6d",
@@ -108630,6 +109126,10 @@ masterIndex=[
   {
     "value": "36b61021-72f0-4c22-a41d-9b2f093d7ca8",
     "label": "Undercity // The Initiative"
+  },
+  {
+    "value": "f09811d0-c5da-4061-aaa7-835ccee3b05a",
+    "label": "Undercity Dire Rat"
   },
   {
     "value": "93cb9c7e-d6d3-4b1e-8bcf-2a4a1d95a549",
@@ -109900,6 +110400,10 @@ masterIndex=[
     "label": "Valki, God of Lies // Tibalt, Cosmic Impostor"
   },
   {
+    "value": "1333d690-a6dc-4ef8-8c57-2ba16727c0a5",
+    "label": "Valkyrie Aerial Unit"
+  },
+  {
     "value": "18a5e71e-eb75-4ac7-bedd-2220aaa24f78",
     "label": "Valkyrie Harbinger"
   },
@@ -110234,6 +110738,10 @@ masterIndex=[
   {
     "value": "bc628018-f5d0-4bd2-91e7-ee4e4a5af9aa",
     "label": "Vanguard's Shield"
+  },
+  {
+    "value": "577725ae-290f-4081-8352-3317521a096f",
+    "label": "Vanille, Cheerful l'Cie"
   },
   {
     "value": "1056b27c-125c-4daa-a0c8-533efc9ccc32",
@@ -111624,6 +112132,10 @@ masterIndex=[
     "label": "Villainous Wealth"
   },
   {
+    "value": "f40e6bbf-1fed-4ec5-869d-18c2dd396d14",
+    "label": "Vincent Valentine // Galian Beast"
+  },
+  {
     "value": "63c1ac21-e3d8-40c2-8c09-3f31c52992ef",
     "label": "Vindicate"
   },
@@ -112026,6 +112538,10 @@ masterIndex=[
   {
     "value": "88fb9e82-28b9-4275-a1e2-cb3a9bfda127",
     "label": "Vitu-Ghazi, the City-Tree"
+  },
+  {
+    "value": "0452be2a-e97a-4269-a9e3-b616265ecb2e",
+    "label": "Vivi Ornitier"
   },
   {
     "value": "d8e2efe0-33a4-4303-9e83-ac42ea5df8cb",
@@ -114000,6 +114516,10 @@ masterIndex=[
     "label": "Warrior's Stand"
   },
   {
+    "value": "a339961e-3555-467f-a4f8-c5eaac7e7ed1",
+    "label": "Warrior's Sword"
+  },
+  {
     "value": "1d4605c0-47c5-4561-ab53-9cff677330aa",
     "label": "Warriors' Lesson"
   },
@@ -115064,6 +115584,10 @@ masterIndex=[
     "label": "Whisperwood Elemental"
   },
   {
+    "value": "6022608a-6cf2-45bd-adec-63211710a5ed",
+    "label": "White Auracite"
+  },
+  {
     "value": "bb03e682-4525-40d2-8c49-6328f84bd36a",
     "label": "White Dragon"
   },
@@ -115074,6 +115598,10 @@ masterIndex=[
   {
     "value": "ddb021df-ae4a-4ac1-8353-d0b375761714",
     "label": "White Knight"
+  },
+  {
+    "value": "af1acf07-39e2-441e-a1e0-1db535535e2e",
+    "label": "White Mage's Staff"
   },
   {
     "value": "cf58682f-c305-4803-b54b-37f0841788e9",
@@ -116288,6 +116816,10 @@ masterIndex=[
     "label": "Witty Roastmaster"
   },
   {
+    "value": "27a141bd-611c-4127-83c7-fbd7682c1427",
+    "label": "Wizard"
+  },
+  {
     "value": "3e211a1b-7115-422b-bcb5-3d6c005afd7f",
     "label": "Wizard"
   },
@@ -117200,6 +117732,10 @@ masterIndex=[
     "label": "Xanathar, Guild Kingpin"
   },
   {
+    "value": "36b5c793-30f6-4f21-8bf6-c18d1c46d732",
+    "label": "Xande, Dark Mage"
+  },
+  {
     "value": "8291543f-d086-48aa-b2b7-5481ca8c9198",
     "label": "Xander's Lounge"
   },
@@ -117290,6 +117826,10 @@ masterIndex=[
   {
     "value": "8687948c-456b-495b-9b31-f818c65624b6",
     "label": "Xyris, the Writhing Storm"
+  },
+  {
+    "value": "a6a7bf77-0560-4572-a826-3bc9df1f78d1",
+    "label": "Y'shtola Rhul"
   },
   {
     "value": "692babfa-9b74-415e-a560-abae4ccb006b",
@@ -117736,6 +118276,10 @@ masterIndex=[
     "label": "Yuma, Proud Protector"
   },
   {
+    "value": "3dee768a-612c-4960-bad2-2fe5b83a70c3",
+    "label": "Yuna, Hope of Spira"
+  },
+  {
     "value": "a7043fbd-1dfd-42cf-be4b-cc343d0949e5",
     "label": "Yuriko, the Tiger's Shadow"
   },
@@ -117754,6 +118298,10 @@ masterIndex=[
   {
     "value": "23270e4a-a222-4ffb-a946-d0e20d665187",
     "label": "Zacama, Primal Calamity"
+  },
+  {
+    "value": "e84d146a-1c67-49df-b062-622794e45c42",
+    "label": "Zack Fair"
   },
   {
     "value": "d57d1988-5962-4df9-8342-cf04233fd6c7",
@@ -117806,6 +118354,10 @@ masterIndex=[
   {
     "value": "049fc248-4e46-43de-986d-fa023a3e8792",
     "label": "Zanam Djinn"
+  },
+  {
+    "value": "5f2b3ea8-99ee-47a4-8a1c-4b27478d524c",
+    "label": "Zanarkand, Ancient Metropolis // Lasting Fayth"
   },
   {
     "value": "e29012bb-4a1d-409e-8db9-50920fdf68a2",
@@ -117900,6 +118452,10 @@ masterIndex=[
     "label": "Zektar Shrine Expedition"
   },
   {
+    "value": "f207ce73-e4cd-4dfc-b3b9-5704f5148959",
+    "label": "Zell Dincht"
+  },
+  {
     "value": "4dde484a-8d5b-4eb6-ab4a-e30cc370431c",
     "label": "Zellix, Sanity Flayer"
   },
@@ -117938,6 +118494,10 @@ masterIndex=[
   {
     "value": "a0fdc716-31b9-47f6-8639-de8bb7e3629f",
     "label": "Zenith Seeker"
+  },
+  {
+    "value": "8f52fc65-a914-421a-9426-21eb520d55d5",
+    "label": "Zenos yae Galvus // Shinryu, Transcendent Rival"
   },
   {
     "value": "88aa710c-26ed-490d-9a4b-4a2b48df1733",
@@ -118104,6 +118664,10 @@ masterIndex=[
     "label": "Ziatora, the Incinerator"
   },
   {
+    "value": "f267fb54-1881-464c-81af-9e03c3f3b41d",
+    "label": "Zidane, Tantalus Thief"
+  },
+  {
     "value": "2dba8d8d-891e-482e-8014-879f701d0619",
     "label": "Zilortha, Strength Incarnate"
   },
@@ -118206,6 +118770,10 @@ masterIndex=[
   {
     "value": "79aba9a7-b957-4139-8d50-f1c91fa17793",
     "label": "Zodiac Tiger"
+  },
+  {
+    "value": "f1190fb9-72a2-48f8-bc2d-61240f1e9119",
+    "label": "Zodiark, Umbral God"
   },
   {
     "value": "3763de30-28e1-4689-a71c-07d2fea3a466",
