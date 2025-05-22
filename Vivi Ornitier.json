@@ -370,7 +370,8 @@
     "4dabba8c-0490-41ec-a03e-f7d0c9f0edb6": "Zenith Festival",
     "9908e597-9470-4c13-8387-39431b380138": "Braingeyser",
     "3428287b-cfd5-45bc-b5f9-1e3f5a425a68": "Mind Spring",
-    "2b0b4fc1-9ad6-4259-a0a2-9a14484c246e": "Silver Scrutiny"
+    "2b0b4fc1-9ad6-4259-a0a2-9a14484c246e": "Silver Scrutiny",
+    "2effcd1c-5833-4e0e-bb67-2d2ffb22a014": "Seething Anger"
   },
   "deckIds": [
     "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
@@ -386,7 +387,6 @@
     "2e2ace5b-4018-43af-8e72-ebafec1a7739",
     "eadd9559-6dcb-4b96-8c95-58abddd0e120",
     "4d6a1391-817a-4ddc-840d-886b138eeb3f",
-    "1cad92ce-55c8-4b78-8d8c-56645ef8e6ee",
     "fb81e4d3-1d8c-4779-be62-87cf49277e51",
     "d3b7b541-6f05-46c1-8031-c848c4bd4635",
     "8c3495bf-02e7-4ad9-949d-92eb3d2b662a",
@@ -406,7 +406,6 @@
     "956381ba-6d37-4a8a-846c-bad79222dbee",
     "2fa94a07-c932-4f85-b6e0-a97d2b29eb52",
     "6eb93545-a1a6-4447-82c5-421d8e9f023d",
-    "228fbae1-423e-461d-b8c3-55786938a3cb",
     "c6bdaf76-6a03-4695-9c4b-f040e73435af",
     "223fa044-d387-4884-bf4e-75f1b61c6a46",
     "02090581-61aa-4348-ad57-451be8ee91c2",
@@ -418,7 +417,6 @@
     "9097243a-39fa-4e18-8316-c0e57699c783",
     "09618da4-6e2d-4047-96d7-0576c0754e7d",
     "d32345c1-ed20-4bfc-a5fa-6ac7b99542ec",
-    "b2b0a5d0-0084-43a4-b6dc-e893ef42cdb7",
     "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
     "4924b3a4-a218-4783-8a4d-82361fdecc78",
     "67f43ac6-2a58-4b53-b5d7-0330e2a252e2",
@@ -432,9 +430,7 @@
     "032b8a0d-491a-4a12-ab9f-689010054d5b",
     "f3e213a4-ba5a-468a-93b3-c0a34e1bd725",
     "cae166de-e681-40a0-83a8-3c17cf40e2fc",
-    "5f15125e-ae89-471e-b055-226a783bc7c1",
     "9880ba09-d5b8-4675-bfb4-2161d86d2d41",
-    "360039a5-1cbd-4ee3-8f94-21b5348e106a",
     "8d0adc5c-3fdd-4e22-b783-5651f8e57b65",
     "cf188dd3-1927-481b-b8c0-93b1222dbf53",
     "a4a8af4e-8686-45ba-94fd-ccf6cc8adaae",
@@ -449,7 +445,12 @@
     "2b0b4fc1-9ad6-4259-a0a2-9a14484c246e",
     "1a0770e6-b093-4439-baff-6889a50ba12e",
     "61978202-538b-4f92-acfc-e95f4a6ce466",
-    "d9f1dc61-831e-4244-a2da-aa9da6fd5b50"
+    "d9f1dc61-831e-4244-a2da-aa9da6fd5b50",
+    "2effcd1c-5833-4e0e-bb67-2d2ffb22a014",
+    "713332c1-5bd8-400f-bfff-c1ca0697a043",
+    "ac641490-ca14-48d7-8cc4-b69ce984befa",
+    "1946ded1-5f53-409f-b0a6-5433bb0357d2",
+    "c5da5c31-0cf1-4393-8701-eda7880ecebc"
   ],
   "tokenIds": [],
   "commandZoneIds": [
@@ -466,13 +467,10 @@
       "88bb91b5-2ccd-4ce9-8cd4-e54d63c12abf",
       "2e9289d6-dbc6-456d-88cf-d1f534e731d6",
       "eadd9559-6dcb-4b96-8c95-58abddd0e120",
-      "1cad92ce-55c8-4b78-8d8c-56645ef8e6ee",
-      "228fbae1-423e-461d-b8c3-55786938a3cb",
       "2fa94a07-c932-4f85-b6e0-a97d2b29eb52",
       "6eb93545-a1a6-4447-82c5-421d8e9f023d",
-      "111889d4-bcca-4b1f-ad48-3077e2f5136f",
       "c6bdaf76-6a03-4695-9c4b-f040e73435af",
-      "b2b0a5d0-0084-43a4-b6dc-e893ef42cdb7",
+      "111889d4-bcca-4b1f-ad48-3077e2f5136f",
       "ea734863-5793-49d6-b10e-109432aec0a3",
       "8c3495bf-02e7-4ad9-949d-92eb3d2b662a",
       "e49b902f-a556-4dab-8928-93caf0a3f609",
@@ -484,10 +482,8 @@
       "bb8cccc8-e56f-42fa-a0d7-fc889b5e1c7b",
       "9097243a-39fa-4e18-8316-c0e57699c783",
       "09618da4-6e2d-4047-96d7-0576c0754e7d",
-      "360039a5-1cbd-4ee3-8f94-21b5348e106a",
       "8d0adc5c-3fdd-4e22-b783-5651f8e57b65",
-      "574044cf-2e2f-4b5c-b4d1-cf05ba814ab2",
-      "5f15125e-ae89-471e-b055-226a783bc7c1"
+      "574044cf-2e2f-4b5c-b4d1-cf05ba814ab2"
     ],
     "ramp": [
       "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
@@ -500,7 +496,8 @@
       "0fd114c4-092b-4e28-b0dc-ef529f3bc73e",
       "45bee121-0beb-4901-9473-20e4704ba6dc",
       "61978202-538b-4f92-acfc-e95f4a6ce466",
-      "9880ba09-d5b8-4675-bfb4-2161d86d2d41"
+      "9880ba09-d5b8-4675-bfb4-2161d86d2d41",
+      "2effcd1c-5833-4e0e-bb67-2d2ffb22a014"
     ],
     "advantage": [
       "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
@@ -522,7 +519,9 @@
       "9908e597-9470-4c13-8387-39431b380138",
       "755bd5d8-67f1-4f24-a4e8-d98edf2f2e03",
       "3428287b-cfd5-45bc-b5f9-1e3f5a425a68",
-      "2b0b4fc1-9ad6-4259-a0a2-9a14484c246e"
+      "2b0b4fc1-9ad6-4259-a0a2-9a14484c246e",
+      "713332c1-5bd8-400f-bfff-c1ca0697a043",
+      "ac641490-ca14-48d7-8cc4-b69ce984befa"
     ],
     "interaction": [
       "f3e213a4-ba5a-468a-93b3-c0a34e1bd725",
