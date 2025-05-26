@@ -371,7 +371,15 @@
     "9908e597-9470-4c13-8387-39431b380138": "Braingeyser",
     "3428287b-cfd5-45bc-b5f9-1e3f5a425a68": "Mind Spring",
     "2b0b4fc1-9ad6-4259-a0a2-9a14484c246e": "Silver Scrutiny",
-    "2effcd1c-5833-4e0e-bb67-2d2ffb22a014": "Seething Anger"
+    "2effcd1c-5833-4e0e-bb67-2d2ffb22a014": "Seething Anger",
+    "362fc643-ab76-4160-a73e-73397464db40": "Deliberate",
+    "4c7f3fbf-6b68-492f-893d-853c73cfa463": "Distortion Strike",
+    "34ef174e-1b3d-43d5-9f72-3d35befbdd7f": "Ojer Pakpatiq, Deepest Epoch // Temple of Cyclical Time",
+    "197582b9-4c86-41a3-ad0c-789a0db8e087": "Quantum Misalignment",
+    "fa482ded-b24c-4f9e-948e-d0620e907b8b": "Surreal Memoir",
+    "02d78e76-8151-4851-bb4e-e0a1fa98756f": "Glimpse of Freedom",
+    "623d9db1-a3af-4a1c-9643-975de364e073": "Inside Out",
+    "cf459f47-e565-4bbb-89e4-ed54da8adae1": "Zhalfirin Shapecraft"
   },
   "deckIds": [
     "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
@@ -404,8 +412,6 @@
     "90f54959-2c9b-4b8a-84c9-d6893eb43553",
     "53236dd7-845a-444c-96d5-f41ed7325d8f",
     "956381ba-6d37-4a8a-846c-bad79222dbee",
-    "2fa94a07-c932-4f85-b6e0-a97d2b29eb52",
-    "6eb93545-a1a6-4447-82c5-421d8e9f023d",
     "c6bdaf76-6a03-4695-9c4b-f040e73435af",
     "223fa044-d387-4884-bf4e-75f1b61c6a46",
     "02090581-61aa-4348-ad57-451be8ee91c2",
@@ -450,7 +456,9 @@
     "713332c1-5bd8-400f-bfff-c1ca0697a043",
     "ac641490-ca14-48d7-8cc4-b69ce984befa",
     "1946ded1-5f53-409f-b0a6-5433bb0357d2",
-    "c5da5c31-0cf1-4393-8701-eda7880ecebc"
+    "c5da5c31-0cf1-4393-8701-eda7880ecebc",
+    "623d9db1-a3af-4a1c-9643-975de364e073",
+    "cf459f47-e565-4bbb-89e4-ed54da8adae1"
   ],
   "tokenIds": [],
   "commandZoneIds": [
@@ -467,8 +475,6 @@
       "88bb91b5-2ccd-4ce9-8cd4-e54d63c12abf",
       "2e9289d6-dbc6-456d-88cf-d1f534e731d6",
       "eadd9559-6dcb-4b96-8c95-58abddd0e120",
-      "2fa94a07-c932-4f85-b6e0-a97d2b29eb52",
-      "6eb93545-a1a6-4447-82c5-421d8e9f023d",
       "c6bdaf76-6a03-4695-9c4b-f040e73435af",
       "111889d4-bcca-4b1f-ad48-3077e2f5136f",
       "ea734863-5793-49d6-b10e-109432aec0a3",
@@ -483,7 +489,8 @@
       "9097243a-39fa-4e18-8316-c0e57699c783",
       "09618da4-6e2d-4047-96d7-0576c0754e7d",
       "8d0adc5c-3fdd-4e22-b783-5651f8e57b65",
-      "574044cf-2e2f-4b5c-b4d1-cf05ba814ab2"
+      "574044cf-2e2f-4b5c-b4d1-cf05ba814ab2",
+      "1946ded1-5f53-409f-b0a6-5433bb0357d2"
     ],
     "ramp": [
       "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
@@ -497,7 +504,9 @@
       "45bee121-0beb-4901-9473-20e4704ba6dc",
       "61978202-538b-4f92-acfc-e95f4a6ce466",
       "9880ba09-d5b8-4675-bfb4-2161d86d2d41",
-      "2effcd1c-5833-4e0e-bb67-2d2ffb22a014"
+      "2effcd1c-5833-4e0e-bb67-2d2ffb22a014",
+      "623d9db1-a3af-4a1c-9643-975de364e073",
+      "cf459f47-e565-4bbb-89e4-ed54da8adae1"
     ],
     "advantage": [
       "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
@@ -521,7 +530,8 @@
       "3428287b-cfd5-45bc-b5f9-1e3f5a425a68",
       "2b0b4fc1-9ad6-4259-a0a2-9a14484c246e",
       "713332c1-5bd8-400f-bfff-c1ca0697a043",
-      "ac641490-ca14-48d7-8cc4-b69ce984befa"
+      "ac641490-ca14-48d7-8cc4-b69ce984befa",
+      "c5da5c31-0cf1-4393-8701-eda7880ecebc"
     ],
     "interaction": [
       "f3e213a4-ba5a-468a-93b3-c0a34e1bd725",
