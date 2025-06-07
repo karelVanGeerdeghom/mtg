@@ -400,7 +400,8 @@
     "574044cf-2e2f-4b5c-b4d1-cf05ba814ab2": "Warrior's Oath",
     "7c0b6b53-4ddb-4bb5-8a26-0041b2006d3f": "Thopter",
     "0ef760f4-bbec-4735-8d60-fc24d973452a": "Squee, Goblin Nabob",
-    "fde3c8df-cc57-4e64-b78b-301e103d8487": "Tin Street Dodger"
+    "fde3c8df-cc57-4e64-b78b-301e103d8487": "Tin Street Dodger",
+    "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f": "Goblin Balloon Brigade"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -466,7 +467,6 @@
     "07c82cde-f00d-4454-9df4-9286e344c9bb",
     "17917b7a-2b2b-4a96-a21e-10cd91375660",
     "7f268b15-ac92-4e98-821b-78d15d9285d9",
-    "d6d9b5d2-0ab6-4637-a468-5149b7c7d0cf",
     "da3b17a2-e1e1-44e9-b9b1-ae54a92037db",
     "edad60c6-80de-4033-af1b-a703ac332983",
     "a8dba58b-2956-492e-ae30-49db2ae68e53",
@@ -474,7 +474,8 @@
     "d0d2c45b-b6e3-4999-bdab-976e8f0d6617",
     "9cfe86ae-eebe-44aa-a956-4b3e9e621105",
     "a6450b8e-eb18-431c-9eb7-7daf107978b2",
-    "145737a7-c597-4dec-b752-207c2d0501e3"
+    "145737a7-c597-4dec-b752-207c2d0501e3",
+    "1005bc16-8a6a-476a-a647-4ed40d2e96de"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d",
@@ -514,7 +515,6 @@
       "badf0669-9f65-44e3-bf91-6c57ac2fecff",
       "61023b48-0433-4993-9534-308c08cef07e",
       "584cee10-f18c-4633-95cc-f2e7a11841ac",
-      "d6d9b5d2-0ab6-4637-a468-5149b7c7d0cf",
       "b8b51a29-a2be-4b97-a73c-ea512d3d5622",
       "8b022754-6d16-470e-b754-4df6e4f4709e",
       "d0d2c45b-b6e3-4999-bdab-976e8f0d6617",
@@ -523,6 +523,7 @@
       "a6450b8e-eb18-431c-9eb7-7daf107978b2",
       "d8cfa20a-343e-4661-9f5a-a8265f6917a8",
       "86ec0b56-497f-481c-a03a-c4e64e8e7404",
+      "1005bc16-8a6a-476a-a647-4ed40d2e96de",
       "7f268b15-ac92-4e98-821b-78d15d9285d9",
       "cd45a29f-73bc-435c-9d50-09a4ecaa77be",
       "0ccb9af3-6902-4130-a59c-4c882dc3a2fd",
