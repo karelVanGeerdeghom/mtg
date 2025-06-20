@@ -281,7 +281,8 @@
     "180ba940-2b11-4953-b7ce-74847e1aebfd": "Assemble the Players",
     "d90882ae-6572-4214-8d9c-0bdfb75f9be2": "Prismatic Omen",
     "5bf93d4f-be59-4aa7-83d5-7c35d1f07fae": "Righteous Aura",
-    "30e58e88-ac99-4d32-b2fe-6d6cb6288af3": "Magus of the Candelabra"
+    "30e58e88-ac99-4d32-b2fe-6d6cb6288af3": "Magus of the Candelabra",
+    "0c7019a7-3cca-481a-9af0-abedb89c15ad": "Brightglass Gearhulk"
   },
   "deckIds": [
     "7f89c0ee-b914-406c-8a3f-98424a52ae14",
@@ -323,7 +324,6 @@
     "88cf4c1a-5863-45fc-b76d-7ad33b175b2b",
     "4eb813fd-2d5a-4b02-8193-662681ef4e7d",
     "84dc18f0-8225-4b40-a165-b10321e41769",
-    "55f3c721-e13a-406e-bc8e-d6cdc91ac477",
     "89ed0598-a3ee-4d14-9a35-25e0dd80d9fb",
     "7c3944fa-7c86-4979-85a9-86196aa94594",
     "fae37e28-e137-4177-b973-fa8b4dd8f409",
@@ -363,7 +363,9 @@
     "9f12bf9a-6e1a-4377-b4af-e8cabd3ee58a",
     "7f425406-2746-45a1-86bf-f9645015ffc2",
     "c4d1a78f-0cca-4042-862c-8f322ee25d50",
-    "30e58e88-ac99-4d32-b2fe-6d6cb6288af3"
+    "30e58e88-ac99-4d32-b2fe-6d6cb6288af3",
+    "0c7019a7-3cca-481a-9af0-abedb89c15ad",
+    "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508"
   ],
   "tokenIds": [
     "246d7a00-288d-448e-9b77-8af41e40a44d",
@@ -424,6 +426,7 @@
       "89ed0598-a3ee-4d14-9a35-25e0dd80d9fb",
       "d2043685-f091-444f-9c35-d238afa24d7b",
       "57c9ff89-dd30-467b-bb3e-499eeea8cb94",
+      "0c7019a7-3cca-481a-9af0-abedb89c15ad",
       "0d96b60b-a060-48ee-bb83-93f1c4a10669",
       "69872a9a-fe54-4e58-940c-89395af71acd",
       "e7e1b166-9267-426d-897d-24903327b48d",
@@ -449,11 +452,11 @@
       "4eb813fd-2d5a-4b02-8193-662681ef4e7d",
       "958d71ff-c9f7-46f0-96ca-79e7f4d65a16",
       "1099588c-cc26-4523-8bd2-90e1e1433f53",
-      "55f3c721-e13a-406e-bc8e-d6cdc91ac477",
       "d371031e-78be-4964-b521-b1eaa22a5480",
       "3e2ae59a-40a1-46ca-8f24-3231ebd4e4eb",
       "7dd189f8-a23f-4b43-b0ef-fb174a9664ba",
-      "0d4ecdb1-ec90-497f-a7a4-1c68092b8757"
+      "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
+      "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508"
     ],
     "land": [
       "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
