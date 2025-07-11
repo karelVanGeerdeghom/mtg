@@ -282,7 +282,9 @@
     "d90882ae-6572-4214-8d9c-0bdfb75f9be2": "Prismatic Omen",
     "5bf93d4f-be59-4aa7-83d5-7c35d1f07fae": "Righteous Aura",
     "30e58e88-ac99-4d32-b2fe-6d6cb6288af3": "Magus of the Candelabra",
-    "0c7019a7-3cca-481a-9af0-abedb89c15ad": "Brightglass Gearhulk"
+    "0c7019a7-3cca-481a-9af0-abedb89c15ad": "Brightglass Gearhulk",
+    "b61a87e3-dc98-4db9-abed-b47b677d81ab": "Cream of the Crop",
+    "043f869d-b11c-4c0d-9591-2bf0df7bde55": "Cryptolith Rite"
   },
   "deckIds": [
     "7f89c0ee-b914-406c-8a3f-98424a52ae14",
@@ -353,19 +355,19 @@
     "e310ab58-180e-4840-bc8d-9f9b06f1b478",
     "e6ccebf4-f4f0-404f-a634-4d751ef9c8aa",
     "c53d958a-f660-4d2e-87cd-87702f973b3a",
-    "1099588c-cc26-4523-8bd2-90e1e1433f53",
     "5eb8b497-ec9a-4a89-ad29-1ec3ca82da7c",
     "7c304547-a4b1-46c9-baed-16d2bfbe16eb",
     "d683d985-9888-4d21-8b5f-69e69ce4a03b",
     "b1544f21-7e98-461b-aed5-e748b0168c52",
-    "e7e1b166-9267-426d-897d-24903327b48d",
     "8695c3c1-fb4b-4429-ae33-ec186f68796b",
     "9f12bf9a-6e1a-4377-b4af-e8cabd3ee58a",
     "7f425406-2746-45a1-86bf-f9645015ffc2",
     "c4d1a78f-0cca-4042-862c-8f322ee25d50",
     "30e58e88-ac99-4d32-b2fe-6d6cb6288af3",
     "0c7019a7-3cca-481a-9af0-abedb89c15ad",
-    "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508"
+    "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508",
+    "55f3c721-e13a-406e-bc8e-d6cdc91ac477",
+    "2ecf7771-8061-4710-ad2e-80b092ae0b4b"
   ],
   "tokenIds": [
     "246d7a00-288d-448e-9b77-8af41e40a44d",
@@ -429,7 +431,6 @@
       "0c7019a7-3cca-481a-9af0-abedb89c15ad",
       "0d96b60b-a060-48ee-bb83-93f1c4a10669",
       "69872a9a-fe54-4e58-940c-89395af71acd",
-      "e7e1b166-9267-426d-897d-24903327b48d",
       "7f89c0ee-b914-406c-8a3f-98424a52ae14",
       "947a2665-2f4d-4193-8768-118f85334549",
       "92eed395-62ca-4293-882b-8565c40daab5",
@@ -451,12 +452,12 @@
       "7c3944fa-7c86-4979-85a9-86196aa94594",
       "4eb813fd-2d5a-4b02-8193-662681ef4e7d",
       "958d71ff-c9f7-46f0-96ca-79e7f4d65a16",
-      "1099588c-cc26-4523-8bd2-90e1e1433f53",
       "d371031e-78be-4964-b521-b1eaa22a5480",
       "3e2ae59a-40a1-46ca-8f24-3231ebd4e4eb",
       "7dd189f8-a23f-4b43-b0ef-fb174a9664ba",
       "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
-      "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508"
+      "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508",
+      "55f3c721-e13a-406e-bc8e-d6cdc91ac477"
     ],
     "land": [
       "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
