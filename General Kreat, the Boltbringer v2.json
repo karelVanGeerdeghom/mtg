@@ -411,7 +411,8 @@
     "d06eedb4-bd5a-4864-9505-a570a745d165": "Apex of Power",
     "d73f02e0-53fa-4437-ab3a-89a9a1db27c5": "Rose Room Treasurer",
     "3641ceef-4f26-4647-ac12-c958524d68ca": "Spawn-Gang Commander",
-    "3aaf906a-e749-4e86-ac79-97650b92f271": "Eldrazi Spawn"
+    "3aaf906a-e749-4e86-ac79-97650b92f271": "Eldrazi Spawn",
+    "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3": "Devastating Onslaught"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -481,11 +482,11 @@
     "926d52a5-4db1-46ce-9567-17c28bf56ae7",
     "37108cd4-bbab-4ce3-9ed6-f60e8422e703",
     "b0d3fd57-1420-4dd1-8410-9d659655287f",
-    "bcd5e175-2ef0-48f4-b9bd-14383dd234e0",
     "213fbbdd-f1bc-4bba-9124-7b26e9a706c8",
     "8e356df5-ca92-4be2-871e-8965c2510fbe",
-    "5f4d0c87-7d59-41d5-9910-86765a0c144b",
-    "bdb94ccd-1bb5-4bb7-9539-e1b1c97c19c5"
+    "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
+    "edad60c6-80de-4033-af1b-a703ac332983",
+    "d53d000f-c92f-4d70-ae60-8be3791da8a2"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d",
@@ -526,16 +527,14 @@
       "badf0669-9f65-44e3-bf91-6c57ac2fecff",
       "61023b48-0433-4993-9534-308c08cef07e",
       "584cee10-f18c-4633-95cc-f2e7a11841ac",
-      "b8b51a29-a2be-4b97-a73c-ea512d3d5622",
       "8b022754-6d16-470e-b754-4df6e4f4709e",
       "d0d2c45b-b6e3-4999-bdab-976e8f0d6617",
       "9cfe86ae-eebe-44aa-a956-4b3e9e621105",
       "7b8f4879-578e-40e4-863a-41d0c32c6bdd",
       "a6450b8e-eb18-431c-9eb7-7daf107978b2",
-      "bcd5e175-2ef0-48f4-b9bd-14383dd234e0",
-      "bdb94ccd-1bb5-4bb7-9539-e1b1c97c19c5",
-      "5f4d0c87-7d59-41d5-9910-86765a0c144b",
+      "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
       "8e356df5-ca92-4be2-871e-8965c2510fbe",
+      "b8b51a29-a2be-4b97-a73c-ea512d3d5622",
       "d8cfa20a-343e-4661-9f5a-a8265f6917a8",
       "86ec0b56-497f-481c-a03a-c4e64e8e7404",
       "7f268b15-ac92-4e98-821b-78d15d9285d9",
@@ -556,30 +555,32 @@
       "64bf8929-f5f2-4d50-8667-13b1d007bcfc",
       "0fd114c4-092b-4e28-b0dc-ef529f3bc73e",
       "a8dba58b-2956-492e-ae30-49db2ae68e53",
-      "eb414a8f-566f-4635-80a1-77b2e18ac8dc",
-      "fb81e4d3-1d8c-4779-be62-87cf49277e51",
-      "37108cd4-bbab-4ce3-9ed6-f60e8422e703",
       "7d9fc9e7-d80b-49c3-871c-ed25b3059ae8",
       "c18013e4-0b99-44e3-a2b2-027ace68723a",
+      "37108cd4-bbab-4ce3-9ed6-f60e8422e703",
+      "eb414a8f-566f-4635-80a1-77b2e18ac8dc",
+      "fb81e4d3-1d8c-4779-be62-87cf49277e51",
       "b0d3fd57-1420-4dd1-8410-9d659655287f",
       "213fbbdd-f1bc-4bba-9124-7b26e9a706c8"
     ],
     "advantage": [
-      "73733fa5-d292-40ec-8f17-05ba5feb40ab",
-      "46d6bc30-9a21-4476-947b-87951cd9c882",
-      "65986c1b-8e51-4604-b685-d82fa7d1263a",
-      "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
       "17917b7a-2b2b-4a96-a21e-10cd91375660",
       "a7d8c99c-cd44-4bad-82e6-7c7cff9bd89f",
       "584cf0fd-112a-4ca6-9c0e-1f3228a7d325",
       "8d286376-f386-43ab-a9bd-8478fb9e2497",
       "3088b09b-1dce-4fc9-99de-2ca9c752eb12",
+      "73733fa5-d292-40ec-8f17-05ba5feb40ab",
+      "46d6bc30-9a21-4476-947b-87951cd9c882",
+      "65986c1b-8e51-4604-b685-d82fa7d1263a",
+      "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
       "d6585e30-4ca0-4701-b274-b24f3508dd97",
       "4d6a1391-817a-4ddc-840d-886b138eeb3f"
     ],
     "interaction": [
       "ae120613-97d6-4393-b39d-c3e6c076f5d6",
-      "ea55db87-a5c3-49f7-b968-77510cdeb469"
+      "edad60c6-80de-4033-af1b-a703ac332983",
+      "ea55db87-a5c3-49f7-b968-77510cdeb469",
+      "d53d000f-c92f-4d70-ae60-8be3791da8a2"
     ],
     "land": [
       "4c6a0c30-b547-4eff-8ff4-0ca25803c076",

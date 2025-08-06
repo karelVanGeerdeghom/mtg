@@ -30,25 +30,25 @@
 			}
 
 			MTG.loadMasterData = function() {
-				for (let i = 0; i < masterData.length; i++) {
-					let masterDatum = masterData[i];
+				for (let i = 0; i < oracleCards.length; i++) {
+					let oracleCard = oracleCards[i];
 
 					if (
-						masterDatum.legalities.commander === 'legal' || 
-						masterDatum.legalities.oathbreaker === 'legal' || 
-						masterDatum.set_type === 'token' ||
-						masterDatum.set === 'eoe'
+						oracleCard.legalities.commander === 'legal' || 
+						oracleCard.legalities.oathbreaker === 'legal' || 
+						oracleCard.set_type === 'token' ||
+						oracleCard.set === 'eoe'
 					) {
 						let card = {
-							oracle_id: masterDatum.oracle_id,
-							name: masterDatum.name,
-							type_line: masterDatum.type_line,
-							cmc: parseInt(masterDatum.cmc),
-							colors: masterDatum.colors,
-							mana_cost: masterDatum.mana_cost,
-							rarity:masterDatum.rarity,
-							commander: masterDatum.legalities.commander === 'legal',
-							oathbreaker: masterDatum.legalities.oathbreaker === 'legal',
+							oracle_id: oracleCard.oracle_id,
+							name: oracleCard.name,
+							type_line: oracleCard.type_line,
+							cmc: parseInt(oracleCard.cmc),
+							colors: oracleCard.colors,
+							mana_cost: oracleCard.mana_cost,
+							rarity:oracleCard.rarity,
+							commander: oracleCard.legalities.commander === 'legal',
+							oathbreaker: oracleCard.legalities.oathbreaker === 'legal',
 							images: {
 								front: {
 									small: 'back.jpeg',
@@ -61,20 +61,20 @@
 							},
 						};
 
-						if (Object.hasOwnProperty.call(masterDatum, 'image_uris')) {
-							card.images.front.small = masterDatum.image_uris.small;
-							card.images.front.normal = masterDatum.image_uris.normal;
+						if (Object.hasOwnProperty.call(oracleCard, 'image_uris')) {
+							card.images.front.small = oracleCard.image_uris.small;
+							card.images.front.normal = oracleCard.image_uris.normal;
 						}
 
-						if (Object.hasOwnProperty.call(masterDatum, 'card_faces')) {
-							if (Object.hasOwnProperty.call(masterDatum.card_faces[0], 'image_uris')) {
-								card.images.front.small = masterDatum.card_faces[0].image_uris.small;
-								card.images.front.normal = masterDatum.card_faces[0].image_uris.normal;
+						if (Object.hasOwnProperty.call(oracleCard, 'card_faces')) {
+							if (Object.hasOwnProperty.call(oracleCard.card_faces[0], 'image_uris')) {
+								card.images.front.small = oracleCard.card_faces[0].image_uris.small;
+								card.images.front.normal = oracleCard.card_faces[0].image_uris.normal;
 							}
 
-							if (Object.hasOwnProperty.call(masterDatum.card_faces[1], 'image_uris')) {
-								card.images.back.small = masterDatum.card_faces[1].image_uris.small;
-								card.images.back.normal = masterDatum.card_faces[1].image_uris.normal;
+							if (Object.hasOwnProperty.call(oracleCard.card_faces[1], 'image_uris')) {
+								card.images.back.small = oracleCard.card_faces[1].image_uris.small;
+								card.images.back.normal = oracleCard.card_faces[1].image_uris.normal;
 							}
 						}
 
