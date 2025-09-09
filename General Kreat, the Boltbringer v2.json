@@ -412,7 +412,8 @@
     "d73f02e0-53fa-4437-ab3a-89a9a1db27c5": "Rose Room Treasurer",
     "3641ceef-4f26-4647-ac12-c958524d68ca": "Spawn-Gang Commander",
     "3aaf906a-e749-4e86-ac79-97650b92f271": "Eldrazi Spawn",
-    "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3": "Devastating Onslaught"
+    "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3": "Devastating Onslaught",
+    "321b5cc6-8df6-4292-97a0-a6a3a22f3b55": "Twinflame Tyrant"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -470,7 +471,6 @@
     "9e9d538b-a9e5-4d59-b7c1-208fe18110e3",
     "08e90e85-4103-4acb-a8a7-e1329b460aa7",
     "736892cb-a34b-4bb9-b56c-e26e3db207a2",
-    "86ec0b56-497f-481c-a03a-c4e64e8e7404",
     "17917b7a-2b2b-4a96-a21e-10cd91375660",
     "7f268b15-ac92-4e98-821b-78d15d9285d9",
     "da3b17a2-e1e1-44e9-b9b1-ae54a92037db",
@@ -485,8 +485,9 @@
     "213fbbdd-f1bc-4bba-9124-7b26e9a706c8",
     "8e356df5-ca92-4be2-871e-8965c2510fbe",
     "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
-    "edad60c6-80de-4033-af1b-a703ac332983",
-    "d53d000f-c92f-4d70-ae60-8be3791da8a2"
+    "d53d000f-c92f-4d70-ae60-8be3791da8a2",
+    "321b5cc6-8df6-4292-97a0-a6a3a22f3b55",
+    "5f4d0c87-7d59-41d5-9910-86765a0c144b"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d",
@@ -496,7 +497,8 @@
     "399bc553-11f7-413c-83c5-4b022fc6b3de",
     "7217090a-e420-4c17-ad47-f92cc3ae9190",
     "02d1dc2f-625e-4be3-9daf-e48c44bc9bf7",
-    "7c0b6b53-4ddb-4bb5-8a26-0041b2006d3f"
+    "7c0b6b53-4ddb-4bb5-8a26-0041b2006d3f",
+    "1a6c2152-71ca-46be-ab83-c84633442257"
   ],
   "commandZoneIds": [
     "da1c1c70-c2fa-4ba7-89fe-d9af3fb353b9"
@@ -515,13 +517,14 @@
       "926d52a5-4db1-46ce-9567-17c28bf56ae7",
       "e1a2bd31-b800-47cd-8866-1b849a601b09",
       "4fdbbec2-e921-4b63-958d-f9ba1e417197",
-      "76678885-3674-443d-b9a2-2a460cf6aac0",
-      "3640c29b-1534-4952-b297-619ade948431",
       "c912a43b-8994-434e-84c0-f4cf58abbd42",
       "8c3495bf-02e7-4ad9-949d-92eb3d2b662a",
       "e49b902f-a556-4dab-8928-93caf0a3f609",
       "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
       "895f23a2-55b7-4cc0-8939-2efaaf097e6f",
+      "321b5cc6-8df6-4292-97a0-a6a3a22f3b55",
+      "3640c29b-1534-4952-b297-619ade948431",
+      "76678885-3674-443d-b9a2-2a460cf6aac0",
       "d3b7b541-6f05-46c1-8031-c848c4bd4635",
       "93fdcc49-e3c8-4f8c-a3bc-064c6392b4ca",
       "badf0669-9f65-44e3-bf91-6c57ac2fecff",
@@ -532,11 +535,11 @@
       "9cfe86ae-eebe-44aa-a956-4b3e9e621105",
       "7b8f4879-578e-40e4-863a-41d0c32c6bdd",
       "a6450b8e-eb18-431c-9eb7-7daf107978b2",
-      "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
+      "5f4d0c87-7d59-41d5-9910-86765a0c144b",
       "8e356df5-ca92-4be2-871e-8965c2510fbe",
+      "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
       "b8b51a29-a2be-4b97-a73c-ea512d3d5622",
       "d8cfa20a-343e-4661-9f5a-a8265f6917a8",
-      "86ec0b56-497f-481c-a03a-c4e64e8e7404",
       "7f268b15-ac92-4e98-821b-78d15d9285d9",
       "cd45a29f-73bc-435c-9d50-09a4ecaa77be",
       "0ccb9af3-6902-4130-a59c-4c882dc3a2fd",
@@ -578,7 +581,6 @@
     ],
     "interaction": [
       "ae120613-97d6-4393-b39d-c3e6c076f5d6",
-      "edad60c6-80de-4033-af1b-a703ac332983",
       "ea55db87-a5c3-49f7-b968-77510cdeb469",
       "d53d000f-c92f-4d70-ae60-8be3791da8a2"
     ],

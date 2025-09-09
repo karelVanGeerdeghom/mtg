@@ -33,11 +33,17 @@
 				for (let i = 0; i < oracleCards.length; i++) {
 					let oracleCard = oracleCards[i];
 
+					let today = new Date();
+					let dd = String(today.getDate()).padStart(2, '0');
+					let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+					let yyyy = today.getFullYear();
+					let currentDate = mm + '-' + dd + '-' + yyyy;
+
 					if (
 						oracleCard.legalities.commander === 'legal' || 
 						oracleCard.legalities.oathbreaker === 'legal' || 
 						oracleCard.set_type === 'token' ||
-						oracleCard.set === 'eoe'
+						oracleCard.released_at >= currentDate
 					) {
 						let card = {
 							oracle_id: oracleCard.oracle_id,
