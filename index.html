@@ -150,10 +150,16 @@
 
 		.counter-toggle {
 			position: absolute;
-			top: 20px;
-			left: 15px;
-			width: 45px;
-			height: 30px;
+			top: 2px;
+			left: 2px;
+			width: 25px;
+			height: 25px;
+			border-radius: 15px;
+			background-color: #CBC2BF;
+			background-image: url('counter.svg');
+			background-size: 80%;
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 
 		.counter {
@@ -199,6 +205,20 @@
 			margin: 0px;
 			color: #FFFFFF;
 			font-size: 30px;
+		}
+
+		.tap-toggle {
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			width: 25px;
+			height: 25px;
+			border-radius: 15px;
+			background-color: #CBC2BF;
+			background-image: url('tap.svg');
+			background-size: 80%;
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 
 		.meta {
@@ -418,7 +438,7 @@
 	</div>
 
 	<div id="build-menu" class="top-menu">
-		<input id="oracle_search" type="text" />
+		<input id="oracle-search" type="text" />
 		<button id="oracle">Oracle</button>
 		<button id="deck">Deck</button>
 		<button id="meta">Meta</button>
@@ -621,7 +641,7 @@
 					MTG.createCardCompare();
 				});
 
-				$('#oracle_search').autocomplete({
+				$('#oracle-search').autocomplete({
 					minLength: 3,
 					source: masterIndex,
 					position: {
@@ -663,7 +683,7 @@
 							MTG.createCardTree();
 							MTG.setCardCounts();
 
-							$('#oracle_search').val('');	
+							$('#oracle-search').val('');	
 						}
 
 						return false;
@@ -914,14 +934,6 @@
 					});
 				});
 
-				$(document).on('click', '.battlefield-card', function(event) {
-					if ($(this).hasClass('tapped')) {
-						$(this).removeClass('tapped');
-					} else {
-						$(this).addClass('tapped');
-					}
-				});
-
 				$(document).on('click', '.counter-minus-button', function(event) {
 					event.stopPropagation();
 
@@ -951,6 +963,16 @@
 
 					$cardCounter.data('count', 0);
 					MTG.showCounterCount($cardCounter);
+				});
+
+				$(document).on('click', '.tap-toggle', function(event) {
+					event.stopPropagation();
+
+					if ($(this).parent().hasClass('tapped')) {
+						$(this).parent().removeClass('tapped');
+					} else {
+						$(this).parent().addClass('tapped');
+					}
 				});
 			};
 
@@ -1865,6 +1887,7 @@
 							});
 
 							MTG.addCounterToggle($card);
+							MTG.addTapToggle($card);
 							MTG.addCounter($card, true);
 						}
 
@@ -2125,7 +2148,7 @@
 			};
 
 			MTG.addCounterToggle = function($card) {
-				let $button = $('<div>', {
+				let $button = $('<button>', {
 					class: 'counter-toggle'
 				});
 
@@ -2220,6 +2243,13 @@
 				return $manaCounter;
 			};
 
+			MTG.addTapToggle = function($card) {
+				let $button = $('<button>', {
+					class: 'tap-toggle'
+				});
+
+				$card.append($button);
+			};
 
 
 			MTG.refreshDeckMeta = function() {
