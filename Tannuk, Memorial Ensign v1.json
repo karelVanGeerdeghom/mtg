@@ -368,7 +368,9 @@
     "b0a96e47-91da-43ee-93dd-f866721029c6": "Khalni Gem",
     "c4bc5bc4-e589-42c5-91fa-2ebc96448e85": "Petrified Field",
     "e49b902f-a556-4dab-8928-93caf0a3f609": "Spiked Corridor // Torture Pit",
-    "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e": "Triumph of the Hordes"
+    "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e": "Triumph of the Hordes",
+    "3c549374-6c37-42e0-8d88-a8555d46732d": "Treasure",
+    "5da15fc5-9cc0-4432-b8d7-cd88b74d4ea5": "Forest Dryad"
   },
   "deckIds": [
     "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
@@ -450,8 +452,6 @@
     "92eed395-62ca-4293-882b-8565c40daab5",
     "3bdc9211-8eff-4b30-8d6f-d26f4087f77f",
     "33c722cf-b4bf-431f-aefd-ee96241a7fbf",
-    "f2c861d3-b302-4e84-b647-099551007269",
-    "c4bc5bc4-e589-42c5-91fa-2ebc96448e85",
     "162572f2-1757-42e9-bd97-e6bd9a762c0e",
     "e49b902f-a556-4dab-8928-93caf0a3f609",
     "0d96b60b-a060-48ee-bb83-93f1c4a10669",
@@ -459,13 +459,16 @@
     "bf1341dd-41a3-49f6-87ec-63170dde4324",
     "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e"
   ],
-  "tokenIds": [],
+  "tokenIds": [
+    "5da15fc5-9cc0-4432-b8d7-cd88b74d4ea5",
+    "3c549374-6c37-42e0-8d88-a8555d46732d"
+  ],
   "commandZoneIds": [
     "76cb1912-3791-44b8-b594-b92dab21bafc"
   ],
-  "forestCount": 6,
+  "forestCount": 7,
   "islandCount": 0,
-  "mountainCount": 6,
+  "mountainCount": 7,
   "plainsCount": 0,
   "swampCount": 0,
   "wastesCount": 0,
@@ -511,13 +514,13 @@
       "f2ccc9e8-8e92-4f8c-8728-8c748630e0dd",
       "6ad8011d-3471-4369-9d68-b264cc027487",
       "736892cb-a34b-4bb9-b56c-e26e3db207a2",
-      "e9319f13-1f2b-429c-9d61-e58a3cbec86a",
       "d3a0b660-358c-41bd-9cd2-41fbf3491b1a",
       "f9d3b046-0b95-4103-a630-4b3fb88bb60b",
       "383e3fe4-8558-4561-8632-6eadb5d5963c",
       "8ad91f64-ccab-4edc-bd54-b2ee9267d614",
       "c1fc5923-c3cd-448a-98d1-c154661c2812",
       "ab8d5f5c-1976-4f77-8ed2-8d28ee666741",
+      "e9319f13-1f2b-429c-9d61-e58a3cbec86a",
       "0fd114c4-092b-4e28-b0dc-ef529f3bc73e"
     ],
     "advantage": [
@@ -544,8 +547,8 @@
     "land": [
       "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
       "22e3cf1d-3559-4ce1-954c-8dc815342979",
-      "45fe016e-1a09-410c-bbe3-4663ba06c5b7",
       "16052b52-ade1-406f-a06b-ce7ea607fb63",
+      "45fe016e-1a09-410c-bbe3-4663ba06c5b7",
       "bd912666-f37f-4767-af6f-9e6d0fcccacf",
       "c5acf2a5-40f4-433d-a74d-1cb56c521464",
       "fc0707c7-d504-4ccf-a0d2-3eb6e26e7a57",
@@ -562,8 +565,6 @@
       "9464ddf2-4bcb-44f6-b945-89a132544de6",
       "8dd5f5af-d2d8-4356-8617-8381081b930c",
       "23467047-6dba-4498-b783-1ebc4f74b8c2",
-      "f2c861d3-b302-4e84-b647-099551007269",
-      "c4bc5bc4-e589-42c5-91fa-2ebc96448e85",
       "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
       "bf1341dd-41a3-49f6-87ec-63170dde4324"
     ]
