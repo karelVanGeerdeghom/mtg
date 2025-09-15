@@ -370,7 +370,8 @@
     "e49b902f-a556-4dab-8928-93caf0a3f609": "Spiked Corridor // Torture Pit",
     "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e": "Triumph of the Hordes",
     "3c549374-6c37-42e0-8d88-a8555d46732d": "Treasure",
-    "5da15fc5-9cc0-4432-b8d7-cd88b74d4ea5": "Forest Dryad"
+    "5da15fc5-9cc0-4432-b8d7-cd88b74d4ea5": "Forest Dryad",
+    "d683024d-8fe7-4509-851b-7655fadc1de7": "Emerald Medallion"
   },
   "deckIds": [
     "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
@@ -452,12 +453,12 @@
     "92eed395-62ca-4293-882b-8565c40daab5",
     "3bdc9211-8eff-4b30-8d6f-d26f4087f77f",
     "33c722cf-b4bf-431f-aefd-ee96241a7fbf",
-    "162572f2-1757-42e9-bd97-e6bd9a762c0e",
     "e49b902f-a556-4dab-8928-93caf0a3f609",
     "0d96b60b-a060-48ee-bb83-93f1c4a10669",
     "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
     "bf1341dd-41a3-49f6-87ec-63170dde4324",
-    "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e"
+    "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e",
+    "d683024d-8fe7-4509-851b-7655fadc1de7"
   ],
   "tokenIds": [
     "5da15fc5-9cc0-4432-b8d7-cd88b74d4ea5",
@@ -504,7 +505,6 @@
       "13fe5e46-77a6-45d8-ac0b-c3d740eccf86",
       "c235015e-a7a9-4f8d-bf4a-cf68b3847f83",
       "3ecaefc8-ead2-47a3-a7ea-b030faab65a7",
-      "162572f2-1757-42e9-bd97-e6bd9a762c0e",
       "3ded0c0c-40ce-4d14-a9a6-b023bc19ee0e"
     ],
     "ramp": [
