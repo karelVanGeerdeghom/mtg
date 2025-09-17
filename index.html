@@ -897,6 +897,9 @@
 						backgroundImage: 'url(' + MTG.getNormalImage(card, side) + ')'
 					});
 
+					$(this).children('.counter-toggle').show();
+					$(this).children('.tap-toggle').show();
+
 					if (!card.commander) {
 						$('#preview').addClass('commander');
 					}
@@ -912,6 +915,8 @@
 					$('#preview').css({
 						backgroundImage: 'url("back.jpeg")'
 					});
+					$('.counter-toggle').hide();
+					$('.tap-toggle').hide();
 				});
 
 				$(document).on('mousedown', '.list-card', function() {
