@@ -257,7 +257,7 @@
 		#hand {
 			min-height: 105px;
 			outline: 1px solid black;
-			margin: 15px;
+			margin: 10px;
 			float: left;
 			clear: both;
 		}
@@ -265,9 +265,9 @@
 		#graveyard  {
 			min-height: 105px;
 			outline: 1px solid black;
-			margin-top: 15px;
-			margin-bottom: 15px;
-			margin-left: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 10px;
 			float: left;
 			clear: left;
 		}
@@ -275,25 +275,25 @@
 		#token-box {
 			min-height: 105px;
 			outline: 1px solid black;
-			margin-top: 15px;
-			margin-bottom: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
 			float: left;
 		}
 
 		#command-zone {
 			min-height: 105px;
 			outline: 1px solid black;
-			margin-top: 15px;
-			margin-bottom: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
 			float: left;
 		}
 
-		#damage-counter {
+		#library {
 			min-height: 105px;
 			outline: 1px solid black;
-			margin-top: 15px;
-			margin-bottom: 15px;
-			margin-right: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-right: 10px;
 			float: left;
 			background-image: url('back.jpeg');
 			background-size: cover;
@@ -302,7 +302,7 @@
 		#battlefield {
 			height: 525px;
 			outline: 1px solid black;
-			margin: 15px;
+			margin: 10px;
 			float: left;
 		}
 
@@ -413,6 +413,8 @@
 			</tbody>
 		</table>
 	</div>
+
+	<div id="library-dialog" style="display: none;"></div>
 
 	<button id="hud">HUD</button>
 
@@ -525,7 +527,7 @@
 				$('#command-zone').css({
 					width: this.commandZoneIds.length * 75
 				});
-				$('#damage-counter').css({
+				$('#library').css({
 					width: 75
 				});
 			};
@@ -540,7 +542,7 @@
 					position: {
 						my: 'center',
 						at: 'center',
-						of: "body"
+						of: 'body'
 					},
 					open: function() {
 						$('.ui-widget-overlay').bind('click', function () {
@@ -558,7 +560,7 @@
 					position: {
 						my: 'center',
 						at: 'center',
-						of: "body"
+						of: 'body'
 					},
 					open: function() {
 						$('#set-forests').val(MTG.forestCount);
@@ -580,6 +582,19 @@
 							$("#save-dialog").dialog('close');
 						});
 					}
+				});
+
+				$('#library-dialog').dialog({
+					title: 'Library',
+					autoOpen: false,
+					modal: true,
+					width: 'auto',
+					height: 'auto',
+					position: {
+						my: 'left',
+						at: 'left',
+						of: 'body'
+					},
 				});
 
 				$('#set-command-zone').on('select2:select', function (e) {
@@ -817,8 +832,7 @@
 				});
 
 				$('#toggle').on('click', function() {
-					$('#library-cards').toggle();
-					$('#library-list').toggle();
+					$('#library-dialog').dialog('open');
 				});
 
 				$(document).on('click', '.card:not(.battlefield-card)', function() {
@@ -879,8 +893,10 @@
 						case 'play':
 							if ($(this).hasClass('library-card')) {
 								MTG.putIntoHand(card.oracle_id);
+								MTG.shuffle();
 								MTG.refreshLibrary();
 								MTG.refreshHand();
+								$('#library-dialog').dialog('close');
 							}
 
 							break;
@@ -1111,7 +1127,7 @@
 				$('#graveyard').remove();
 				$('#token-box').remove();
 				$('#command-zone').remove();
-				$('#damage-counter').remove();
+				$('#library').remove();
 				$('#battlefield').remove();
 				$('.chart').remove();
 			};
@@ -1283,12 +1299,12 @@
 			};
 
 			MTG.createCardPlay = function() {
-				this.createLibrary();
+				this.createLibrarySearch();
 				this.createHand();
 				this.createGraveyard();
 				this.createTokenBox();
 				this.createCommandZone();
-				this.createDamageCounter();
+				this.createLibrary();
 				this.createBattlefield();
 
 				$('#game-menu button').attr('disabled', false);
@@ -1638,38 +1654,38 @@
 
 
 
-			MTG.createLibrary = function() {
+			MTG.createLibrarySearch = function() {
 				let $libraryCards = $('<div>', {
 					id: 'library-cards'
 				});
-				$('#content').append($libraryCards);
+				$('#library-dialog').append($libraryCards);
 
-				$libraryCards.droppable({
-					accept: '.hand-card, .graveyard-card, .battlefield-card',
-					drop: function(event, ui) {
-						let $card = ui.draggable;
-						let cardId = $card.data('card').oracle_id;
-
-						MTG.libraryIds.push(cardId);
-
-						if ($card.hasClass('hand-card')) {
-							let handIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.handIds.splice(handIndex, 1);
-
-							MTG.refreshHand();
-						}
-
-						if ($card.hasClass('graveyard-card')) {
-							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.graveyardIds.splice(graveyardIndex, 1);
-
-							MTG.refreshGraveyard();
-						}
-
-						$card.remove();
-						MTG.refreshLibrary();
-					}
-				});
+//				$libraryCards.droppable({
+//					accept: '.hand-card, .graveyard-card, .battlefield-card',
+//					drop: function(event, ui) {
+//						let $card = ui.draggable;
+//						let cardId = $card.data('card').oracle_id;
+//
+//						MTG.libraryIds.push(cardId);
+//
+//						if ($card.hasClass('hand-card')) {
+//							let handIndex = parseInt($card.attr('id').split('-').pop());
+//							MTG.handIds.splice(handIndex, 1);
+//
+//							MTG.refreshHand();
+//						}
+//
+//						if ($card.hasClass('graveyard-card')) {
+//							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
+//							MTG.graveyardIds.splice(graveyardIndex, 1);
+//
+//							MTG.refreshGraveyard();
+//						}
+//
+//						$card.remove();
+//						MTG.refreshLibrary();
+//					}
+//				});
 
 				$libraryCards.sortable({
 					stop: function(event, ui) {
@@ -1687,14 +1703,10 @@
 				let $libraryList = $('<div>', {
 					id: 'library-list'
 				});
-				$('#content').append($libraryList);
-
-				$libraryCards.hide();
+				$('#library-dialog').append($libraryList);
 
 				let $ul = $('<ul>');
 				$libraryList.append($ul);
-
-				$libraryList.hide();
 			};
 
 			MTG.createHand = function() {
@@ -1704,19 +1716,12 @@
 				$('#content').append($hand);
 
 				$hand.droppable({
-					accept: '.library-card, .graveyard-card, .battlefield-card',
+					accept: '.graveyard-card, .battlefield-card',
 					drop: function(event, ui) {
 						let $card = ui.draggable;
 						let cardId = $card.data('card').oracle_id;
 
 						MTG.handIds.push(cardId);
-
-						if ($card.hasClass('library-card')) {
-							let libraryIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.libraryIds.splice(libraryIndex, 1);
-
-							MTG.refreshLibrary();
-						}
 
 						if ($card.hasClass('graveyard-card')) {
 							let graveyardIndex = parseInt($card.attr('id').split('-').pop());
@@ -1752,19 +1757,12 @@
 				$('#content').append($graveyard);
 
 				$graveyard.droppable({
-					accept: '.library-card, .hand-card, .battlefield-card',
+					accept: '.hand-card, .battlefield-card',
 					drop: function(event, ui) {
 						let $card = ui.draggable;
 						let cardId = $card.data('card').oracle_id;
 
 						MTG.graveyardIds.push(cardId);
-
-						if ($card.hasClass('library-card')) {
-							let libraryIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.libraryIds.splice(libraryIndex, 1);
-
-							MTG.refreshLibrary();
-						}
 
 						if ($card.hasClass('hand-card')) {
 							let handIndex = parseInt($card.attr('id').split('-').pop());
@@ -1808,14 +1806,14 @@
 				$('#content').append($commandZone);
 			};
 
-			MTG.createDamageCounter = function() {
-				let $damageCounter = $('<div>', {
-					id: 'damage-counter'
+			MTG.createLibrary = function() {
+				let $library = $('<div>', {
+					id: 'library'
 				});
 
-				this.addCounter($damageCounter, false);
+				this.addCounter($library, false);
 
-				$('#content').append($damageCounter);
+				$('#content').append($library);
 			};
 
 			MTG.createBattlefield = function() {
@@ -1846,19 +1844,12 @@
 				this.addManaCounters($battlefield);
 
 				$('.slot').droppable({
-					accept: '.card',
+					accept: '.card:not(.library-card)',
 					drop: function(event, ui) {
 						let $card = ui.draggable;
 
 						if (!$card.hasClass('battlefield-card')) {
 							let cardId = $card.data('card').oracle_id;
-
-							if ($card.hasClass('library-card')) {
-								let libraryIndex = parseInt($card.attr('id').split('-').pop());
-								MTG.libraryIds.splice(libraryIndex, 1);
-
-								MTG.refreshLibrary();
-							}
 
 							if ($card.hasClass('hand-card')) {
 								let handIndex = parseInt($card.attr('id').split('-').pop());
@@ -1906,7 +1897,7 @@
 				});
 
 				$('.trash').droppable({
-					accept: '.card',
+					accept: '.card:not(.library-card)',
 					over: function(event, ui) {
 						$(this).removeClass('trash-out');
 						$(this).addClass('trash-over');
@@ -1917,13 +1908,6 @@
 					},
 					drop: function (event, ui) {
 						let $card = ui.draggable;
-
-						if ($card.hasClass('library-card')) {
-							let libraryIndex = parseInt($card.attr('id').split('-').pop());
-							MTG.libraryIds.splice(libraryIndex, 1);
-
-							MTG.refreshLibrary();
-						}
 
 						if ($card.hasClass('hand-card')) {
 							let handIndex = parseInt($card.attr('id').split('-').pop());
@@ -2374,10 +2358,6 @@
 					let $card = this.createCard(card, 'library-' + i);
 
 					$card.addClass('library-card');
-					$card.draggable({
-						revert: 'invalid',
-						connectToSortable: '#library-cards'
-					});
 
 					$('#library-cards').append($card);
 
