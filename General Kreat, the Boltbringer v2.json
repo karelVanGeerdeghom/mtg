@@ -413,7 +413,11 @@
     "3641ceef-4f26-4647-ac12-c958524d68ca": "Spawn-Gang Commander",
     "3aaf906a-e749-4e86-ac79-97650b92f271": "Eldrazi Spawn",
     "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3": "Devastating Onslaught",
-    "321b5cc6-8df6-4292-97a0-a6a3a22f3b55": "Twinflame Tyrant"
+    "321b5cc6-8df6-4292-97a0-a6a3a22f3b55": "Twinflame Tyrant",
+    "c5acf2a5-40f4-433d-a74d-1cb56c521464": "Arid Mesa",
+    "6587a463-a108-4854-b6d1-944e89b8c8a4": "Wooded Foothills",
+    "032b8a0d-491a-4a12-ab9f-689010054d5b": "Prismatic Vista",
+    "0c85b8f7-0bd0-4680-9ec5-d4b110460a54": "Fabled Passage"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -486,8 +490,14 @@
     "8e356df5-ca92-4be2-871e-8965c2510fbe",
     "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
     "d53d000f-c92f-4d70-ae60-8be3791da8a2",
-    "321b5cc6-8df6-4292-97a0-a6a3a22f3b55",
-    "5f4d0c87-7d59-41d5-9910-86765a0c144b"
+    "5f4d0c87-7d59-41d5-9910-86765a0c144b",
+    "f3c5978a-70fa-431f-933b-b954bd0db0ea",
+    "fc0707c7-d504-4ccf-a0d2-3eb6e26e7a57",
+    "cb027150-848c-4a66-88ad-e20222304dd8",
+    "c5acf2a5-40f4-433d-a74d-1cb56c521464",
+    "6587a463-a108-4854-b6d1-944e89b8c8a4",
+    "032b8a0d-491a-4a12-ab9f-689010054d5b",
+    "0c85b8f7-0bd0-4680-9ec5-d4b110460a54"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d",
@@ -505,7 +515,7 @@
   ],
   "forestCount": 0,
   "islandCount": 0,
-  "mountainCount": 27,
+  "mountainCount": 21,
   "plainsCount": 0,
   "swampCount": 0,
   "wastesCount": 0,
@@ -522,7 +532,6 @@
       "e49b902f-a556-4dab-8928-93caf0a3f609",
       "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
       "895f23a2-55b7-4cc0-8939-2efaaf097e6f",
-      "321b5cc6-8df6-4292-97a0-a6a3a22f3b55",
       "3640c29b-1534-4952-b297-619ade948431",
       "76678885-3674-443d-b9a2-2a460cf6aac0",
       "d3b7b541-6f05-46c1-8031-c848c4bd4635",
@@ -548,6 +557,7 @@
     ],
     "ramp": [
       "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
+      "f3c5978a-70fa-431f-933b-b954bd0db0ea",
       "7a43bd27-fdd8-41f0-9bc4-92568f3408f1",
       "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
       "6ad8011d-3471-4369-9d68-b264cc027487",
@@ -590,7 +600,13 @@
       "c5ee72d5-3a9e-4fe5-8802-3286ee612055",
       "79638767-fbc7-451a-b29f-d93f2ac6f102",
       "b5fa5651-d714-44d6-867b-be0e3224b7ed",
-      "da3b17a2-e1e1-44e9-b9b1-ae54a92037db"
+      "da3b17a2-e1e1-44e9-b9b1-ae54a92037db",
+      "032b8a0d-491a-4a12-ab9f-689010054d5b",
+      "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
+      "6587a463-a108-4854-b6d1-944e89b8c8a4",
+      "c5acf2a5-40f4-433d-a74d-1cb56c521464",
+      "cb027150-848c-4a66-88ad-e20222304dd8",
+      "fc0707c7-d504-4ccf-a0d2-3eb6e26e7a57"
     ]
   }
 }
