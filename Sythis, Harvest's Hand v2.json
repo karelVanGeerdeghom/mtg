@@ -284,13 +284,14 @@
     "30e58e88-ac99-4d32-b2fe-6d6cb6288af3": "Magus of the Candelabra",
     "0c7019a7-3cca-481a-9af0-abedb89c15ad": "Brightglass Gearhulk",
     "b61a87e3-dc98-4db9-abed-b47b677d81ab": "Cream of the Crop",
-    "043f869d-b11c-4c0d-9591-2bf0df7bde55": "Cryptolith Rite"
+    "043f869d-b11c-4c0d-9591-2bf0df7bde55": "Cryptolith Rite",
+    "c63402b2-1f8c-4004-82d8-48ea26bfe3fc": "Shimmerwilds Growth",
+    "782dcbc4-5a11-42f5-b8d9-4572e36d45b3": "Summoner's Pact"
   },
   "deckIds": [
     "7f89c0ee-b914-406c-8a3f-98424a52ae14",
     "92eed395-62ca-4293-882b-8565c40daab5",
     "2c275a85-5a15-46cd-a6e7-add63f9b853d",
-    "8d03d050-391c-4311-8c42-4ee632d40fdc",
     "e7faf8eb-e829-4109-8dfe-42865a23ba86",
     "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
     "acfe7ec0-0606-4d5e-b1fa-25f0c7aeec47",
@@ -367,7 +368,8 @@
     "0c7019a7-3cca-481a-9af0-abedb89c15ad",
     "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508",
     "55f3c721-e13a-406e-bc8e-d6cdc91ac477",
-    "2ecf7771-8061-4710-ad2e-80b092ae0b4b"
+    "2ecf7771-8061-4710-ad2e-80b092ae0b4b",
+    "c63402b2-1f8c-4004-82d8-48ea26bfe3fc"
   ],
   "tokenIds": [
     "246d7a00-288d-448e-9b77-8af41e40a44d",
@@ -408,6 +410,7 @@
       "7f425406-2746-45a1-86bf-f9645015ffc2",
       "706ae742-1807-44b7-a4fa-f2e26f61519a",
       "00d8efa6-a2d9-4249-8da7-b45173675329",
+      "c63402b2-1f8c-4004-82d8-48ea26bfe3fc",
       "cf14d4e5-5965-45ad-97f7-26facf2884b5",
       "e6ccebf4-f4f0-404f-a634-4d751ef9c8aa",
       "d3a0b660-358c-41bd-9cd2-41fbf3491b1a",
@@ -427,6 +430,7 @@
       "2c275a85-5a15-46cd-a6e7-add63f9b853d",
       "89ed0598-a3ee-4d14-9a35-25e0dd80d9fb",
       "d2043685-f091-444f-9c35-d238afa24d7b",
+      "2ecf7771-8061-4710-ad2e-80b092ae0b4b",
       "57c9ff89-dd30-467b-bb3e-499eeea8cb94",
       "0c7019a7-3cca-481a-9af0-abedb89c15ad",
       "0d96b60b-a060-48ee-bb83-93f1c4a10669",
@@ -444,7 +448,6 @@
       "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
       "f14dbb39-c9f9-4f64-b22a-38dba28f5b1e",
       "e7faf8eb-e829-4109-8dfe-42865a23ba86",
-      "8d03d050-391c-4311-8c42-4ee632d40fdc",
       "7735eeba-693b-47e2-bd51-414379cf1016",
       "fae37e28-e137-4177-b973-fa8b4dd8f409",
       "05a4f8ff-49da-42af-add5-6248c4b0644b",

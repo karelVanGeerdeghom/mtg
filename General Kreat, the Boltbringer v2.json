@@ -417,7 +417,15 @@
     "c5acf2a5-40f4-433d-a74d-1cb56c521464": "Arid Mesa",
     "6587a463-a108-4854-b6d1-944e89b8c8a4": "Wooded Foothills",
     "032b8a0d-491a-4a12-ab9f-689010054d5b": "Prismatic Vista",
-    "0c85b8f7-0bd0-4680-9ec5-d4b110460a54": "Fabled Passage"
+    "0c85b8f7-0bd0-4680-9ec5-d4b110460a54": "Fabled Passage",
+    "8abff7b5-fe27-46bd-b951-b5d9f93f3a14": "Slash, Reptile Rampager",
+    "229d6627-1292-4ae1-8849-b0f956fa6540": "Grim Monolith",
+    "0f1afedd-c60f-454f-b84a-c8117aec0128": "Manabarbs",
+    "bdeb440d-a714-40e8-9038-f651e6ae45fb": "Springleaf Drum",
+    "649e4969-71d4-434f-85b0-205ec2c6b24f": "Collective Inferno",
+    "af38d683-77a3-4599-ad2a-1c293ae01d45": "Scuzzback Scrounger",
+    "96c2d71e-0fc9-42aa-bc6b-6d0ae3f66f8b": "Hexing Squelcher",
+    "0b67dff0-5bb7-44fe-a72b-d3b1a6c0ee72": "Infernal Plunge"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -475,7 +483,6 @@
     "9e9d538b-a9e5-4d59-b7c1-208fe18110e3",
     "08e90e85-4103-4acb-a8a7-e1329b460aa7",
     "736892cb-a34b-4bb9-b56c-e26e3db207a2",
-    "17917b7a-2b2b-4a96-a21e-10cd91375660",
     "7f268b15-ac92-4e98-821b-78d15d9285d9",
     "da3b17a2-e1e1-44e9-b9b1-ae54a92037db",
     "a8dba58b-2956-492e-ae30-49db2ae68e53",
@@ -489,15 +496,16 @@
     "213fbbdd-f1bc-4bba-9124-7b26e9a706c8",
     "8e356df5-ca92-4be2-871e-8965c2510fbe",
     "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
-    "d53d000f-c92f-4d70-ae60-8be3791da8a2",
     "5f4d0c87-7d59-41d5-9910-86765a0c144b",
-    "f3c5978a-70fa-431f-933b-b954bd0db0ea",
     "fc0707c7-d504-4ccf-a0d2-3eb6e26e7a57",
     "cb027150-848c-4a66-88ad-e20222304dd8",
     "c5acf2a5-40f4-433d-a74d-1cb56c521464",
     "6587a463-a108-4854-b6d1-944e89b8c8a4",
     "032b8a0d-491a-4a12-ab9f-689010054d5b",
-    "0c85b8f7-0bd0-4680-9ec5-d4b110460a54"
+    "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
+    "8676e917-17dd-4047-99c4-402f2e909e16",
+    "bdeb440d-a714-40e8-9038-f651e6ae45fb",
+    "0b67dff0-5bb7-44fe-a72b-d3b1a6c0ee72"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d",
@@ -532,8 +540,8 @@
       "e49b902f-a556-4dab-8928-93caf0a3f609",
       "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
       "895f23a2-55b7-4cc0-8939-2efaaf097e6f",
-      "3640c29b-1534-4952-b297-619ade948431",
       "76678885-3674-443d-b9a2-2a460cf6aac0",
+      "3640c29b-1534-4952-b297-619ade948431",
       "d3b7b541-6f05-46c1-8031-c848c4bd4635",
       "93fdcc49-e3c8-4f8c-a3bc-064c6392b4ca",
       "badf0669-9f65-44e3-bf91-6c57ac2fecff",
@@ -544,40 +552,41 @@
       "9cfe86ae-eebe-44aa-a956-4b3e9e621105",
       "7b8f4879-578e-40e4-863a-41d0c32c6bdd",
       "a6450b8e-eb18-431c-9eb7-7daf107978b2",
+      "7d9fc9e7-d80b-49c3-871c-ed25b3059ae8",
       "5f4d0c87-7d59-41d5-9910-86765a0c144b",
       "8e356df5-ca92-4be2-871e-8965c2510fbe",
       "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
-      "b8b51a29-a2be-4b97-a73c-ea512d3d5622",
+      "213fbbdd-f1bc-4bba-9124-7b26e9a706c8",
       "d8cfa20a-343e-4661-9f5a-a8265f6917a8",
+      "8676e917-17dd-4047-99c4-402f2e909e16",
       "7f268b15-ac92-4e98-821b-78d15d9285d9",
       "cd45a29f-73bc-435c-9d50-09a4ecaa77be",
       "0ccb9af3-6902-4130-a59c-4c882dc3a2fd",
       "9e9d538b-a9e5-4d59-b7c1-208fe18110e3",
-      "68418069-f615-40ef-ae0d-764192acae00"
+      "68418069-f615-40ef-ae0d-764192acae00",
+      "b8b51a29-a2be-4b97-a73c-ea512d3d5622"
     ],
     "ramp": [
       "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
-      "f3c5978a-70fa-431f-933b-b954bd0db0ea",
       "7a43bd27-fdd8-41f0-9bc4-92568f3408f1",
+      "bdeb440d-a714-40e8-9038-f651e6ae45fb",
       "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
       "6ad8011d-3471-4369-9d68-b264cc027487",
       "736892cb-a34b-4bb9-b56c-e26e3db207a2",
       "0c367958-729e-416d-988b-098e90e7a1fd",
       "08e90e85-4103-4acb-a8a7-e1329b460aa7",
       "4b977117-741c-4157-8fcf-719e475a8a4c",
+      "0b67dff0-5bb7-44fe-a72b-d3b1a6c0ee72",
       "64bf8929-f5f2-4d50-8667-13b1d007bcfc",
       "0fd114c4-092b-4e28-b0dc-ef529f3bc73e",
       "a8dba58b-2956-492e-ae30-49db2ae68e53",
-      "7d9fc9e7-d80b-49c3-871c-ed25b3059ae8",
       "c18013e4-0b99-44e3-a2b2-027ace68723a",
       "37108cd4-bbab-4ce3-9ed6-f60e8422e703",
       "eb414a8f-566f-4635-80a1-77b2e18ac8dc",
       "fb81e4d3-1d8c-4779-be62-87cf49277e51",
-      "b0d3fd57-1420-4dd1-8410-9d659655287f",
-      "213fbbdd-f1bc-4bba-9124-7b26e9a706c8"
+      "b0d3fd57-1420-4dd1-8410-9d659655287f"
     ],
     "advantage": [
-      "17917b7a-2b2b-4a96-a21e-10cd91375660",
       "a7d8c99c-cd44-4bad-82e6-7c7cff9bd89f",
       "584cf0fd-112a-4ca6-9c0e-1f3228a7d325",
       "8d286376-f386-43ab-a9bd-8478fb9e2497",
@@ -591,8 +600,7 @@
     ],
     "interaction": [
       "ae120613-97d6-4393-b39d-c3e6c076f5d6",
-      "ea55db87-a5c3-49f7-b968-77510cdeb469",
-      "d53d000f-c92f-4d70-ae60-8be3791da8a2"
+      "ea55db87-a5c3-49f7-b968-77510cdeb469"
     ],
     "land": [
       "4c6a0c30-b547-4eff-8ff4-0ca25803c076",
