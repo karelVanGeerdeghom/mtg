@@ -752,7 +752,7 @@
 						let cardName = cardNames[i].trim();
 
 						let card = masterIndex.find(function(item) {
-							if (item.label === cardName) {
+							if (item.label.toLowerCase() === cardName.toLowerCase()) {
 								return item;
 							}
 						});
