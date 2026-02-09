@@ -1416,16 +1416,16 @@
 					}
 				}
 				
-				let $manaCostChart = this.createManaCostChart($charts, manaCosts);
+				let $manaCostChart = this.createManaCostChart($charts, manaCosts, manaCount / spellCount);
 				let $cardTypeChart = this.createCardTypeChart($charts, cardTypes);
 				let $devotionChart = this.createDevotionChart($charts, devotions);
 				let $rarityChart = this.createRarityChart($charts, rarities);
 				let $metaTypeChart = this.createMetaTypeChart($charts, metaTypes);
 
-				console.log(manaCount / spellCount);
+				console.log();
 			};
 
-			MTG.createManaCostChart = function($charts, manaCosts) {
+			MTG.createManaCostChart = function($charts, manaCosts, averageManaCost) {
 				let $manaCostChart = $('<div class="chart bar-chart"><canvas id="mana-cost-chart" width="1200" height="300"></canvas>');
 				$charts.append($manaCostChart);
 
@@ -1438,7 +1438,7 @@
 						labels: manaCostLabels,
 						datasets: [
 							{
-								label: 'Number of cards',
+								label: 'Average: ' + averageManaCost,
 								data: manaCostData,
 								backgroundColor: 'gray',
 								borderColor: 'black',
