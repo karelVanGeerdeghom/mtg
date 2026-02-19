@@ -400,7 +400,8 @@
     "bdeb440d-a714-40e8-9038-f651e6ae45fb": "Springleaf Drum",
     "8a2e53f9-8100-488f-8504-b59e9bd1cc29": "Rite of Flame",
     "64ad5657-78e9-4f34-8877-18c4f51fff9a": "Glint-Horn Buccaneer",
-    "39419d29-47e7-4d71-953b-96a2e14ae964": "Songs of the Damned"
+    "39419d29-47e7-4d71-953b-96a2e14ae964": "Songs of the Damned",
+    "b3e28bcf-0ed0-4406-b615-68ddc55b349a": "Great Hall of the Citadel"
   },
   "deckIds": [
     "afaef788-34d1-460b-b884-9d7ae6ddeb18",
@@ -499,7 +500,8 @@
     "66fa528f-0e3a-450f-9035-1ba5a8a921e6",
     "0452be2a-e97a-4269-a9e3-b616265ecb2e",
     "6f98c1eb-0f52-4d21-a266-e8d52f98c1b3",
-    "64ad5657-78e9-4f34-8877-18c4f51fff9a"
+    "64ad5657-78e9-4f34-8877-18c4f51fff9a",
+    "b3e28bcf-0ed0-4406-b615-68ddc55b349a"
   ],
   "tokenIds": [
     "02d1dc2f-625e-4be3-9daf-e48c44bc9bf7"
@@ -508,7 +510,7 @@
     "8a5e3c8e-8e22-49b9-8ee5-4a36361f0da6"
   ],
   "forestCount": 0,
-  "islandCount": 2,
+  "islandCount": 1,
   "mountainCount": 1,
   "plainsCount": 0,
   "swampCount": 1,
@@ -614,6 +616,7 @@
       "dab520d0-20b4-4273-ba6b-eb07f85ea433",
       "f3c7af78-a77d-4134-82a2-a5ce84285a84",
       "db6174d7-211d-4817-b8e4-8384594c83f9",
+      "b3e28bcf-0ed0-4406-b615-68ddc55b349a",
       "4c6a0c30-b547-4eff-8ff4-0ca25803c076",
       "23467047-6dba-4498-b783-1ebc4f74b8c2"
     ]
