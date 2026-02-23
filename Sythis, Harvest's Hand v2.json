@@ -329,7 +329,6 @@
     "34187c71-6033-4058-aadc-2bc266f762be",
     "29737a60-3ebd-40d9-b935-c4f54b90d45d",
     "761cb262-f83b-4a99-9345-b773182a7671",
-    "c23e5b80-08d2-4e24-9908-fe2aa4f30f6f",
     "48a99dce-0aa9-4aac-81df-cec5f94c639d",
     "393e5331-4456-4ba3-b410-bb630bb053db",
     "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
@@ -363,7 +362,6 @@
     "e6ccebf4-f4f0-404f-a634-4d751ef9c8aa",
     "c53d958a-f660-4d2e-87cd-87702f973b3a",
     "5eb8b497-ec9a-4a89-ad29-1ec3ca82da7c",
-    "7c304547-a4b1-46c9-baed-16d2bfbe16eb",
     "d683d985-9888-4d21-8b5f-69e69ce4a03b",
     "b1544f21-7e98-461b-aed5-e748b0168c52",
     "8695c3c1-fb4b-4429-ae33-ec186f68796b",
@@ -379,9 +377,8 @@
     "782dcbc4-5a11-42f5-b8d9-4572e36d45b3",
     "b1bc8e58-ea4f-46a9-b833-d780cf6758b3",
     "dfd5939e-a71a-4e16-9b93-752162be4ccd",
-    "d90882ae-6572-4214-8d9c-0bdfb75f9be2",
-    "81c223a5-5ff2-43e5-bd0b-25c4f72b2150",
-    "043f869d-b11c-4c0d-9591-2bf0df7bde55"
+    "89ed0598-a3ee-4d14-9a35-25e0dd80d9fb",
+    "38513660-260f-4663-b199-6473fa004a3b"
   ],
   "tokenIds": [
     "246d7a00-288d-448e-9b77-8af41e40a44d",
@@ -393,10 +390,10 @@
   "commandZoneIds": [
     "0fc64fd6-f057-4056-9dca-47accb7ff036"
   ],
-  "forestCount": 9,
+  "forestCount": 10,
   "islandCount": 0,
   "mountainCount": 0,
-  "plainsCount": 9,
+  "plainsCount": 10,
   "swampCount": 0,
   "wastesCount": 0,
   "meta": {
@@ -415,11 +412,9 @@
       "e4125377-34c0-4b54-bdf8-4e88f5d24565"
     ],
     "ramp": [
-      "88cf4c1a-5863-45fc-b76d-7ad33b175b2b",
       "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
       "bdbde5d0-f5e4-44da-b27c-b4ad6f374cc9",
-      "8695c3c1-fb4b-4429-ae33-ec186f68796b",
-      "7f425406-2746-45a1-86bf-f9645015ffc2",
+      "88cf4c1a-5863-45fc-b76d-7ad33b175b2b",
       "706ae742-1807-44b7-a4fa-f2e26f61519a",
       "00d8efa6-a2d9-4249-8da7-b45173675329",
       "c63402b2-1f8c-4004-82d8-48ea26bfe3fc",
@@ -429,6 +424,8 @@
       "f9d3b046-0b95-4103-a630-4b3fb88bb60b",
       "acfe7ec0-0606-4d5e-b1fa-25f0c7aeec47",
       "30e58e88-ac99-4d32-b2fe-6d6cb6288af3",
+      "8695c3c1-fb4b-4429-ae33-ec186f68796b",
+      "7f425406-2746-45a1-86bf-f9645015ffc2",
       "50aa7aff-1f01-4224-9a83-01f74d703ec2",
       "c4d1a78f-0cca-4042-862c-8f322ee25d50",
       "28b46183-c62f-47b1-9fee-3ba148202cab",
@@ -440,6 +437,7 @@
       "e8863518-0bfa-49c3-8c6e-6c9116a81051",
       "935e0cac-51ee-4cb7-a209-f085e0f099ed",
       "2c275a85-5a15-46cd-a6e7-add63f9b853d",
+      "89ed0598-a3ee-4d14-9a35-25e0dd80d9fb",
       "782dcbc4-5a11-42f5-b8d9-4572e36d45b3",
       "2ecf7771-8061-4710-ad2e-80b092ae0b4b",
       "57c9ff89-dd30-467b-bb3e-499eeea8cb94",
@@ -449,17 +447,18 @@
       "7f89c0ee-b914-406c-8a3f-98424a52ae14",
       "947a2665-2f4d-4193-8768-118f85334549",
       "11f17f85-ca97-4551-838f-7cb32f0e5f10",
-      "795b096a-2bce-4588-a2c9-abc5ea40dc0c"
+      "795b096a-2bce-4588-a2c9-abc5ea40dc0c",
+      "38513660-260f-4663-b199-6473fa004a3b"
     ],
     "interaction": [
       "d683d985-9888-4d21-8b5f-69e69ce4a03b",
       "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "7735eeba-693b-47e2-bd51-414379cf1016",
+      "fae37e28-e137-4177-b973-fa8b4dd8f409",
       "dfd5939e-a71a-4e16-9b93-752162be4ccd",
       "b1bc8e58-ea4f-46a9-b833-d780cf6758b3",
       "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
       "f14dbb39-c9f9-4f64-b22a-38dba28f5b1e",
-      "7735eeba-693b-47e2-bd51-414379cf1016",
-      "fae37e28-e137-4177-b973-fa8b4dd8f409",
       "05a4f8ff-49da-42af-add5-6248c4b0644b",
       "a492a323-df8a-40fd-bff0-50091baa7700",
       "7c3944fa-7c86-4979-85a9-86196aa94594",
@@ -468,8 +467,8 @@
       "d371031e-78be-4964-b521-b1eaa22a5480",
       "7dd189f8-a23f-4b43-b0ef-fb174a9664ba",
       "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
-      "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508",
-      "55f3c721-e13a-406e-bc8e-d6cdc91ac477"
+      "55f3c721-e13a-406e-bc8e-d6cdc91ac477",
+      "ac9d52b2-78a5-4b17-8aaf-1c1cb936a508"
     ],
     "land": [
       "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
@@ -478,9 +477,7 @@
       "761cb262-f83b-4a99-9345-b773182a7671",
       "29737a60-3ebd-40d9-b935-c4f54b90d45d",
       "5eb8b497-ec9a-4a89-ad29-1ec3ca82da7c",
-      "7c304547-a4b1-46c9-baed-16d2bfbe16eb",
       "032b8a0d-491a-4a12-ab9f-689010054d5b",
-      "c23e5b80-08d2-4e24-9908-fe2aa4f30f6f",
       "9f12bf9a-6e1a-4377-b4af-e8cabd3ee58a",
       "84dc18f0-8225-4b40-a165-b10321e41769",
       "34187c71-6033-4058-aadc-2bc266f762be",

@@ -395,7 +395,13 @@
     "dab520d0-20b4-4273-ba6b-eb07f85ea433": "Marsh Flats",
     "09dd85aa-47bc-4713-a9b9-8b52ff2285ed": "Misty Rainforest",
     "0452be2a-e97a-4269-a9e3-b616265ecb2e": "Vivi Ornitier",
-    "b9df2cdf-397c-458d-89cf-911568737ffa": "Mockingbird"
+    "b9df2cdf-397c-458d-89cf-911568737ffa": "Mockingbird",
+    "3db16fb8-5650-4568-b975-42ad3d44ebcd": "Electro, Assaulting Battery",
+    "bdeb440d-a714-40e8-9038-f651e6ae45fb": "Springleaf Drum",
+    "8a2e53f9-8100-488f-8504-b59e9bd1cc29": "Rite of Flame",
+    "64ad5657-78e9-4f34-8877-18c4f51fff9a": "Glint-Horn Buccaneer",
+    "39419d29-47e7-4d71-953b-96a2e14ae964": "Songs of the Damned",
+    "b3e28bcf-0ed0-4406-b615-68ddc55b349a": "Great Hall of the Citadel"
   },
   "deckIds": [
     "afaef788-34d1-460b-b884-9d7ae6ddeb18",
@@ -417,8 +423,6 @@
     "ea5103f5-27e0-4eb1-902c-7f34652d6bf3",
     "a78f981a-bf8a-42a4-b171-d655cc2cc1a2",
     "b110b8e6-859b-4370-aceb-b21c6cf61532",
-    "b6c8ac69-daa7-4e2e-a1d9-439731a81870",
-    "df13dafb-f82e-42ac-b6dc-efe82af5db58",
     "16cd0b90-f70c-4efa-b252-8de8784ef9a3",
     "ededbdae-d9dc-4206-9335-d7158f2d7700",
     "82004860-e589-4e38-8d61-8c0210e4ea39",
@@ -492,7 +496,10 @@
     "13ff3222-91cb-4796-a34e-899ed817694c",
     "2e2ace5b-4018-43af-8e72-ebafec1a7739",
     "66fa528f-0e3a-450f-9035-1ba5a8a921e6",
-    "0452be2a-e97a-4269-a9e3-b616265ecb2e"
+    "0452be2a-e97a-4269-a9e3-b616265ecb2e",
+    "b3e28bcf-0ed0-4406-b615-68ddc55b349a",
+    "44e0ffa3-8915-4c1f-8f1a-4aeea1365f07",
+    "51b47053-d169-4627-982f-f29b8630d75f"
   ],
   "tokenIds": [
     "02d1dc2f-625e-4be3-9daf-e48c44bc9bf7"
@@ -501,7 +508,7 @@
     "8a5e3c8e-8e22-49b9-8ee5-4a36361f0da6"
   ],
   "forestCount": 0,
-  "islandCount": 2,
+  "islandCount": 1,
   "mountainCount": 1,
   "plainsCount": 0,
   "swampCount": 1,
@@ -511,18 +518,16 @@
       "fc7b46af-6c07-455a-99c7-f1bccaa2a5f4",
       "a78f981a-bf8a-42a4-b171-d655cc2cc1a2",
       "ea5103f5-27e0-4eb1-902c-7f34652d6bf3",
-      "d5ea905b-4bb6-48d0-9082-c472703db550",
       "34f34409-326d-4994-a0ea-1a69aa278f03",
+      "d5ea905b-4bb6-48d0-9082-c472703db550",
       "2e2ace5b-4018-43af-8e72-ebafec1a7739",
       "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
       "b110b8e6-859b-4370-aceb-b21c6cf61532",
       "e49b902f-a556-4dab-8928-93caf0a3f609",
       "d3b7b541-6f05-46c1-8031-c848c4bd4635",
-      "df13dafb-f82e-42ac-b6dc-efe82af5db58",
       "a8abd966-de7b-46a3-8ac7-8747ab35653a",
       "eb9c9a34-88a8-4afe-a053-806f6b29834f",
       "a7c6f07c-3cc3-4271-bbc7-9f7d5bbed3e8",
-      "b6c8ac69-daa7-4e2e-a1d9-439731a81870",
       "08becc07-28bc-4a2f-a6b0-28a2998d2f50",
       "7bbc5f3a-f8fb-47e8-837e-ce319bc489de",
       "f525cf10-e24c-4c46-9a13-6f8579d09d50",
@@ -543,6 +548,7 @@
       "14d2979d-5728-42d7-a027-0eb1f754655d",
       "4c0a0448-b9d6-43a0-8549-64066dac63f0",
       "1d9aeaaa-66f6-41cb-9bac-162d6fd8662c",
+      "44e0ffa3-8915-4c1f-8f1a-4aeea1365f07",
       "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
       "64bf8929-f5f2-4d50-8667-13b1d007bcfc",
       "0fd114c4-092b-4e28-b0dc-ef529f3bc73e",
@@ -578,6 +584,7 @@
       "0456ec64-2c81-4763-a352-8ff64a4c3d6b",
       "615927c2-3fb0-4e64-a1a7-55fb56de1423",
       "afaef788-34d1-460b-b884-9d7ae6ddeb18",
+      "51b47053-d169-4627-982f-f29b8630d75f",
       "d75b9c82-1b49-4c3e-a1b5-aeef57d6644b",
       "7a2484a9-04fd-41a0-8224-610c1c07ed10"
     ],
@@ -609,6 +616,7 @@
       "dab520d0-20b4-4273-ba6b-eb07f85ea433",
       "f3c7af78-a77d-4134-82a2-a5ce84285a84",
       "db6174d7-211d-4817-b8e4-8384594c83f9",
+      "b3e28bcf-0ed0-4406-b615-68ddc55b349a",
       "4c6a0c30-b547-4eff-8ff4-0ca25803c076",
       "23467047-6dba-4498-b783-1ebc4f74b8c2"
     ]
