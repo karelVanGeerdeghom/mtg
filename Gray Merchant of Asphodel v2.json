@@ -200,7 +200,8 @@
     "431d6a2b-e22c-4921-a5f1-dd672f764f78": "Grim Bauble",
     "05da6b06-fb5f-41e8-b0a2-d949646e36d9": "Mephitic Draught",
     "cb65ee08-bfdb-4c18-8967-8bcf31fcabfa": "Witch's Cauldron",
-    "2750451f-348e-452f-88d0-bc921c46e8cc": "Undercity Scrounger"
+    "2750451f-348e-452f-88d0-bc921c46e8cc": "Undercity Scrounger",
+    "e0a35a44-e56d-434e-8043-43d5031b2e84": "Perigee Beckoner"
   },
   "deckIds": [
     "b15c6203-6311-44eb-916d-a4c271960c74",
@@ -236,8 +237,6 @@
     "e05c6c80-a91a-45e0-b991-0014fd5a6472",
     "d4a9d63a-5a8a-4f51-9e49-43d6dc3234b1",
     "f82a4e85-526d-4456-b700-7760043a31be",
-    "310f141c-7f37-4729-aed6-dd9c09db448d",
-    "41087db6-34c4-4e2b-9f54-5e4488ca9c0b",
     "c1d0537b-954f-4d3b-b9fe-1dd7ffaa1197",
     "556c4dad-002e-41a8-8ba3-8b4eda70232f",
     "41f58e06-5ce0-4b2d-a280-5bb3b6c56dfe",
@@ -256,14 +255,16 @@
     "0e6ff89e-9ae7-4dc3-98b7-05401c5df266",
     "415e9484-0788-4c00-bb1f-19308511114b",
     "638eeb16-9e0e-4cc6-b97e-8ff0df81ca58",
-    "e0f23e7e-2858-4f5e-9dd5-8a0ba934a048",
     "3c7f2b29-9f42-41ab-a2d4-7a450fb0242d",
     "1c145f2d-8345-4902-b869-afb70145dec7",
     "2f65f16f-c6c2-48f0-b556-63cf7d162000",
     "0dd73855-6a7a-4eb4-80e0-1509f9397e5a",
     "7d5e4033-bd58-4854-b9d3-a440240995ee",
     "d0d844f2-6cf4-49f2-95db-64e932a15b17",
-    "25c04be3-f2e0-4f45-a1ca-9e75ffffa9b5"
+    "25c04be3-f2e0-4f45-a1ca-9e75ffffa9b5",
+    "e0a35a44-e56d-434e-8043-43d5031b2e84",
+    "a1cc5e37-b09a-4b7f-afd5-77c1c35aa425",
+    "2ec8c540-73bf-4412-a53a-499e9b9fd213"
   ],
   "tokenIds": [],
   "commandZoneIds": [
@@ -279,6 +280,7 @@
     "strategy": [
       "b15c6203-6311-44eb-916d-a4c271960c74",
       "cf73d2e7-584f-41d0-8fc7-50d886dcf9fe",
+      "e0a35a44-e56d-434e-8043-43d5031b2e84",
       "f718e507-296b-4f22-842b-5fb91322069b",
       "380c367f-73ea-485f-a37b-5af0ba160893",
       "65756e6d-9825-4ed6-91c4-79f1e3bd4ae5",
@@ -288,11 +290,12 @@
       "162bcc9d-6edf-4b3b-83e6-2c933e2a5967",
       "9c002b4d-bb6c-45a5-88e1-1df2958dff9f",
       "814679b4-51bd-4b07-a7b8-d3375d36ff45",
+      "7d5e4033-bd58-4854-b9d3-a440240995ee",
       "7b81596b-9487-4be1-a417-6913fa72299d",
       "556c4dad-002e-41a8-8ba3-8b4eda70232f",
-      "e0f23e7e-2858-4f5e-9dd5-8a0ba934a048",
-      "7d5e4033-bd58-4854-b9d3-a440240995ee",
+      "a1cc5e37-b09a-4b7f-afd5-77c1c35aa425",
       "f82a4e85-526d-4456-b700-7760043a31be",
+      "2ec8c540-73bf-4412-a53a-499e9b9fd213",
       "11656b2a-b459-4b1c-b505-8547c3507856",
       "2f65f16f-c6c2-48f0-b556-63cf7d162000",
       "41f58e06-5ce0-4b2d-a280-5bb3b6c56dfe",
@@ -301,9 +304,7 @@
       "c1d0537b-954f-4d3b-b9fe-1dd7ffaa1197",
       "415e9484-0788-4c00-bb1f-19308511114b",
       "a24f4198-2412-4b73-8e20-4ced3a826301",
-      "0e6ff89e-9ae7-4dc3-98b7-05401c5df266",
-      "41087db6-34c4-4e2b-9f54-5e4488ca9c0b",
-      "310f141c-7f37-4729-aed6-dd9c09db448d"
+      "0e6ff89e-9ae7-4dc3-98b7-05401c5df266"
     ],
     "ramp": [
       "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
