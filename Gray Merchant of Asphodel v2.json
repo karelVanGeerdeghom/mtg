@@ -201,7 +201,8 @@
     "05da6b06-fb5f-41e8-b0a2-d949646e36d9": "Mephitic Draught",
     "cb65ee08-bfdb-4c18-8967-8bcf31fcabfa": "Witch's Cauldron",
     "2750451f-348e-452f-88d0-bc921c46e8cc": "Undercity Scrounger",
-    "e0a35a44-e56d-434e-8043-43d5031b2e84": "Perigee Beckoner"
+    "e0a35a44-e56d-434e-8043-43d5031b2e84": "Perigee Beckoner",
+    "17c7878f-891f-40a6-80a7-47fcc7b8e29b": "Skulltap"
   },
   "deckIds": [
     "b15c6203-6311-44eb-916d-a4c271960c74",
@@ -228,7 +229,6 @@
     "044ea111-ce87-49ab-98f7-ae8447f48ac5",
     "9c002b4d-bb6c-45a5-88e1-1df2958dff9f",
     "814679b4-51bd-4b07-a7b8-d3375d36ff45",
-    "96480e86-70a8-401d-abf8-a7d509311b73",
     "7ffae8f8-3006-4969-a339-6d30678f87ea",
     "c6207f6a-a624-4754-88f5-dbe700c841ff",
     "e3174070-542f-429e-9149-b572f6614537",
@@ -264,7 +264,10 @@
     "25c04be3-f2e0-4f45-a1ca-9e75ffffa9b5",
     "e0a35a44-e56d-434e-8043-43d5031b2e84",
     "a1cc5e37-b09a-4b7f-afd5-77c1c35aa425",
-    "2ec8c540-73bf-4412-a53a-499e9b9fd213"
+    "2ec8c540-73bf-4412-a53a-499e9b9fd213",
+    "aa76cc50-5be0-4844-b3a4-fb33fca3cdd3",
+    "17c7878f-891f-40a6-80a7-47fcc7b8e29b",
+    "0aa9ee99-69a8-452b-a0d5-001384bdff3c"
   ],
   "tokenIds": [],
   "commandZoneIds": [
@@ -274,7 +277,7 @@
   "islandCount": 0,
   "mountainCount": 0,
   "plainsCount": 0,
-  "swampCount": 38,
+  "swampCount": 36,
   "wastesCount": 0,
   "meta": {
     "strategy": [
@@ -290,11 +293,14 @@
       "162bcc9d-6edf-4b3b-83e6-2c933e2a5967",
       "9c002b4d-bb6c-45a5-88e1-1df2958dff9f",
       "814679b4-51bd-4b07-a7b8-d3375d36ff45",
+      "7265d768-b79f-44eb-9873-d834e55f6463",
+      "614f748b-5d31-440d-a7c0-3ba12dc63c24",
       "7d5e4033-bd58-4854-b9d3-a440240995ee",
       "7b81596b-9487-4be1-a417-6913fa72299d",
       "556c4dad-002e-41a8-8ba3-8b4eda70232f",
       "a1cc5e37-b09a-4b7f-afd5-77c1c35aa425",
       "f82a4e85-526d-4456-b700-7760043a31be",
+      "aa76cc50-5be0-4844-b3a4-fb33fca3cdd3",
       "2ec8c540-73bf-4412-a53a-499e9b9fd213",
       "11656b2a-b459-4b1c-b505-8547c3507856",
       "2f65f16f-c6c2-48f0-b556-63cf7d162000",
@@ -322,6 +328,7 @@
     "advantage": [
       "c6207f6a-a624-4754-88f5-dbe700c841ff",
       "7ffae8f8-3006-4969-a339-6d30678f87ea",
+      "17c7878f-891f-40a6-80a7-47fcc7b8e29b",
       "b45e35df-9032-4482-89a6-c7c50c6d0a79",
       "365548fb-5acc-4a8a-b20b-26d28b7d029f",
       "6a125750-2b8c-4f9d-8173-ac8d14c91ddb",
@@ -338,13 +345,10 @@
       "0f8ebf11-b5ec-4f21-8c49-90d569b5a4c5",
       "d437ecc2-2fd3-4ad3-b23e-217f55e58dae",
       "c753e9e3-9374-4e3c-8622-94576a8c1da3",
-      "96480e86-70a8-401d-abf8-a7d509311b73",
       "883a4180-9ede-4249-a4b8-3a29c998fb63",
       "0dd73855-6a7a-4eb4-80e0-1509f9397e5a",
       "d0d844f2-6cf4-49f2-95db-64e932a15b17",
-      "1a7e0e55-41c3-4fd8-b718-55b59b5cab90",
-      "7265d768-b79f-44eb-9873-d834e55f6463",
-      "614f748b-5d31-440d-a7c0-3ba12dc63c24"
+      "1a7e0e55-41c3-4fd8-b718-55b59b5cab90"
     ],
     "land": []
   }
