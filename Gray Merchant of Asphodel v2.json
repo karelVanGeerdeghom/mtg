@@ -202,7 +202,10 @@
     "cb65ee08-bfdb-4c18-8967-8bcf31fcabfa": "Witch's Cauldron",
     "2750451f-348e-452f-88d0-bc921c46e8cc": "Undercity Scrounger",
     "e0a35a44-e56d-434e-8043-43d5031b2e84": "Perigee Beckoner",
-    "17c7878f-891f-40a6-80a7-47fcc7b8e29b": "Skulltap"
+    "17c7878f-891f-40a6-80a7-47fcc7b8e29b": "Skulltap",
+    "a57d4a9d-4ac5-4a68-adb9-a73754034d7c": "Hasran Ogress",
+    "3365a79e-3e2d-4f4b-861c-a970ae23345b": "Treasure",
+    "3c549374-6c37-42e0-8d88-a8555d46732d": "Treasure"
   },
   "deckIds": [
     "b15c6203-6311-44eb-916d-a4c271960c74",
@@ -245,7 +248,6 @@
     "d437ecc2-2fd3-4ad3-b23e-217f55e58dae",
     "cdba7f43-df9e-4bfb-9480-721c787ad051",
     "0f8ebf11-b5ec-4f21-8c49-90d569b5a4c5",
-    "5b5bf1fa-6502-4790-b66b-f0f8504ebc7c",
     "883a4180-9ede-4249-a4b8-3a29c998fb63",
     "7265d768-b79f-44eb-9873-d834e55f6463",
     "614f748b-5d31-440d-a7c0-3ba12dc63c24",
@@ -267,9 +269,12 @@
     "2ec8c540-73bf-4412-a53a-499e9b9fd213",
     "aa76cc50-5be0-4844-b3a4-fb33fca3cdd3",
     "17c7878f-891f-40a6-80a7-47fcc7b8e29b",
-    "0aa9ee99-69a8-452b-a0d5-001384bdff3c"
+    "0aa9ee99-69a8-452b-a0d5-001384bdff3c",
+    "a57d4a9d-4ac5-4a68-adb9-a73754034d7c"
   ],
-  "tokenIds": [],
+  "tokenIds": [
+    "3c549374-6c37-42e0-8d88-a8555d46732d"
+  ],
   "commandZoneIds": [
     "38f3b157-0df4-409b-89cc-086e1531cd5b"
   ],
@@ -293,6 +298,7 @@
       "162bcc9d-6edf-4b3b-83e6-2c933e2a5967",
       "9c002b4d-bb6c-45a5-88e1-1df2958dff9f",
       "814679b4-51bd-4b07-a7b8-d3375d36ff45",
+      "0aa9ee99-69a8-452b-a0d5-001384bdff3c",
       "7265d768-b79f-44eb-9873-d834e55f6463",
       "614f748b-5d31-440d-a7c0-3ba12dc63c24",
       "7d5e4033-bd58-4854-b9d3-a440240995ee",
@@ -305,6 +311,7 @@
       "11656b2a-b459-4b1c-b505-8547c3507856",
       "2f65f16f-c6c2-48f0-b556-63cf7d162000",
       "41f58e06-5ce0-4b2d-a280-5bb3b6c56dfe",
+      "a57d4a9d-4ac5-4a68-adb9-a73754034d7c",
       "1c145f2d-8345-4902-b869-afb70145dec7",
       "25c04be3-f2e0-4f45-a1ca-9e75ffffa9b5",
       "c1d0537b-954f-4d3b-b9fe-1dd7ffaa1197",
@@ -317,7 +324,6 @@
       "bdeb440d-a714-40e8-9038-f651e6ae45fb",
       "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
       "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
-      "5b5bf1fa-6502-4790-b66b-f0f8504ebc7c",
       "6385fd0d-256d-4400-9319-afa8170024db",
       "3c7f2b29-9f42-41ab-a2d4-7a450fb0242d",
       "d4a9d63a-5a8a-4f51-9e49-43d6dc3234b1",
