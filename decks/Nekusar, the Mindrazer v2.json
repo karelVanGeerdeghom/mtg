@@ -402,7 +402,8 @@
     "64ad5657-78e9-4f34-8877-18c4f51fff9a": "Glint-Horn Buccaneer",
     "39419d29-47e7-4d71-953b-96a2e14ae964": "Songs of the Damned",
     "b3e28bcf-0ed0-4406-b615-68ddc55b349a": "Great Hall of the Citadel",
-    "17770eeb-ecbf-4510-af2d-acececfbe146": "Multiversal Passage"
+    "17770eeb-ecbf-4510-af2d-acececfbe146": "Multiversal Passage",
+    "deda54da-4fcc-4da3-9337-7768a2db3283": "Irma, Part-Time Mutant"
   },
   "deckIds": [
     "afaef788-34d1-460b-b884-9d7ae6ddeb18",
@@ -499,8 +500,8 @@
     "66fa528f-0e3a-450f-9035-1ba5a8a921e6",
     "0452be2a-e97a-4269-a9e3-b616265ecb2e",
     "44e0ffa3-8915-4c1f-8f1a-4aeea1365f07",
-    "51b47053-d169-4627-982f-f29b8630d75f",
-    "17770eeb-ecbf-4510-af2d-acececfbe146"
+    "17770eeb-ecbf-4510-af2d-acececfbe146",
+    "deda54da-4fcc-4da3-9337-7768a2db3283"
   ],
   "tokenIds": [
     "02d1dc2f-625e-4be3-9daf-e48c44bc9bf7"
@@ -585,7 +586,6 @@
       "0456ec64-2c81-4763-a352-8ff64a4c3d6b",
       "615927c2-3fb0-4e64-a1a7-55fb56de1423",
       "afaef788-34d1-460b-b884-9d7ae6ddeb18",
-      "51b47053-d169-4627-982f-f29b8630d75f",
       "d75b9c82-1b49-4c3e-a1b5-aeef57d6644b",
       "7a2484a9-04fd-41a0-8224-610c1c07ed10"
     ],
