@@ -458,26 +458,29 @@
     "888e711a-1251-4704-8ef1-b4b98ec54b5a",
     "7a2484a9-04fd-41a0-8224-610c1c07ed10",
     "782dcbc4-5a11-42f5-b8d9-4572e36d45b3",
-    "ee24bf27-484d-4e1c-998e-6a74e3d3f6c4",
     "3b6ef144-bb98-4686-9718-204f1c3cf020",
-    "52867cdd-8bf2-4cae-bb8d-0f16a18a455b",
     "0c319f45-cb0f-4641-acd8-145768acb3fc",
     "c4bc5bc4-e589-42c5-91fa-2ebc96448e85",
     "ac8fba34-512c-4f24-999a-ab72f1ce4acb",
     "4f819ba4-52ef-4fdd-8e4c-5ae3b2f44db5",
     "dba16032-66c1-4ccb-9d65-d41ac550d182",
-    "3ecaefc8-ead2-47a3-a7ea-b030faab65a7",
     "3bdc9211-8eff-4b30-8d6f-d26f4087f77f",
     "6fd9ece7-366f-45c7-a8ea-edb4ca637a06",
     "4c6a0c30-b547-4eff-8ff4-0ca25803c076",
-    "3cc79d36-1a24-4395-8ad1-915a65db8a60",
-    "bb2b324c-970a-4920-884e-c92ba49669f0",
     "6789a170-f2c5-4fc0-8a45-2b2361e67410",
     "a08f79b7-d66f-47da-9670-afd7409c0c5c",
     "88cf4c1a-5863-45fc-b76d-7ad33b175b2b",
     "21d90735-5e04-4a8c-a546-ff26d4d5998d",
     "8f47a230-7500-4afb-97cd-dbd444c307c8",
-    "616d6013-24f4-4999-9bf3-5b0764e52fa6"
+    "616d6013-24f4-4999-9bf3-5b0764e52fa6",
+    "62f6baba-da3b-45b8-a3c1-efb75763cca8",
+    "2962fe4c-bf48-454b-8a6b-0f8253352ae8",
+    "97a84e9d-bfc4-4ca2-b1e8-908dba56ccdb",
+    "c1fc5923-c3cd-448a-98d1-c154661c2812",
+    "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
+    "8a3ad2ef-8bcb-40c0-85de-f03328c2b644",
+    "374e54d8-8e73-4268-9dde-c28c77bbbf32",
+    "f3c5978a-70fa-431f-933b-b954bd0db0ea"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d"
@@ -485,9 +488,9 @@
   "commandZoneIds": [
     "76cb1912-3791-44b8-b594-b92dab21bafc"
   ],
-  "forestCount": 7,
+  "forestCount": 8,
   "islandCount": 0,
-  "mountainCount": 7,
+  "mountainCount": 8,
   "plainsCount": 0,
   "swampCount": 0,
   "wastesCount": 0,
@@ -502,8 +505,10 @@
       "3bcf090c-e890-4a9f-a8aa-6079e4ec9947",
       "33c722cf-b4bf-431f-aefd-ee96241a7fbf",
       "4f819ba4-52ef-4fdd-8e4c-5ae3b2f44db5",
+      "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
       "dba16032-66c1-4ccb-9d65-d41ac550d182",
-      "3ecaefc8-ead2-47a3-a7ea-b030faab65a7",
+      "62f6baba-da3b-45b8-a3c1-efb75763cca8",
+      "2962fe4c-bf48-454b-8a6b-0f8253352ae8",
       "88cf4c1a-5863-45fc-b76d-7ad33b175b2b",
       "8a83ecee-092b-456c-803f-a9aaa17c4da9",
       "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
@@ -514,8 +519,6 @@
       "6fd9ece7-366f-45c7-a8ea-edb4ca637a06",
       "3bdc9211-8eff-4b30-8d6f-d26f4087f77f",
       "ac8fba34-512c-4f24-999a-ab72f1ce4acb",
-      "52867cdd-8bf2-4cae-bb8d-0f16a18a455b",
-      "ee24bf27-484d-4e1c-998e-6a74e3d3f6c4",
       "e21c8fc6-d4ef-42b6-b11e-d9c931da1387",
       "1b882a0e-0ede-4d1a-bd1a-9b7cffbcde8e",
       "78826359-fe63-44ad-adc4-a17ffcd710e4",
@@ -524,11 +527,14 @@
       "c235015e-a7a9-4f8d-bf4a-cf68b3847f83",
       "888e711a-1251-4704-8ef1-b4b98ec54b5a",
       "3b6ef144-bb98-4686-9718-204f1c3cf020",
-      "3cc79d36-1a24-4395-8ad1-915a65db8a60"
+      "374e54d8-8e73-4268-9dde-c28c77bbbf32",
+      "97a84e9d-bfc4-4ca2-b1e8-908dba56ccdb",
+      "8a3ad2ef-8bcb-40c0-85de-f03328c2b644"
     ],
     "ramp": [
       "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
       "7a43bd27-fdd8-41f0-9bc4-92568f3408f1",
+      "f3c5978a-70fa-431f-933b-b954bd0db0ea",
       "f2ccc9e8-8e92-4f8c-8728-8c748630e0dd",
       "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
       "6ad8011d-3471-4369-9d68-b264cc027487",
@@ -536,6 +542,7 @@
       "383e3fe4-8558-4561-8632-6eadb5d5963c",
       "8ad91f64-ccab-4edc-bd54-b2ee9267d614",
       "ab8d5f5c-1976-4f77-8ed2-8d28ee666741",
+      "c1fc5923-c3cd-448a-98d1-c154661c2812",
       "d683024d-8fe7-4509-851b-7655fadc1de7",
       "e9319f13-1f2b-429c-9d61-e58a3cbec86a",
       "0fd114c4-092b-4e28-b0dc-ef529f3bc73e"
@@ -560,8 +567,7 @@
       "7735eeba-693b-47e2-bd51-414379cf1016",
       "ae120613-97d6-4393-b39d-c3e6c076f5d6",
       "7a2484a9-04fd-41a0-8224-610c1c07ed10",
-      "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c",
-      "bb2b324c-970a-4920-884e-c92ba49669f0"
+      "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c"
     ],
     "land": [
       "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
