@@ -390,7 +390,9 @@
     "76c33d54-ce55-400e-bec5-79d33a5a20fb": "Undiscovered Paradise",
     "c6792d9f-8b74-43c4-814f-ba4adab2fdea": "Thawing Glaciers",
     "21d90735-5e04-4a8c-a546-ff26d4d5998d": "Invasion of Ikoria // Zilortha, Apex of Ikoria",
-    "01fc5bb3-ebd7-4ab4-8aef-2ece1e1d9b7c": "Lotus Vale"
+    "01fc5bb3-ebd7-4ab4-8aef-2ece1e1d9b7c": "Lotus Vale",
+    "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1": "Hawkeye, Young Avenger",
+    "34994475-b914-44f6-8ca1-c2747b6d5956": "Mole Man, Moloid Master"
   },
   "deckIds": [
     "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
@@ -403,7 +405,6 @@
     "032b8a0d-491a-4a12-ab9f-689010054d5b",
     "6c2c8bf3-9bf8-4a86-89d3-3bb36260dc51",
     "d3b7b541-6f05-46c1-8031-c848c4bd4635",
-    "8c3495bf-02e7-4ad9-949d-92eb3d2b662a",
     "28b46183-c62f-47b1-9fee-3ba148202cab",
     "e8863518-0bfa-49c3-8c6e-6c9116a81051",
     "1b882a0e-0ede-4d1a-bd1a-9b7cffbcde8e",
@@ -451,10 +452,6 @@
     "33c722cf-b4bf-431f-aefd-ee96241a7fbf",
     "e49b902f-a556-4dab-8928-93caf0a3f609",
     "0d96b60b-a060-48ee-bb83-93f1c4a10669",
-    "d683024d-8fe7-4509-851b-7655fadc1de7",
-    "a7d8c99c-cd44-4bad-82e6-7c7cff9bd89f",
-    "584cf0fd-112a-4ca6-9c0e-1f3228a7d325",
-    "8d286376-f386-43ab-a9bd-8478fb9e2497",
     "888e711a-1251-4704-8ef1-b4b98ec54b5a",
     "7a2484a9-04fd-41a0-8224-610c1c07ed10",
     "782dcbc4-5a11-42f5-b8d9-4572e36d45b3",
@@ -480,7 +477,9 @@
     "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
     "8a3ad2ef-8bcb-40c0-85de-f03328c2b644",
     "374e54d8-8e73-4268-9dde-c28c77bbbf32",
-    "f3c5978a-70fa-431f-933b-b954bd0db0ea"
+    "f3c5978a-70fa-431f-933b-b954bd0db0ea",
+    "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1",
+    "34994475-b914-44f6-8ca1-c2747b6d5956"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d"
@@ -498,8 +497,8 @@
     "strategy": [
       "65385311-1158-4e94-892a-683997706ca8",
       "78cd6d20-033f-471f-a86e-59ec8307ae1f",
+      "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1",
       "e49b902f-a556-4dab-8928-93caf0a3f609",
-      "8c3495bf-02e7-4ad9-949d-92eb3d2b662a",
       "d3b7b541-6f05-46c1-8031-c848c4bd4635",
       "2e5675d3-3fb0-43b5-a65c-95aacbe48bf9",
       "3bcf090c-e890-4a9f-a8aa-6079e4ec9947",
@@ -543,14 +542,10 @@
       "8ad91f64-ccab-4edc-bd54-b2ee9267d614",
       "ab8d5f5c-1976-4f77-8ed2-8d28ee666741",
       "c1fc5923-c3cd-448a-98d1-c154661c2812",
-      "d683024d-8fe7-4509-851b-7655fadc1de7",
       "e9319f13-1f2b-429c-9d61-e58a3cbec86a",
       "0fd114c4-092b-4e28-b0dc-ef529f3bc73e"
     ],
     "advantage": [
-      "a7d8c99c-cd44-4bad-82e6-7c7cff9bd89f",
-      "584cf0fd-112a-4ca6-9c0e-1f3228a7d325",
-      "8d286376-f386-43ab-a9bd-8478fb9e2497",
       "a08f79b7-d66f-47da-9670-afd7409c0c5c",
       "8d47b78b-11cc-4351-91d6-c891eb63dd98",
       "70ed2052-f03c-461d-b32a-8835c97c559f",
