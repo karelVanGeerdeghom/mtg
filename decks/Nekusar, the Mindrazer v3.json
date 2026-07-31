@@ -408,7 +408,8 @@
     "02070488-9203-4304-9392-a111d20218c5": "Flashback",
     "4d6a1391-817a-4ddc-840d-886b138eeb3f": "Imperial Recruiter",
     "37108cd4-bbab-4ce3-9ed6-f60e8422e703": "Ragavan, Nimble Pilferer",
-    "a498ca5f-7743-47b7-a57a-471efa1a99e8": "Dual Strike"
+    "a498ca5f-7743-47b7-a57a-471efa1a99e8": "Dual Strike",
+    "30c3c700-46f4-4a77-8c45-5c7e3a21bd62": "Wizard's Staff"
   },
   "deckIds": [
     "afaef788-34d1-460b-b884-9d7ae6ddeb18",
@@ -500,13 +501,13 @@
     "deda54da-4fcc-4da3-9337-7768a2db3283",
     "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1",
     "02070488-9203-4304-9392-a111d20218c5",
-    "51b47053-d169-4627-982f-f29b8630d75f",
     "4d6a1391-817a-4ddc-840d-886b138eeb3f",
     "37abcc92-9466-47ea-9e0b-5eda2eb62c8e",
     "37108cd4-bbab-4ce3-9ed6-f60e8422e703",
     "229d6627-1292-4ae1-8849-b0f956fa6540",
     "7a2484a9-04fd-41a0-8224-610c1c07ed10",
-    "a498ca5f-7743-47b7-a57a-471efa1a99e8"
+    "30c3c700-46f4-4a77-8c45-5c7e3a21bd62",
+    "d3b7b541-6f05-46c1-8031-c848c4bd4635"
   ],
   "tokenIds": [
     "02d1dc2f-625e-4be3-9daf-e48c44bc9bf7"
@@ -527,12 +528,14 @@
       "ea5103f5-27e0-4eb1-902c-7f34652d6bf3",
       "34f34409-326d-4994-a0ea-1a69aa278f03",
       "d5ea905b-4bb6-48d0-9082-c472703db550",
+      "30c3c700-46f4-4a77-8c45-5c7e3a21bd62",
       "2e2ace5b-4018-43af-8e72-ebafec1a7739",
       "deda54da-4fcc-4da3-9337-7768a2db3283",
       "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
       "b110b8e6-859b-4370-aceb-b21c6cf61532",
       "e49b902f-a556-4dab-8928-93caf0a3f609",
       "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1",
+      "d3b7b541-6f05-46c1-8031-c848c4bd4635",
       "a8abd966-de7b-46a3-8ac7-8747ab35653a",
       "eb9c9a34-88a8-4afe-a053-806f6b29834f",
       "a7c6f07c-3cc3-4271-bbc7-9f7d5bbed3e8",
@@ -587,7 +590,6 @@
       "956381ba-6d37-4a8a-846c-bad79222dbee",
       "ae120613-97d6-4393-b39d-c3e6c076f5d6",
       "0456ec64-2c81-4763-a352-8ff64a4c3d6b",
-      "51b47053-d169-4627-982f-f29b8630d75f",
       "615927c2-3fb0-4e64-a1a7-55fb56de1423",
       "afaef788-34d1-460b-b884-9d7ae6ddeb18",
       "d75b9c82-1b49-4c3e-a1b5-aeef57d6644b",
