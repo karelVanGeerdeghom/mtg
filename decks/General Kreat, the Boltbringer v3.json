@@ -441,7 +441,9 @@
     "b380c04b-0bce-4328-8f0a-1425e48bee72": "Urza's Incubator",
     "02070488-9203-4304-9392-a111d20218c5": "Flashback",
     "6a7a9dff-ff9e-4005-a17f-6ea0c11c1d5a": "Spirit",
-    "16604fee-cd8d-41e4-8269-3c7ff756613d": "Tomik, Izzet Sparkmage"
+    "16604fee-cd8d-41e4-8269-3c7ff756613d": "Tomik, Izzet Sparkmage",
+    "e56472ec-6ae8-48b2-a4ce-0ed154161c06": "Lwaxana Troi, Charming Guest",
+    "85ceb4ac-7a1c-4c7e-95a3-515a5b5d6116": "Goblin-town Flunkies"
   },
   "deckIds": [
     "e1a2bd31-b800-47cd-8866-1b849a601b09",
@@ -518,7 +520,9 @@
     "44e0ffa3-8915-4c1f-8f1a-4aeea1365f07",
     "02070488-9203-4304-9392-a111d20218c5",
     "16604fee-cd8d-41e4-8269-3c7ff756613d",
-    "8676e917-17dd-4047-99c4-402f2e909e16"
+    "8676e917-17dd-4047-99c4-402f2e909e16",
+    "eca27964-accc-46cc-8aff-a06183e61e9c",
+    "e56472ec-6ae8-48b2-a4ce-0ed154161c06"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d",
@@ -550,6 +554,7 @@
       "4fdbbec2-e921-4b63-958d-f9ba1e417197",
       "76678885-3674-443d-b9a2-2a460cf6aac0",
       "3640c29b-1534-4952-b297-619ade948431",
+      "e56472ec-6ae8-48b2-a4ce-0ed154161c06",
       "71220cc2-5f3d-4c97-ae66-05b1b79adef1",
       "16604fee-cd8d-41e4-8269-3c7ff756613d",
       "8c3495bf-02e7-4ad9-949d-92eb3d2b662a",
