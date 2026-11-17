@@ -410,7 +410,8 @@
     "ef8df503-6160-4e40-a689-49e97fd56cd0": "Saheeli's Lattice // Mastercraft Raptor",
     "ac7d1986-8388-4e4c-973e-d90382b12acf": "Sazacap's Brew",
     "f307b5b4-e949-4f69-8dc7-856e33a45a16": "Tormenting Voice",
-    "70c96b50-ac2b-493d-bd15-fc66eb767111": "Vision of Love"
+    "70c96b50-ac2b-493d-bd15-fc66eb767111": "Vision of Love",
+    "e56472ec-6ae8-48b2-a4ce-0ed154161c06": "Lwaxana Troi, Charming Guest"
   },
   "deckIds": [
     "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
@@ -475,7 +476,6 @@
     "97a84e9d-bfc4-4ca2-b1e8-908dba56ccdb",
     "c1fc5923-c3cd-448a-98d1-c154661c2812",
     "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
-    "8a3ad2ef-8bcb-40c0-85de-f03328c2b644",
     "374e54d8-8e73-4268-9dde-c28c77bbbf32",
     "f3c5978a-70fa-431f-933b-b954bd0db0ea",
     "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1",
@@ -495,7 +495,8 @@
     "6a9031b6-3f4d-4a36-90e1-ac77b8518cee",
     "70c96b50-ac2b-493d-bd15-fc66eb767111",
     "c11e84a1-dbda-429b-8cd6-fd0deaefc689",
-    "7c1fd7c6-2f3d-496f-9f09-660a13ef923f"
+    "7c1fd7c6-2f3d-496f-9f09-660a13ef923f",
+    "e56472ec-6ae8-48b2-a4ce-0ed154161c06"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d"
@@ -518,6 +519,7 @@
       "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1",
       "e49b902f-a556-4dab-8928-93caf0a3f609",
       "d3b7b541-6f05-46c1-8031-c848c4bd4635",
+      "e56472ec-6ae8-48b2-a4ce-0ed154161c06",
       "2e5675d3-3fb0-43b5-a65c-95aacbe48bf9",
       "3bcf090c-e890-4a9f-a8aa-6079e4ec9947",
       "4f819ba4-52ef-4fdd-8e4c-5ae3b2f44db5",
@@ -563,16 +565,14 @@
       "0d96b60b-a060-48ee-bb83-93f1c4a10669",
       "69872a9a-fe54-4e58-940c-89395af71acd",
       "6789a170-f2c5-4fc0-8a45-2b2361e67410",
-      "d6861319-ae16-4e6c-af87-a264f667d694",
-      "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
-      "eccc9a54-2b56-4a02-9926-258d5b2e25fb",
       "a7d8c99c-cd44-4bad-82e6-7c7cff9bd89f",
       "584cf0fd-112a-4ca6-9c0e-1f3228a7d325",
       "8d286376-f386-43ab-a9bd-8478fb9e2497",
       "6a9031b6-3f4d-4a36-90e1-ac77b8518cee",
       "df020a47-1784-479b-9882-be77b7f30950",
       "70c96b50-ac2b-493d-bd15-fc66eb767111",
-      "c11e84a1-dbda-429b-8cd6-fd0deaefc689"
+      "c11e84a1-dbda-429b-8cd6-fd0deaefc689",
+      "3aa83ed2-f48b-4ce6-a614-2c54ddf50538"
     ],
     "interaction": [
       "ae120613-97d6-4393-b39d-c3e6c076f5d6",
