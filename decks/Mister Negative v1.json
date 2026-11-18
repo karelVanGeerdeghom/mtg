@@ -310,7 +310,9 @@
     "8bc5546e-554f-430d-80b1-99578b5ea188": "Soul Echo",
     "31932df4-0be8-45c4-8b22-84119d9c20ba": "Georgiou, Terran Emperor",
     "046add85-952f-46ac-974a-463d2a7d3fd4": "The Book of Exalted Deeds",
-    "9c36760b-57c5-488b-afc9-ef141942c6ab": "Archfiend of Despair"
+    "9c36760b-57c5-488b-afc9-ef141942c6ab": "Archfiend of Despair",
+    "3424cd7f-4fe8-4ab5-8e24-fb2eb2478d1b": "Abyssal Lotus",
+    "19015380-1332-4960-8cc6-0732009525a2": "Pearl Medallion"
   },
   "deckIds": [
     "229d6627-1292-4ae1-8849-b0f956fa6540",
@@ -397,7 +399,8 @@
     "4608c663-e088-40ca-a915-b6e39253eb98",
     "322f0459-f394-44f0-977b-55fd0cbe0712",
     "cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd",
-    "0456ec64-2c81-4763-a352-8ff64a4c3d6b"
+    "0456ec64-2c81-4763-a352-8ff64a4c3d6b",
+    "3424cd7f-4fe8-4ab5-8e24-fb2eb2478d1b"
   ],
   "tokenIds": [],
   "commandZoneIds": [
