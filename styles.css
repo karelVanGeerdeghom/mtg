@@ -127,7 +127,7 @@ ul {
 	float: left;
 }
 
-.card, .mana-counter {
+.card, .mana-counter, .treasure-counter {
 	width: 75px;
 	height: 105px;
 	background-size: cover;
@@ -135,6 +135,10 @@ ul {
 	display: flex;
   			justify-content: center;
   			align-items: center;
+}
+
+.treasure-counter {
+	background-image: url('assets/treasure.jpg');
 }
 
 .card.tapped {
@@ -166,6 +170,12 @@ ul {
 	height: 40px;
 	margin-top: 65px;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#library .library-top-counter {
+	position: absolute;
+	top: 0;
+	margin-top: 0;
 }
 
 .counter-minus-button {
@@ -287,6 +297,7 @@ ul {
 }
 
 #library {
+	position: relative;
 	min-height: 105px;
 	outline: 1px solid black;
 	margin-top: 10px;
@@ -309,26 +320,6 @@ ul {
 	height: 105px;
 	outline: 1px solid black;
 	float: left;
-}
-
-.trash {
-	width: 75px;
-	height: 105px;
-	outline: 1px solid black;
-	float: left;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.trash-out {
-	background-color: white;
-	background-image: url('assets/trash-out.png');
-}
-
-.trash-over {
-	background-color: black;
-	background-image: url('assets/trash-over.png');
 }
 
 .charts {

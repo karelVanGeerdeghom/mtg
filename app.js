@@ -1116,6 +1116,7 @@
 			id: 'library'
 		});
 
+		this.addCounter($library, false, 40, 'library-top-counter');
 		this.addCounter($library, false);
 
 		$('#content').append($library);
@@ -1134,15 +1135,9 @@
 
 		for (let i = 0; i < this.rowCount; i++) {
 			for (let j = 0; j < this.columnCount; j++) {
-				let slotClass = 'slot';
-
-				if (i === this.rowCount - 1 && j === this.columnCount - 1) {
-					slotClass = 'trash trash-out';
-				}
-
 				let $slot = $('<div>', {
 					id: this.getBattlefieldSlotId(i, j),
-					class: slotClass
+					class: 'slot'
 				});
 
 				$battlefield.append($slot);
@@ -1150,6 +1145,7 @@
 		}
 
 		this.addManaCounters();
+		this.addTreasureCounter();
 
 		$battlefield.find('.slot').droppable({
 			tolerance: 'pointer',
@@ -1186,28 +1182,13 @@
 			}
 		});
 
-		$battlefield.find('.trash').droppable({
-			accept: '.card:not(.library-card)',
-			tolerance: 'pointer',
-			over: function(event, ui) {
-				$(this).removeClass('trash-out').addClass('trash-over');
-			},
-			out: function(event, ui) {
-				$(this).removeClass('trash-over').addClass('trash-out');
-			},
-			drop: function (event, ui) {
-				let $card = ui.draggable;
+	};
 
-				MTG.removeFromSortablePlayZone($card);
-
-				$card.remove();
-
-				MTG.refreshTokenBox();
-				MTG.refreshCommandZone();
-
-				$(this).removeClass('trash-over').addClass('trash-out');
-			}
-		});
+	MTG.removeCardFromPlay = function($card) {
+		this.removeFromSortablePlayZone($card);
+		$card.remove();
+		this.refreshTokenBox();
+		this.refreshCommandZone();
 	};
 
 	MTG.removeFromSortablePlayZone = function($card) {
@@ -1386,11 +1367,12 @@
 		$card.append($('<button>', { class: buttonClass }));
 	};
 
-	MTG.addCounter = function($card, hidden) {
+	MTG.addCounter = function($card, hidden, initialCount = 0, counterClass = '') {
 		let $cardCounter = $('<div>', {
-			class: 'counter',
+			class: 'counter ' + counterClass,
 			data: {
-				count: 0
+				count: initialCount,
+				initialCount: initialCount
 			}
 		});
 
@@ -1409,7 +1391,7 @@
 		});
 
 		let $p = $('<p>', {
-			text: 0
+			text: initialCount
 		});
 
 		$count.append($p);
@@ -1453,7 +1435,7 @@
 			}
 		}
 
-		if ($manaCounters.length <= 4) {
+		if ($manaCounters.length <= this.rowCount) {
 			for (let i = 0; i < $manaCounters.length; i++) {
 				let $slot = $('#' + this.getBattlefieldSlotId(i, this.columnCount - 1));
 				let $manaCounter = $manaCounters[i];
@@ -1470,6 +1452,16 @@
 		this.addCounter($manaCounter, false);
 
 		return $manaCounter;
+	};
+
+	MTG.addTreasureCounter = function() {
+		const $treasure = $('<div>', {
+			class: 'treasure-counter',
+			'aria-label': 'Treasure'
+		});
+		this.addCounter($treasure, false);
+		const $slot = $('#' + this.getBattlefieldSlotId(0, this.columnCount - 2));
+		$slot.append($treasure).removeClass('slot');
 	};
 
 	MTG.refreshDeckMeta = function() {
@@ -1550,7 +1542,8 @@
 		$('#token-box').empty();
 		$('#command-zone').empty();
 		$('.counter').each(function() {
-			MTG.setCounterCount($(this), 0);
+			const $counter = $(this);
+			MTG.setCounterCount($counter, $counter.data('initialCount'));
 		});
 		$('#battlefield .slot').empty();
 		this.updateTurnLabel();
