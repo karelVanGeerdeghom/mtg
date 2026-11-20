@@ -1421,8 +1421,6 @@
 				let $devotionChart = this.createDevotionChart($charts, devotions);
 				let $rarityChart = this.createRarityChart($charts, rarities);
 				let $metaTypeChart = this.createMetaTypeChart($charts, metaTypes);
-
-				console.log();
 			};
 
 			MTG.createManaCostChart = function($charts, manaCosts, averageManaCost) {
@@ -2573,10 +2571,6 @@
 
 
 			MTG.getMetaType = function(card) {
-				if (this.getCardType(card) === 'Land') {
-					return 'land';
-				}
-
 				if (this.meta.strategy.indexOf(card.oracle_id) > -1) {
 					return 'strategy';
 				}
@@ -2591,6 +2585,10 @@
 
 				if (this.meta.interaction.indexOf(card.oracle_id) > -1) {
 					return 'interaction';
+				}
+
+				if (this.getCardType(card) === 'Land') {
+					return 'land';
 				}
 
 				return 'none';
