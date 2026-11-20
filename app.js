@@ -203,7 +203,7 @@
 			focus: function(event, ui) {
 				let card = MTG.findOracleCard(ui.item.value);
 
-				MTG.showCardPreview(card, 'front');
+				MTG.showCardPreview(card, MTG.getDefaultCardSide(card));
 			},
 			select: function(event, ui) {
 				let card = MTG.findOracleCard(ui.item.value);
@@ -1300,17 +1300,20 @@
 		return this.getCardType(card);
 	};
 
+	MTG.getCardTreeCmc = function(card, cardType = this.getCardTreeType(card)) {
+		if (cardType === 'Land' || cardType === 'BasicLand') {
+			return '0';
+		}
+		return card.hasOwnProperty('cmc') ? String(parseInt(card.cmc)) : null;
+	};
+
 	MTG.getCardTreeData = function(cardData) {
 		let cardTreeData = {};
 		for (let i = 0; i < cardData.length; i++) {
 			let card = cardData[i];
 
 			const cardType = this.getCardTreeType(card);
-			let cardCmc = null;
-
-			if (card.hasOwnProperty('cmc')) {
-				cardCmc = String(parseInt(card.cmc));
-			}
+			const cardCmc = this.getCardTreeCmc(card, cardType);
 
 			if (cardType !== null && cardCmc !== null) {
 				if (!cardTreeData.hasOwnProperty(cardType)) {
@@ -1349,16 +1352,27 @@
 
 
 
+	MTG.getDefaultCardSide = function(card) {
+		if (card.layout === 'modal_dfc') {
+			const types = card.type_line.split('//').map(face => face.split('\u2014')[0]);
+			if (!/\bLand\b/.test(types[0]) && /\bLand\b/.test(types[1])) {
+				return 'back';
+			}
+		}
+		return 'front';
+	};
+
 	MTG.createCard = function(card, id) {
+		const side = this.getDefaultCardSide(card);
 		let $card = $('<div>', {
 			id: id,
 			class: 'card',
 			css: {
-				backgroundImage: 'url(' + this.getSmallImage(card, 'front') + ')'
+				backgroundImage: 'url(' + this.getSmallImage(card, side) + ')'
 			},
 			data: {
 				card: card,
-				side: 'front'
+				side: side
 			},
 			attr: {
 				oracle_id: card.oracle_id
