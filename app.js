@@ -1286,13 +1286,17 @@
 	MTG.getCardTreeType = function(card) {
 		const frontTypeLine = this.getFrontTypeLine(card);
 		if (frontTypeLine === null) {
-			return null;
+		   return null;
 		}
 
-		const types = frontTypeLine.split('\u2014')[0];
-		if (/\bLand\b/.test(types)) {
-			return /\bBasic\b/.test(types) ? 'BasicLand' : 'Land';
+		const faces = card.layout === 'modal_dfc' ? card.type_line.split('//') : [frontTypeLine];
+		for (const face of faces) {
+		   const types = face.split('\u2014')[0];
+		   if (/\bLand\b/.test(types)) {
+			  return /\bBasic\b/.test(types) ? 'BasicLand' : 'Land';
+		   }
 		}
+
 		return this.getCardType(card);
 	};
 

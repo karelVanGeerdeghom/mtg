@@ -9,7 +9,6 @@
 	<div id="content">
 		<label for="oracle-file">Select the Oracle cards JSONL file:</label>
 		<input id="oracle-file" type="file" accept=".jsonl,.ndjson">
-		<p>Save the generated master-data.js file in this data folder so index.html can load it automatically.</p>
 		<button id="master-data" style="display: none;">Data</button>
 		<a id="data" style="display: none;">Click to download</a>
 	</div>
@@ -20,12 +19,6 @@
 				saveFile: null,
 				cards: [],
 			};
-
-			MTG.setupUI = function() {
-				$('#master-data').on('click', function() {
-					MTG.createDownload();
-				});
-			}
 
 			MTG.loadMasterData = async function(file) {
 				this.cards = [];
@@ -55,6 +48,7 @@
 							cmc: parseInt(oracleCard.cmc),
 							colors: oracleCard.colors,
 							mana_cost: oracleCard.mana_cost,
+							layout: oracleCard.layout,
 							rarity:oracleCard.rarity,
 							commander: oracleCard.legalities.commander === 'legal',
 							oathbreaker: oracleCard.legalities.oathbreaker === 'legal',
@@ -131,7 +125,6 @@
 			};
 
 			$(document).ready(function() {
-				MTG.setupUI();
 				$('#oracle-file').on('change', async function() {
 					const file = this.files[0];
 					if (!file) {
@@ -139,10 +132,10 @@
 					}
 
 					this.disabled = true;
-					$('#master-data, #data').hide();
+					$('#data').hide();
 					try {
 						await MTG.loadMasterData(file);
-						$('#master-data').show();
+						MTG.createDownload();
 					} catch (error) {
 						console.error(error);
 						alert('Could not load or convert the card data: ' + error.message);
