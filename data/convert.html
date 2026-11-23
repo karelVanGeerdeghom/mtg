@@ -64,8 +64,6 @@
 							},
 						};
 
-						console.log(card.layout);
-
 						if (Object.hasOwnProperty.call(oracleCard, 'image_uris')) {
 							card.images.front.small = oracleCard.image_uris.small;
 							card.images.front.normal = oracleCard.image_uris.normal;
@@ -100,13 +98,43 @@
 				});
 			};
 
+			MTG.createNameIndexes = function() {
+				const nameIndex = new Map();
+				const searchIndex = new Map();
+				const isToken = card => /\bToken\b/.test(card.type_line.split('\u2014')[0]);
+				for (let cardIndex = 0; cardIndex < this.cards.length; cardIndex++) {
+					const card = this.cards[cardIndex];
+					const name = card.name.toLowerCase();
+					const existingIndex = nameIndex.get(name);
+					if (existingIndex === undefined ||
+						(!isToken(card) && isToken(this.cards[existingIndex]))) {
+						nameIndex.set(name, cardIndex);
+					}
+
+					const cardTrigrams = new Set();
+					for (let i = 0; i <= name.length - 3; i++) {
+						cardTrigrams.add(name.slice(i, i + 3));
+					}
+					for (const trigram of cardTrigrams) {
+						if (!searchIndex.has(trigram)) {
+							searchIndex.set(trigram, []);
+						}
+						searchIndex.get(trigram).push(cardIndex);
+					}
+				}
+				return { nameIndex, searchIndex };
+			};
+
 			MTG.createDownload = function() {
 				let $fileLink = $('#data');
 				$fileLink.hide();
+				const { nameIndex, searchIndex } = this.createNameIndexes();
 
 				let blob = new Blob(
 					[
-						'const masterData = ' + JSON.stringify(this.cards, null, 2) + ';\n'
+						'const masterData = ' + JSON.stringify(this.cards, null, 2) + ';\n' +
+						'const masterDataNameIndex = new Map(' + JSON.stringify([...nameIndex]) + ');\n' +
+						'const masterDataSearchIndex = new Map(' + JSON.stringify([...searchIndex]) + ');\n'
 					],
 					{
 						type: 'text/javascript'

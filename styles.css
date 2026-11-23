@@ -137,6 +137,20 @@ ul {
   			align-items: center;
 }
 
+.card-missing {
+	box-sizing: border-box;
+	width: 75px;
+	height: 105px;
+	outline: 1px solid red;
+	padding: 4px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow-wrap: anywhere;
+}
+
 .treasure-counter {
 	background-image: url('assets/treasure.jpg');
 }

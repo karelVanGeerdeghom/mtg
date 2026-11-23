@@ -603,7 +603,10 @@
     "1093fdb6-bd4f-46a8-92e3-5aa46b52bb4f",
     "c749f23c-40c0-4159-b84c-a70cbb062c14",
     "5a343a5f-3f9b-43c3-8532-8391de7a5443",
-    "e8065e1d-e937-4b56-8011-78f0d07328a0"
+    "e8065e1d-e937-4b56-8011-78f0d07328a0",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "bc71ebf6-2056-41f7-be35-b2e5c34afa99"
   ],
   "tokenIds": [
     "3aaf906a-e749-4e86-ac79-97650b92f271",
@@ -618,12 +621,6 @@
   "commandZoneIds": [
     "da72a4bc-ce6f-4b72-bc66-2ee33cfa87df"
   ],
-  "forestCount": 1,
-  "islandCount": 0,
-  "mountainCount": 1,
-  "plainsCount": 1,
-  "swampCount": 0,
-  "wastesCount": 0,
   "meta": {
     "strategy": [
       "27ad3e00-6ffb-48f7-8469-8868d066d1e2",

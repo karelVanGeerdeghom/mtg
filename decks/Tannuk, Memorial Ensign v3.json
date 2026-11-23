@@ -496,7 +496,23 @@
     "78826359-fe63-44ad-adc4-a17ffcd710e4",
     "1b882a0e-0ede-4d1a-bd1a-9b7cffbcde8e",
     "0259f063-3e3f-4e07-9066-f748d4819829",
-    "21d90735-5e04-4a8c-a546-ff26d4d5998d"
+    "21d90735-5e04-4a8c-a546-ff26d4d5998d",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+    "a3fb7228-e76b-4e96-a40e-20b5fed75685"
   ],
   "tokenIds": [
     "3c549374-6c37-42e0-8d88-a8555d46732d"
@@ -504,12 +520,6 @@
   "commandZoneIds": [
     "76cb1912-3791-44b8-b594-b92dab21bafc"
   ],
-  "forestCount": 8,
-  "islandCount": 0,
-  "mountainCount": 8,
-  "plainsCount": 0,
-  "swampCount": 0,
-  "wastesCount": 0,
   "meta": {
     "strategy": [
       "65385311-1158-4e94-892a-683997706ca8",
