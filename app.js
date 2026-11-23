@@ -1,4 +1,92 @@
 (function($) {
+	class Counter {
+		constructor(initialCount = 0, counterClass = '') {
+			this.initialCount = initialCount;
+			this.value = initialCount;
+			this.$element = $('<div>', { class: 'counter ' + counterClass });
+			this.$element.data('counter', this);
+			this.$element.append($('<button>', { class: 'counter-minus-button', text: '-' }));
+			this.$element.append($('<button>', { class: 'counter-plus-button', text: '+' }));
+			this.$value = $('<p>', { text: initialCount });
+			this.$element.append($('<div>', { class: 'counter-count' }).append(this.$value));
+		}
+
+		set(value) {
+			this.value = value;
+			this.$value.text(value >= 0 ? value : '');
+		}
+
+		adjust(delta) {
+			this.set(delta < 0 ? Math.max(0, this.value + delta) : this.value + delta);
+		}
+
+		reset() {
+			this.set(this.initialCount);
+		}
+	}
+
+	class CounterRepeat {
+		constructor() {
+			this.timer = null;
+			this.activePointer = null;
+			this.repeatedButton = null;
+		}
+
+		start(event, button) {
+			const pointer = event.originalEvent;
+			if (this.activePointer !== null || !pointer.isPrimary || pointer.button !== 0) {
+				return;
+			}
+			this.repeatedButton = null;
+			this.activePointer = pointer.pointerId;
+			const repeat = () => {
+				if (!button.isConnected) {
+					this.stop();
+					return;
+				}
+				this.repeatedButton = button;
+				this.adjust(button);
+				this.timer = setTimeout(repeat, 50);
+			};
+			this.timer = setTimeout(repeat, 400);
+		}
+
+		stop() {
+			clearTimeout(this.timer);
+			this.timer = null;
+			this.activePointer = null;
+		}
+
+		end(event) {
+			if (event.originalEvent.pointerId === this.activePointer) {
+				this.stop();
+				if (event.type === 'pointercancel') {
+					this.repeatedButton = null;
+				}
+			}
+		}
+
+		cancel() {
+			this.stop();
+			this.repeatedButton = null;
+		}
+
+		click(event, button) {
+			if (this.repeatedButton === button && event.originalEvent?.detail !== 0) {
+				this.repeatedButton = null;
+				return;
+			}
+			this.repeatedButton = null;
+			this.adjust(button);
+		}
+
+		adjust(button) {
+			const $button = $(button);
+			const delta = $button.hasClass('counter-minus-button') ? -1 : 1;
+			$button.parent().data('counter').adjust(delta);
+		}
+	}
+
 	const sortablePlayZones = new Map([
 		['hand', 'handIds'],
 		['graveyard', 'graveyardIds'],
@@ -375,7 +463,7 @@
 			MTG.updateTurnLabel();
 			$('.tapped').removeClass('tapped');
 			$('.mana-counter').find('.counter').each(function() {
-				MTG.setCounterCount($(this), 0);
+				$(this).data('counter').set(0);
 			});
 		});
 
@@ -467,22 +555,34 @@
 			});
 		});
 
-		$(document).on('click', '.counter-minus-button', function(event) {
-			event.stopPropagation();
+		const counterRepeat = new CounterRepeat();
+		const counterButtons = '.counter-minus-button, .counter-plus-button';
 
-			MTG.adjustCounter($(this).parent(), -1);
+		$(document).on('mousedown', counterButtons, function(event) {
+			event.stopPropagation();
 		});
 
-		$(document).on('click', '.counter-plus-button', function(event) {
-			event.stopPropagation();
+		$(document).on('pointerdown', counterButtons, function(event) {
+			counterRepeat.start(event, this);
+		});
 
-			MTG.adjustCounter($(this).parent(), 1);
+		$(document).on('pointerup pointercancel', function(event) {
+			counterRepeat.end(event);
+		});
+
+		$(window).on('blur', function() {
+			counterRepeat.cancel();
+		});
+
+		$(document).on('click', counterButtons, function(event) {
+			event.stopPropagation();
+			counterRepeat.click(event, this);
 		});
 
 		$(document).on('click', '.counter-count', function(event) {
 			event.stopPropagation();
 
-			MTG.setCounterCount($(this).parent(), 0);
+			$(this).parent().data('counter').set(0);
 		});
 
 		$(document).on('click', '.tap-toggle', function(event) {
@@ -1368,63 +1468,12 @@
 	};
 
 	MTG.addCounter = function($card, hidden, initialCount = 0, counterClass = '') {
-		let $cardCounter = $('<div>', {
-			class: 'counter ' + counterClass,
-			data: {
-				count: initialCount,
-				initialCount: initialCount
-			}
-		});
-
-		let $minusButton = $('<button>', {
-			class: 'counter-minus-button',
-			text: '-'
-		});
-
-		let $plusButton = $('<button>', {
-			class: 'counter-plus-button',
-			text: '+'
-		});
-
-		let $count = $('<div>', {
-			class: 'counter-count'
-		});
-
-		let $p = $('<p>', {
-			text: initialCount
-		});
-
-		$count.append($p);
-
-		$cardCounter
-			.append($minusButton)
-			.append($plusButton)
-			.append($count);
-
-		$card.append($cardCounter);
+		const counter = new Counter(initialCount, counterClass);
+		$card.append(counter.$element);
 
 		if (hidden) {
-			$cardCounter.hide();
+			counter.$element.hide();
 		}
-	};
-
-	MTG.adjustCounter = function($cardCounter, delta) {
-		const count = $cardCounter.data('count');
-		const newCount = delta < 0
-			? (count > 0 ? count - Math.abs(delta) : 0)
-			: count + delta;
-
-		this.setCounterCount($cardCounter, newCount);
-	};
-
-	MTG.setCounterCount = function($cardCounter, count) {
-		$cardCounter.data('count', count);
-		this.showCounterCount($cardCounter);
-	};
-
-	MTG.showCounterCount = function($cardCounter) {
-		const count = $cardCounter.data('count');
-		$cardCounter.find('.counter-count p').text(count >= 0 ? count : '');
 	};
 
 	MTG.addManaCounters = function() {
@@ -1542,8 +1591,7 @@
 		$('#token-box').empty();
 		$('#command-zone').empty();
 		$('.counter').each(function() {
-			const $counter = $(this);
-			MTG.setCounterCount($counter, $counter.data('initialCount'));
+			$(this).data('counter').reset();
 		});
 		$('#battlefield .slot').empty();
 		this.updateTurnLabel();

@@ -186,6 +186,7 @@ ul {
 	left: 1px;
 	text-align: center;
 	padding: 0px;
+	touch-action: none;
 }
 
 .counter-plus-button {
@@ -196,6 +197,7 @@ ul {
 	right: 1px;
 	text-align: center;
 	padding: 0px;
+	touch-action: none;
 }
 
 .counter-count {
