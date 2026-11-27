@@ -369,29 +369,38 @@
 				MTG.commandZoneIds.splice(index, 1);
 			} else if (e.type === 'select2:select' && index === -1) {
 				MTG.commandZoneIds.push(id);
+				MTG.deckIds = MTG.deckIds.filter(cardId => cardId !== id);
+				for (const type of Object.keys(MTG.meta)) {
+					MTG.meta[type] = MTG.meta[type].filter(cardId => cardId !== id);
+				}
 			}
 
 			MTG.setDeckCount();
 			$('#file-create').attr('disabled', MTG.commandZoneIds.length === 0);
+			MTG.refreshAfterCommandZoneChange();
 		});
 
 		$('#hud').on('click', function() {
 			$('#data-menu, #compare-menu, #build-menu, #preview').toggle();
 		});
 
-		$('#data-file').on('change', function() {
+		$('#data-file').on('change', async function() {
 			let file = $(this).prop('files')[0];
 			if (!file) {
 				return;
 			}
 			this.value = '';
 
-			MTG.readFileAsText(file, function(text) {
+			try {
+				const text = await file.text();
 				MTG.loadDataFile(text);
-				MTG.rebuildCardData();
-				MTG.switchView('oracle', MTG.createCardTree);
-				MTG.setCardCounts();
-			});
+			} catch (error) {
+				MTG.showFileError(error);
+				return;
+			}
+			MTG.rebuildCardData();
+			MTG.switchView('oracle', MTG.createCardTree);
+			MTG.setCardCounts();
 		});
 
 		$('#save').on('click', function() {
@@ -406,19 +415,23 @@
 			$(this).hide()
 		});
 
-		$('#compare-file').on('change', function() {
+		$('#compare-file').on('change', async function() {
 			let file = $(this).prop('files')[0];
 			if (!file) {
 				return;
 			}
 			this.value = '';
 
-			MTG.readFileAsText(file, function(text) {
+			try {
+				const text = await file.text();
 				MTG.loadCompareFile(text);
-				if (MTG.mode === 'compare') {
-					MTG.switchView('compare', MTG.createCardCompare);
-				}
-			});
+			} catch (error) {
+				MTG.showFileError(error);
+				return;
+			}
+			if (MTG.mode === 'compare') {
+				MTG.switchView('compare', MTG.createCardCompare);
+			}
 		});
 
 		$('#compare').on('click', function() {
@@ -533,6 +546,9 @@
 		$(document).on('click', '.card:not(.battlefield-card)', function() {
 			const $card = $(this);
 			const card = $card.data('card');
+			if (card.images.back.small === 'back.jpeg' || card.images.back.small === 'assets/back.jpeg') {
+				return;
+			}
 			const nextSide = $card.data('side') === 'front' ? 'back' : 'front';
 
 			$card.data('side', nextSide).css({
@@ -555,7 +571,6 @@
 					break;
 				case 'deck':
 					MTG.removeFromDeck(card.oracle_id, cardType);
-					MTG.removeMetaType(card.oracle_id);
 					MTG.clear();
 					MTG.createCardTree();
 
@@ -563,8 +578,9 @@
 				case 'meta':
 					if ($(this).hasClass('deck-card')) {
 						MTG.removeFromDeck(card.oracle_id, cardType);
+					} else {
+						MTG.removeMetaType(card.oracle_id);
 					}
-					MTG.removeMetaType(card.oracle_id);
 					MTG.clear();
 					MTG.createCardMeta();
 
@@ -671,30 +687,83 @@
 		return unmatched;
 	};
 
-	MTG.readFileAsText = function(file, onLoad) {
-		const fileReader = new FileReader();
-		fileReader.onload = function() {
-			onLoad(fileReader.result);
-		};
-		fileReader.readAsText(file);
+	MTG.showFileError = function(error) {
+		console.error(error);
+		alert('Could not load the file: ' + error.message);
+	};
+
+	MTG.refreshAfterCommandZoneChange = function() {
+		this.resetPreview();
+		switch (this.mode) {
+			case 'oracle':
+				this.switchView('oracle', this.createCardTree);
+				this.setCardCounts();
+				break;
+			case 'deck':
+				this.switchView('deck', this.createCardTree);
+				break;
+			case 'meta':
+				this.switchView('meta', this.createCardMeta);
+				break;
+			case 'stats':
+				this.switchView('stats', this.createCardStats);
+				break;
+			case 'compare':
+				this.switchView('compare', this.createCardCompare);
+				break;
+		}
 	};
 
 	MTG.loadDataFile = function(json) {
-		let data = JSON.parse(json);
+		const data = JSON.parse(json);
 		const deckIds = this.getDeckIdsFromSave(data);
-
-		this.cardIds = data.cardIds;
-		this.deckIds = deckIds;
-		this.tokenIds = data.tokenIds;
-		this.commandZoneIds = data.commandZoneIds;
-
-		this.meta = {};
+		if (!data.cardIds || typeof data.cardIds !== 'object' || Array.isArray(data.cardIds) ||
+			Object.values(data.cardIds).some(name => typeof name !== 'string')) {
+			throw new Error('Invalid cardIds in deck file');
+		}
+		for (const key of ['tokenIds', 'commandZoneIds']) {
+			this.validateCardIds(data[key], key);
+		}
+		this.validateUniqueCardIds(data.commandZoneIds, 'commandZoneIds');
+		if (!data.meta || typeof data.meta !== 'object' || Array.isArray(data.meta)) {
+			throw new Error('Invalid meta in deck file');
+		}
+		const metaTypes = ['strategy', 'ramp', 'advantage', 'interaction', 'land'];
+		for (const type of Object.keys(data.meta)) {
+			if (!metaTypes.includes(type)) {
+				throw new Error(`Unknown meta type: ${type}`);
+			}
+		}
+		const meta = {};
+		for (const type of metaTypes) {
+			this.validateCardIds(data.meta[type], `meta.${type}`);
+		}
 		for (const [type, ids] of Object.entries(data.meta)) {
-			this.meta[type] = ids.filter(id => {
+			this.validateCardIds(ids, `meta.${type}`);
+			this.validateUniqueCardIds(ids, `meta.${type}`);
+			meta[type] = ids.filter(id => {
 				const card = this.findOracleCard(id);
 				return !card || this.getCardTreeType(card) !== 'BasicLand';
 			});
 		}
+
+		const basicLandIds = new Set(this.basicLands.map(land => land.id));
+		const referencedIds = deckIds.concat(data.tokenIds, data.commandZoneIds, ...Object.values(meta));
+		for (const id of referencedIds) {
+			if ((!basicLandIds.has(id) && !Object.prototype.hasOwnProperty.call(data.cardIds, id)) ||
+				!this.findOracleCard(id)) {
+				throw new Error(`Missing card data for ${id}`);
+			}
+		}
+
+		this.cardIds = data.cardIds;
+		this.deckIds = deckIds.filter(id => !data.commandZoneIds.includes(id));
+		this.tokenIds = data.tokenIds;
+		this.commandZoneIds = data.commandZoneIds;
+		for (const type of Object.keys(meta)) {
+			meta[type] = meta[type].filter(id => !data.commandZoneIds.includes(id));
+		}
+		this.meta = meta;
 
 		this.setCardData([]);
 
@@ -755,6 +824,10 @@
 	};
 
 	MTG.getDeckIdsFromSave = function(data) {
+		if (!data || typeof data !== 'object' || Array.isArray(data)) {
+			throw new Error('Invalid deck file');
+		}
+		this.validateCardIds(data.deckIds, 'deckIds');
 		const deckIds = data.deckIds.slice();
 		for (const { id, name } of this.basicLands) {
 			const count = data[`${name}Count`];
@@ -771,6 +844,18 @@
 		return deckIds;
 	};
 
+	MTG.validateCardIds = function(ids, field) {
+		if (!Array.isArray(ids) || ids.some(id => typeof id !== 'string' || id.length === 0)) {
+			throw new Error(`Invalid ${field} in deck file`);
+		}
+	};
+
+	MTG.validateUniqueCardIds = function(ids, field) {
+		if (new Set(ids).size !== ids.length) {
+			throw new Error(`Duplicate card IDs in ${field}`);
+		}
+	};
+
 
 
 	MTG.findOracleCard = function(id) {
@@ -782,6 +867,7 @@
 		$('#data-menu button, #compare-menu button, #build-menu button:not(#view-json)').attr('disabled', true);
 
 		this.setCardData(this.collectCardData());
+		this.resetPreview();
 
 		$('#data-menu button, #compare-menu button, #build-menu button:not(#view-json)').attr('disabled', false);
 	};
@@ -915,7 +1001,19 @@
 	};
 
 	MTG.getExclusiveCardIds = function(cardIds, otherIds) {
-		return cardIds.filter(cardId => !otherIds.includes(cardId));
+		const otherCounts = new Map();
+		for (const cardId of otherIds) {
+			otherCounts.set(cardId, (otherCounts.get(cardId) ?? 0) + 1);
+		}
+
+		return cardIds.filter(cardId => {
+			const count = otherCounts.get(cardId) ?? 0;
+			if (count === 0) {
+				return true;
+			}
+			otherCounts.set(cardId, count - 1);
+			return false;
+		});
 	};
 
 	MTG.appendComparisonSection = function(cardIds) {
@@ -1033,6 +1131,14 @@
 			'Red': 0,
 			'White': 0,
 		};
+		const devotionColors = {
+			B: 'Black',
+			U: 'Blue',
+			G: 'Green',
+			C: 'Grey',
+			R: 'Red',
+			W: 'White',
+		};
 
 		let rarities = {
 			'common': 0,
@@ -1055,7 +1161,9 @@
 			if (card.hasOwnProperty('type_line')) {
 				const cardType = this.getCardTreeType(card);
 				const rarity = card.rarity === 'bonus' ? 'mythic' : card.rarity;
-				rarities[rarity]++;
+				if (Object.prototype.hasOwnProperty.call(rarities, rarity)) {
+					rarities[rarity]++;
+				}
 				metaTypes[this.getMetaType(card, cardType)]++;
 
 				if (cardType !== 'Land' && cardType !== 'BasicLand' && cardType !== 'Token') {
@@ -1076,14 +1184,19 @@
 			}
 
 			const cardType = this.getCardTreeType(card);
-			if (cardType !== 'Land' && cardType !== 'BasicLand' && card.hasOwnProperty('mana_cost')) {
-				devotions.Black += (card.mana_cost.match(/B/g) || []).length;
-				devotions.Blue += (card.mana_cost.match(/U/g) || []).length;
-				devotions.Green += (card.mana_cost.match(/G/g) || []).length;
-				devotions.Grey += (card.mana_cost.match(/C/g) || []).length;
-				devotions.Grey += parseInt(card.mana_cost.replace(/\D/g, "")) || 0;
-				devotions.Red += (card.mana_cost.match(/R/g) || []).length;
-				devotions.White += (card.mana_cost.match(/W/g) || []).length;
+			if (cardType !== 'Land' && cardType !== 'BasicLand' && typeof card.mana_cost === 'string') {
+				for (const [, manaSymbol] of card.mana_cost.matchAll(/\{([^}]+)\}/g)) {
+					const symbolColors = new Set();
+					for (const component of manaSymbol.split('/')) {
+						const color = component.startsWith('H') ? component.slice(1) : component;
+						if (Object.prototype.hasOwnProperty.call(devotionColors, color)) {
+							symbolColors.add(color);
+						}
+					}
+					for (const color of symbolColors) {
+						devotions[devotionColors[color]]++;
+					}
+				}
 			}
 		}
 
@@ -1591,7 +1704,10 @@
 	MTG.addManaCounters = function() {
 		let $manaCounters = [];
 		for (const { id, name } of this.basicLands) {
-			if (name === 'wastes' || this.deckIds.includes(id)) {
+			if (name === 'wastes') {
+				const $slot = $('#' + this.getBattlefieldSlotId(0, this.columnCount - 2));
+				$slot.append(this.createManaCounter(id, name)).removeClass('slot');
+			} else if (this.deckIds.includes(id)) {
 				$manaCounters.push(this.createManaCounter(id, name));
 			}
 		}
@@ -1621,7 +1737,7 @@
 			'aria-label': 'Treasure'
 		});
 		this.addCounter($treasure, false);
-		const $slot = $('#' + this.getBattlefieldSlotId(0, this.columnCount - 2));
+		const $slot = $('#' + this.getBattlefieldSlotId(1, this.columnCount - 2));
 		$slot.append($treasure).removeClass('slot');
 	};
 
@@ -1868,6 +1984,9 @@
 	};
 
 	MTG.moveToDeck = function(id, cardType) {
+		if (this.commandZoneIds.includes(id)) {
+			return;
+		}
 		if (cardType === 'Token') {
 			if (this.tokenIds.indexOf(id) === -1) {
 				this.tokenIds.push(id);
@@ -1891,6 +2010,9 @@
 			const index = this.deckIds.indexOf(id);
 			if (index !== -1) {
 				this.deckIds.splice(index, 1);
+				if (!this.deckIds.includes(id)) {
+					this.removeMetaType(id);
+				}
 			}
 		}
 
@@ -1902,6 +2024,9 @@
 
 
 	MTG.getMetaType = function(card, cardType = this.getCardType(card)) {
+		if (this.commandZoneIds.includes(card.oracle_id)) {
+			return 'strategy';
+		}
 		if (cardType === 'BasicLand') {
 			return 'land';
 		}
@@ -1988,11 +2113,13 @@
 	};
 
 	MTG.getSmallImage = function(card, side) {
-		return card.images[side].small;
+		const image = card.images[side].small;
+		return image === 'back.jpeg' ? 'assets/back.jpeg' : image;
 	};
 
 	MTG.getNormalImage = function(card, side) {
-		return card.images[side].normal;
+		const image = card.images[side].normal;
+		return image === 'back.jpeg' ? 'assets/back.jpeg' : image;
 	};
 
 	MTG.showCardPreview = function(card, side) {
@@ -2005,12 +2132,16 @@
 	};
 
 	MTG.resetPreview = function() {
-		$('#preview').removeClass('commander oathbreaker');
 		this.resetPreviewImage();
 	};
 
 	MTG.resetPreviewImage = function() {
-		$('#preview').css({
+		const commander = this.getCard(this.commandZoneIds[0]);
+		if (commander) {
+			this.showCardPreview(commander, this.getDefaultCardSide(commander));
+			return;
+		}
+		$('#preview').removeClass('commander oathbreaker').css({
 			backgroundImage: 'url("assets/back.jpeg")'
 		});
 	};

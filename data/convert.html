@@ -47,19 +47,24 @@
 							type_line: oracleCard.type_line,
 							cmc: parseInt(oracleCard.cmc),
 							colors: oracleCard.colors,
-							mana_cost: oracleCard.mana_cost,
+							mana_cost: typeof oracleCard.mana_cost === 'string' && oracleCard.mana_cost !== ''
+								? oracleCard.mana_cost
+								: (oracleCard.card_faces || [])
+									.map(face => face.mana_cost)
+									.filter(cost => typeof cost === 'string' && cost !== '')
+									.join(' // '),
 							layout: oracleCard.layout,
 							rarity:oracleCard.rarity,
 							commander: oracleCard.legalities.commander === 'legal',
 							oathbreaker: oracleCard.legalities.oathbreaker === 'legal',
 							images: {
 								front: {
-									small: 'back.jpeg',
-									normal: 'back.jpeg',
+									small: 'assets/back.jpeg',
+									normal: 'assets/back.jpeg',
 								},
 								back: {
-									small: 'back.jpeg',
-									normal: 'back.jpeg',
+									small: 'assets/back.jpeg',
+									normal: 'assets/back.jpeg',
 								},
 							},
 						};
